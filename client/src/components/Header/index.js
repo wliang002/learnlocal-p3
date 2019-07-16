@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './style.css'
 
 const Header = props => (
@@ -45,8 +46,18 @@ const Header = props => (
         </a>
       </div>
     </div>
-    <div>
-      <button className='login-btn'>Login</button>
+    <div style={{ float: 'left' }}>
+      <ul>
+        <li>
+          <a href='/'>Teachers</a>
+        </li>
+        <li>
+          <Link to='/register'>Register</Link>
+        </li>
+        <li>
+          <Link to='/login'>Login</Link>
+        </li>
+      </ul>
     </div>
   </header>
 )

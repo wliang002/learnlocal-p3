@@ -1,19 +1,32 @@
 import React, { Component } from 'react'
 import './App.css'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import Login from './components/auth/Login'
+import Register from './components/auth/Register'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import TeachForm from './components/TeachForm'
+import Landing from './components/layout/Landing'
 
 class App extends Component {
   render () {
     return (
-      <div className='App'>
-        <Header />
-        {/* Testing out the TeachForm */}
+      <Router>
+        <div>
 
-        <TeachForm />
-        {/* Original boilerplate React Code Below: */}
-        {/* <header className='App-header'>
+          <Header />
+          <section className='container'>
+            <Switch>
+              <Route exact path='/' component={Landing} />
+              <Route exact path='/register' component={Register} />
+              <Route exact path='/login' component={Login} />
+            </Switch>
+          </section>
+          {/* Testing out the TeachForm */}
+
+          {/* <TeachForm /> */}
+          {/* Original boilerplate React Code Below: */}
+          {/* <header className='App-header'>
           <img src={logo} className='App-logo' alt='logo' />
           <p>
             Edit <code>src/App.js</code> and save to reload.
@@ -27,9 +40,12 @@ class App extends Component {
             Learn React
           </a>
         </header> */}
-        
-        <Footer />
-      </div>
+
+          <Footer />
+        </div>
+
+      </Router>
+
     )
   }
 }
