@@ -1,0 +1,88 @@
+/* Header */
+
+.site-header {
+  position: fixed;
+  width: 100%;
+  margin: 0 0 50px 0;
+  padding: 10px 50px 10px 50px;
+  color: #ffffff;
+  background: rgba(255,255,255,0.4);
+  z-index: 100;
+}
+
+.site-logo {
+  color: #E4B320;
+  font-size: 30px;
+  font-family: 'Fredericka the Great', Verdana, Tahoma, sans-serif;
+  text-shadow: 1px 1px 0 rgba(0,0,0,0.4), 0 0 15px rgba(255,255,255,0.4);
+  float: left;
+  margin-top: 5px;
+}
+
+
+/* Dropdown Button */
+
+.dropdown {
+  position: relative;
+  float: left;
+  margin-left: 20px;
+}
+
+.dropdown #dropdownMenuLink {
+  font-size: 17px;
+  color:#DA7A22;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 rgba(0,0,0,0.4), 0 0 15px rgba(255,255,255,0.4);
+  margin-top: 5px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: .25rem
+
+}
+
+.dropdown-content a {
+  color: rgb(73, 105, 109);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+/* Login Button */
+
+.login-btn {
+  float: right;
+  background-color: #6c757d;
+  padding: 10px 10px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 120px;
+  font-size: 17px;
+  color:#DA7A22;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 rgba(0,0,0,0.4), 0 0 15px rgba(255,255,255,0.4);
+  margin-top: 5px;
+  border-radius: .25rem;
+}
+
+.login-btn:hover {
+  opacity: 0.8;
+}
