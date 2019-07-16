@@ -3,7 +3,7 @@
 .site-header {
   position: fixed;
   width: 100%;
-  margin: 0 0 30px;
+  margin: 0 0 50px 0;
   padding: 10px 50px 10px 50px;
   color: #ffffff;
   background: rgba(255,255,255,0.4);
