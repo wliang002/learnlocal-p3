@@ -4,7 +4,7 @@ import './style.css'
 
 const Footer = (props) => (
   <footer className='site-footer'>
-    <div className='container'>
+    <div>
       <a
         href='https://github.com/wliang002/learnlocal-p3'
         target='_blank'

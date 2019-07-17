@@ -3,7 +3,7 @@ import './App.css'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Login from './components/auth/Login'
 import Register from './components/auth/Register'
-import Header from './components/Header'
+import Header from './components/Header/Header'
 import Footer from './components/Footer'
 import TeachForm from './components/TeachForm'
 import Landing from './components/layout/Landing'
@@ -25,7 +25,7 @@ class App extends Component {
           {/* Testing out the TeachForm */}
 
           {/* <TeachForm /> */}
-          {/* Original boilerplate React Code Below: */}
+          {/* ******Original boilerplate React Code Below: ****** */}
           {/* <header className='App-header'>
           <img src={logo} className='App-logo' alt='logo' />
           <p>
