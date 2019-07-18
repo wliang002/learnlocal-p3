@@ -8,10 +8,10 @@ const Landing = () => {
       <div className='landing-inner'>
         <p>Log in or create an account to host a class of your own.</p>
         <div className='buttons'>
-          <Link to='/register' className='btn btn-success'>
+          <Link to='/login' className='btn btn-success'>
             Log in
           </Link>
-          <Link to='/login' className='btn btn-success'>
+          <Link to='/register' className='btn btn-success'>
             Create an account
           </Link>
         </div>
