@@ -6,13 +6,13 @@ const Landing = () => {
   return (
     <section className='landing'>
       <div className='landing-inner'>
-        <p>Sign up or log in to host a class of your own.</p>
+        <p>Log in or create an account to host a class of your own.</p>
         <div className='buttons'>
           <Link to='/register' className='btn btn-success'>
-            Sign Up
+            Log in
           </Link>
           <Link to='/login' className='btn btn-success'>
-            Login
+            Create an account
           </Link>
         </div>
       </div>
