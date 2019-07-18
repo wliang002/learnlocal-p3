@@ -5,12 +5,13 @@ import './header.css'
 const Header = props => (
   <header className='site-header'>
     <div className='site-logo'>Learn Local</div>
+    {/* class categories */}
     <div class='dropdown'>
       <a
         class='btn btn-secondary dropdown-toggle'
         href='#'
         role='button'
-        id='dropdownMenuLink'
+        id='categoryDropdownMenuLink'
         data-toggle='dropdown'
         aria-haspopup='true'
         aria-expanded='false'
@@ -31,33 +32,44 @@ const Header = props => (
           Other
         </a>
       </div>
+    </div>
+    {/* teachers */}
+    <div class='dropdown'>
+      <a
+        class='btn btn-secondary dropdown-toggle'
+        href='#'
+        role='button'
+        id='teacherDropdownMenuLink'
+        data-toggle='dropdown'
+        aria-haspopup='true'
+        aria-expanded='false'
+      >
+        Browse Teachers
+      </a>
       <div class='dropdown-content'>
         <a class='dropdown-item' href='#'>
-          Creative
+          dummy teacher 1
         </a>
         <a class='dropdown-item' href='#'>
-          Business
+          dummy teacher 2
         </a>
         <a class='dropdown-item' href='#'>
-          Lifestyle
+          dummy teacher 3
         </a>
         <a class='dropdown-item' href='#'>
-          Other
+          dummy teacher 4
         </a>
       </div>
     </div>
-    <div style={{ float: 'left' }}>
-      <ul>
-        <li>
-          <a href='/'>Teachers</a>
-        </li>
-        <li>
-          <Link to='/register'>Register</Link>
-        </li>
-        <li>
-          <Link to='/login'>Login</Link>
-        </li>
-      </ul>
+    <div style={{ float: 'right' }}>
+      <div className='LogInBtns'>
+        <Link to='/login' className='btn btn-success'>
+            Log in
+        </Link>
+        <Link to='/register' className='btn btn-success'>
+            Create an account
+        </Link>
+      </div>
     </div>
   </header>
 )

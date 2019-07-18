@@ -16,7 +16,7 @@ class App extends Component {
         <div>
 
           <Header />
-          <section className='container'>
+          <section>
             <Switch>
               <Route exact path='/' component={Landing} />
               <Route exact path='/register' component={Register} />
