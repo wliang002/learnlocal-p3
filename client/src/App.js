@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Login from './components/auth/Login'
 import Register from './components/auth/Register'
 import Header from './components/Header/Header'
+import CategoryBtns from './components/CategoryBtns/CategoryBtns'
 import Footer from './components/Footer'
 import TeachForm from './components/TeachForm'
 import Landing from './components/layout/Landing'
@@ -40,7 +41,7 @@ class App extends Component {
             Learn React
           </a>
         </header> */}
-
+          <CategoryBtns />
           <Footer />
         </div>
 

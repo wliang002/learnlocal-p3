@@ -1,0 +1,24 @@
+/* Category Buttons */
+
+.categoryBtnContainer {
+    text-align: center;
+}
+
+.categoryBtnContainer p {
+    color: #CECDC9;
+    font-family: 'Lustria', serif;
+    font-size: 17px;
+}
+
+.categoryBtnContainer .btn {
+    background-color: #DA7A22;
+    color: white;
+    font-family: 'Fredericka the Great', cursive;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
