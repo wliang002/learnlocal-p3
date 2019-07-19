@@ -1,6 +1,6 @@
 import React from 'react'
 import ghlogo from '../Footer/ghlogo.png'
-import './style.css'
+import './Footer.css'
 
 const Footer = (props) => (
   <footer className='site-footer'>

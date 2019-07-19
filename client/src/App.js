@@ -5,7 +5,7 @@ import Login from './components/auth/Login'
 import Register from './components/auth/Register'
 import Header from './components/Header/Header'
 import CategoryBtns from './components/CategoryBtns/CategoryBtns'
-import Footer from './components/Footer'
+import Footer from './components/Footer/Footer'
 import TeachForm from './components/TeachForm'
 import Landing from './components/layout/Landing'
 

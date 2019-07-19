@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import './header.css'
+import './Header.css'
 
 const Header = props => (
   <header className='site-header'>
@@ -34,7 +34,7 @@ const Header = props => (
       </div>
     </div>
     {/* teachers */}
-    <div clasName='dropdown'>
+    <div className='dropdown'>
       <a
         className='btn btn-secondary dropdown-toggle'
         href='#'
@@ -62,11 +62,11 @@ const Header = props => (
       </div>
     </div>
     <div style={{ float: 'right' }}>
-      <div clasName='LogInBtns'>
-        <Link to='/login' clasName='btn btn-success'>
+      <div className='LogInBtns'>
+        <Link to='/login' className='btn btn-success'>
             Log in
         </Link>
-        <Link to='/register' clasName='btn btn-success'>
+        <Link to='/register' className='btn btn-success'>
             Create an account
         </Link>
       </div>
