@@ -1,4 +1,9 @@
+// {
+//     "mongoURI": "mongodb+srv://<>@cluster0-xobic.mongodb.net/test?retryWrites=true&w=majority",
+//     "jwtSecret": "secret"
+//   }
+
 {
-    "mongoURI": "mongodb+srv://<>@cluster0-xobic.mongodb.net/test?retryWrites=true&w=majority",
-    "jwtSecret": "secret"
-  }
+  "mongoURI": "mongodb+srv://wliang002:192166lwx@cluster0-xobic.mongodb.net/test?retryWrites=true&w=majority",
+  "jwtSecret": "secret"
+ }

@@ -6,9 +6,9 @@ const Header = props => (
   <header className='site-header'>
     <div className='site-logo'>Learn Local</div>
     {/* class categories */}
-    <div class='dropdown'>
+    <div className='dropdown'>
       <a
-        class='btn btn-secondary dropdown-toggle'
+        className='btn btn-secondary dropdown-toggle'
         href='#'
         role='button'
         id='categoryDropdownMenuLink'
@@ -16,27 +16,27 @@ const Header = props => (
         aria-haspopup='true'
         aria-expanded='false'
       >
-        Browse Classes
+        Browse classes
       </a>
-      <div class='dropdown-content'>
-        <a class='dropdown-item' href='#'>
+      <div className='dropdown-content'>
+        <a className='dropdown-item' href='#'>
           Creative
         </a>
-        <a class='dropdown-item' href='#'>
+        <a className='dropdown-item' href='#'>
           Business
         </a>
-        <a class='dropdown-item' href='#'>
+        <a className='dropdown-item' href='#'>
           Lifestyle
         </a>
-        <a class='dropdown-item' href='#'>
+        <a className='dropdown-item' href='#'>
           Other
         </a>
       </div>
     </div>
     {/* teachers */}
-    <div class='dropdown'>
+    <div clasName='dropdown'>
       <a
-        class='btn btn-secondary dropdown-toggle'
+        className='btn btn-secondary dropdown-toggle'
         href='#'
         role='button'
         id='teacherDropdownMenuLink'
@@ -46,27 +46,27 @@ const Header = props => (
       >
         Browse Teachers
       </a>
-      <div class='dropdown-content'>
-        <a class='dropdown-item' href='#'>
+      <div className='dropdown-content'>
+        <a className='dropdown-item' href='#'>
           dummy teacher 1
         </a>
-        <a class='dropdown-item' href='#'>
+        <a className='dropdown-item' href='#'>
           dummy teacher 2
         </a>
-        <a class='dropdown-item' href='#'>
+        <a className='dropdown-item' href='#'>
           dummy teacher 3
         </a>
-        <a class='dropdown-item' href='#'>
+        <a className='dropdown-item' href='#'>
           dummy teacher 4
         </a>
       </div>
     </div>
     <div style={{ float: 'right' }}>
-      <div className='LogInBtns'>
-        <Link to='/login' className='btn btn-success'>
+      <div clasName='LogInBtns'>
+        <Link to='/login' clasName='btn btn-success'>
             Log in
         </Link>
-        <Link to='/register' className='btn btn-success'>
+        <Link to='/register' clasName='btn btn-success'>
             Create an account
         </Link>
       </div>
