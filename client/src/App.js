@@ -8,7 +8,7 @@ import CategoryBtns from './components/CategoryBtns/CategoryBtns'
 import Footer from './components/Footer/Footer'
 import TeachForm from './components/TeachForm/TeachForm'
 import TeacherProfile from './components/TeacherProfile/TeacherProfile'
-import Landing from './components/layout/Landing'
+import Landing from './components/Landing/Landing'
 
 class App extends Component {
   render () {

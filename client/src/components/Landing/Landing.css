@@ -1,0 +1,66 @@
+/* Landing Page Log in and Sign Up Buttons */
+
+/* background image is in app.css */
+
+.landing-header {
+  padding-top: 65px;
+  background-color:#007B89;
+  padding-bottom: 10px;
+}
+
+.landing-header hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #eee;
+}
+
+.appDescriptionContainer p {
+  text-align: center;
+}
+
+.appDescriptionContainer strong {
+  color: #E4B320;
+  font-family: 'Fredericka the Great', cursive;
+}
+
+.landing-inner {
+  padding-top:10px;
+  background: rgba(0,0,0,0.4);
+  color: #fff;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.landing p {
+    font-family: 'Lustria', serif;
+    font-size: 17px;
+    color: #CECDC9;
+}
+.landing-inner .btn {
+    background-color: #E4B320;
+    color: white;
+    font-family: 'Fredericka the Great', cursive;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/* desktop view */
+@media only screen and (min-width:576px){
+  .landing-inner {
+    margin-top:150px;
+  }
+}
