@@ -10,6 +10,7 @@ import TeachForm from './components/TeachForm/TeachForm'
 import TeacherProfile from './components/TeacherProfile/TeacherProfile'
 import LearnByCategory from './components/LearnByCategory/LearnByCategory'
 import Landing from './components/Landing/Landing'
+import ClassCard from './components/ClassCard/ClassCard'
 
 class App extends Component {
   render () {
