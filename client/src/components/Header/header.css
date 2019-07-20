@@ -4,7 +4,7 @@
   position: fixed;
   width: 100%;
   margin: 0 0 50px 0;
-  padding: 10px 50px 10px 50px;
+  padding: 10px 50px 0px 50px;
   color: #ffffff;
   background: rgba(255,255,255,0.4);
   z-index: 100;
@@ -16,7 +16,6 @@
   font-family: 'Fredericka the Great', Verdana, Tahoma, sans-serif;
   text-shadow: 1px 1px 0 rgba(0,0,0,0.4), 0 0 15px rgba(255,255,255,0.4);
   float: left;
-  margin-top: 10px;
   text-decoration: none;
 }
 
@@ -25,9 +24,11 @@
 .dropdown {
   position: relative;
   float: left;
-  margin-left: 20px;
-  margin-top: 20px;
   font-family: 'Lustria', serif;
+}
+
+.dropdown.first {
+  margin-left: 20px;
 }
 
 .dropdown #categoryDropdownMenuLink {
@@ -78,13 +79,14 @@
 .LogInBtns .btn {
   background-color: #E4B320;
   color: white;
+  font-size:17px;
   font-family: 'Fredericka the Great', cursive;
   padding-left: 30px;
   padding-right: 30px;
-  padding-bottom: 10px;
-  padding-top: 10px;
-  margin-top: 20px;
   margin-bottom: 20px;
   margin-left: 5px;
   margin-right: 5px;
+  margin-top: 5px;
 }
+
+/* responsive */
