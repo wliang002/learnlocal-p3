@@ -8,7 +8,7 @@ const Header = props => (
       <Link to='/' className='home'>Learn Local</Link>
     </div>
     {/* class categories */}
-    <div className='dropdown'>
+    <div className='dropdown first'>
       <a
         className='btn btn-secondary dropdown-toggle'
         href='#'
@@ -36,7 +36,7 @@ const Header = props => (
       </div>
     </div>
     {/* teachers */}
-    <div className='dropdown'>
+    <div className='dropdown last'>
       <a
         className='btn btn-secondary dropdown-toggle'
         href='#'
@@ -49,9 +49,7 @@ const Header = props => (
         Browse Teachers
       </a>
       <div className='dropdown-content'>
-        <a className='dropdown-item' href='#'>
-          dummy teacher 1
-        </a>
+        <Link to='/TeacherProfile' className='dropdown-item'>TeacherProfile placeholder</Link>
         <a className='dropdown-item' href='#'>
           dummy teacher 2
         </a>

@@ -7,7 +7,8 @@ import Header from './components/Header/Header'
 import CategoryBtns from './components/CategoryBtns/CategoryBtns'
 import Footer from './components/Footer/Footer'
 import TeachForm from './components/TeachForm/TeachForm'
-import Landing from './components/layout/Landing'
+import TeacherProfile from './components/TeacherProfile/TeacherProfile'
+import Landing from './components/Landing/Landing'
 
 class App extends Component {
   render () {
@@ -20,6 +21,7 @@ class App extends Component {
               <Route exact path='/' component={Landing} />
               <Route exact path='/register' component={Register} />
               <Route exact path='/login' component={Login} />
+              <Route exact path='/TeacherProfile' component={TeacherProfile} />
             </Switch>
           </section>
           {/* Testing out the TeachForm */}
