@@ -8,6 +8,7 @@ import CategoryBtns from './components/CategoryBtns/CategoryBtns'
 import Footer from './components/Footer/Footer'
 import TeachForm from './components/TeachForm/TeachForm'
 import TeacherProfile from './components/TeacherProfile/TeacherProfile'
+import LearnByCategory from './components/LearnByCategory/LearnByCategory'
 import Landing from './components/Landing/Landing'
 
 class App extends Component {
@@ -21,8 +22,9 @@ class App extends Component {
               <Route exact path='/' component={Landing} />
               <Route exact path='/register' component={Register} />
               <Route exact path='/login' component={Login} />
-              <Route exact path='/TeacherProfile' component={TeacherProfile} />
+              <Route exact path='/teacher-profile' component={TeacherProfile} />
               <Route exact path='/teachform' component={TeachForm} />
+              <Route exact path='/learn-by-category' component={LearnByCategory} />
             </Switch>
           </section>
           <CategoryBtns />
