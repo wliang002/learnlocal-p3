@@ -91,26 +91,14 @@
 
 /* narrower screen view */
 @media only screen and (max-width:1019px){
-  .site-header {
-    padding: 0;
+  .wideView {
+    display:none;
   }
-  .site-logo {
-    float: none;
-    display:inline-block;
-  }
+}
 
-  .dropdown{
-    float:none;
-  }
-  .dropdown.first {
-    margin:0;
-  } 
-  .dropdown .btn {
-  }
-  .LogInBtns .btn {
-    width: 100%;
-    margin:0;
-    display: inline-block;
-    float:none;
+/* wider screen view */
+@media only screen and (min-width:1019px){
+  .narrowView {
+    display:none;
   }
 }
