@@ -1,5 +1,5 @@
 import React from 'react'
-import './style.css'
+import './TeachForm.css'
 
 const TeachForm = (props) => (
   <div className='container'>

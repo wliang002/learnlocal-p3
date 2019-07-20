@@ -6,16 +6,15 @@ import Register from './components/auth/Register'
 import Header from './components/Header/Header'
 import CategoryBtns from './components/CategoryBtns/CategoryBtns'
 import Footer from './components/Footer/Footer'
-import TeachForm from './components/TeachForm'
+import TeachForm from './components/TeachForm/TeachForm'
 import Landing from './components/layout/Landing'
 
 class App extends Component {
   render () {
     return (
       <Router>
+        <Header />
         <div>
-
-          <Header />
           <section>
             <Switch>
               <Route exact path='/' component={Landing} />
@@ -24,23 +23,7 @@ class App extends Component {
             </Switch>
           </section>
           {/* Testing out the TeachForm */}
-
           {/* <TeachForm /> */}
-          {/* ******Original boilerplate React Code Below: ****** */}
-          {/* <header className='App-header'>
-          <img src={logo} className='App-logo' alt='logo' />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className='App-link'
-            href='https://reactjs.org'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            Learn React
-          </a>
-        </header> */}
           <CategoryBtns />
           <Footer />
         </div>
@@ -50,29 +33,5 @@ class App extends Component {
     )
   }
 }
-
-// function App () {
-//   return (
-//     <div className='App'>
-//       <Header />
-//       <header className='App-header'>
-
-//         <img src={logo} className='App-logo' alt='logo' />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className='App-link'
-//           href='https://reactjs.org'
-//           target='_blank'
-//           rel='noopener noreferrer'
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//       <Footer />
-//     </div>
-//   )
-// }
 
 export default App
