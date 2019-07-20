@@ -7,7 +7,7 @@ const Login = () => {
           Invalid credentials
       </div>
       <h1 className='large text-primary'>Sign In</h1>
-      <p className='lead'><i className='fas fa-user' /> Sign into Your Account</p>
+      <p className='lead'><i className='fas fa-user' /> Sign Into Your Account</p>
       <form className='form' action='dashboard.html'>
         <div className='form-group'>
           <input

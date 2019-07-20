@@ -4,7 +4,9 @@ import './Header.css'
 
 const Header = props => (
   <header className='site-header'>
-    <div className='site-logo'>Learn Local</div>
+    <div className='site-logo'>
+      <Link to='/' className='home'>Learn Local</Link>
+    </div>
     {/* class categories */}
     <div className='dropdown'>
       <a
@@ -16,7 +18,7 @@ const Header = props => (
         aria-haspopup='true'
         aria-expanded='false'
       >
-        Browse classes
+        Browse Classes
       </a>
       <div className='dropdown-content'>
         <a className='dropdown-item' href='#'>
@@ -64,10 +66,10 @@ const Header = props => (
     <div style={{ float: 'right' }}>
       <div className='LogInBtns'>
         <Link to='/login' className='btn btn-success'>
-            Log in
+          Log In
         </Link>
         <Link to='/register' className='btn btn-success'>
-            Create an account
+          Create an Account
         </Link>
       </div>
     </div>
