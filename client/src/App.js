@@ -22,10 +22,9 @@ class App extends Component {
               <Route exact path='/register' component={Register} />
               <Route exact path='/login' component={Login} />
               <Route exact path='/TeacherProfile' component={TeacherProfile} />
+              <Route exact path='/teachform' component={TeachForm} />
             </Switch>
           </section>
-          {/* Testing out the TeachForm */}
-          {/* <TeachForm /> */}
           <CategoryBtns />
           <Footer />
         </div>
