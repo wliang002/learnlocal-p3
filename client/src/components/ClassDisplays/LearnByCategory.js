@@ -1,5 +1,5 @@
 import React from 'react'
-import './LearnByCategory.css'
+import './ClassDisplays.css'
 import { Link, Redirect } from 'react-router-dom'
 import ClassCard from '../ClassCard/ClassCard'
 
