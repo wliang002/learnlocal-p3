@@ -11,6 +11,10 @@ const ClassCard = props => (
     <p>
       <strong>Location:</strong> 124 Bolinas Road, Fairfax, CA 94930
     </p>
+    {/* need to code it to read the address -- https://www.google.com/maps/dir/?api=1&destination= PARAMETERS */}
+    <button className='directions-btn'><a href='https://www.google.com/maps/dir/?api=1&destination=124+Bolinas+Road%2C+Fairfax%2C+CA+94930' target='_blank'>
+      Get directions</a>
+    </button>
     <p>
       <strong>Date:</strong> Wednesday, June 12th, 2019
     </p>
