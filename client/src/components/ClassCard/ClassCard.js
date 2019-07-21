@@ -4,7 +4,7 @@ import './ClassCard.css'
 
 const ClassCard = props => (
   <div className='class-card'>
-    <h1>Class: Wooden heart pendants</h1>
+    <h2 className='class-title'>Class: Wooden heart pendants</h2>
     <p>
       <strong>Taught by:</strong> Hetty Chin
     </p>

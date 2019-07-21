@@ -5,6 +5,16 @@
     background-color: rgb(73, 105, 109);
 }
 
+.class-title {
+  color: #E4B320;
+  text-align: center;
+  font-family: 'Fredericka the Great', cursive;
+  text-shadow: 1px 1px 0 rgba(0,0,0,0.4), 0 0 15px rgba(255,255,255,0.4);
+  font-size: 40px;
+  padding-top:20px;
+  padding-bottom: 20px;
+}
+
 .class-signup-btn, .directions-btn {
     background-color: #DA7A22;
     color: white;
@@ -32,7 +42,7 @@ strong {
 }
 
 p {
-    font-size: 1em;
+    font-size: 20px;
     color: #CECDC9;
     font-family: 'Lustria', serif;
 }
