@@ -68,10 +68,10 @@ const Header = props => (
       <div style={{ float: 'right' }}>
         <div className='LogInBtns'>
           <Link to='/login' className='btn btn-success'>
-            Log In
+            Login
           </Link>
           <Link to='/register' className='btn btn-success'>
-            Create an Account
+            Create Account
           </Link>
         </div>
       </div>

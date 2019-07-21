@@ -72,7 +72,7 @@ const Register = () => {
             onChange={e => onChange(e)}
           />
         </div>
-        <input type='submit' className='btn btn-primary' value='Register' />
+        <input type='submit' className='btn btn-success reg' value='Create' />
       </form>
       <p className='my-1'>
       Already have an account? <Link to='/login'>Login</Link>

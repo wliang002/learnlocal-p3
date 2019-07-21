@@ -18,3 +18,16 @@
 .my-1 {
     padding-top: 10px;
 }
+
+.log, .reg{
+  background-color: #E4B320;
+  color: white;
+  font-size:17px;
+  font-family: 'Fredericka the Great', cursive;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-bottom: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+}
