@@ -6,7 +6,7 @@ import ClassCard from '../ClassCard/ClassCard'
 const TeacherProfile = (props) => {
   return [
     <div className='teacherProfile'>
-      <h1>Teacher&rsquo;s classes:</h1>
+      <h1>Teacher&rsquo;s Classes:</h1>
       <hr />
       {/* insert profile */}
       {/* classes they're teaching */}

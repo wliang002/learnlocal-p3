@@ -5,7 +5,7 @@ import './LoginRegister.css'
 const Login = () => {
   return (
     <div className='wrapper'>
-      <h1 className='sign-in'>Sign In</h1>
+      <h1 className='sign-in'>Log In</h1>
       <p className='lead'>
         <i className='fas fa-user' /> Sign Into Your Account
       </p>
@@ -26,7 +26,7 @@ const Login = () => {
         <input type='submit' className='btn btn-primary' value='Login' onClick='showDiv()' />
       </form>
       <p className='my-1'>
-        Don't have an account? <Link to='/register'>Register</Link>
+        Don't have an account? <Link to='/register'>Create One!</Link>
       </p>
     </div>
   )
