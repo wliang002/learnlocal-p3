@@ -40,8 +40,8 @@ const Register = () => {
     }
   }
   return (
-    <div>
-      <h1 className='large text-primary'>Sign Up</h1>
+    <div className='wrapper'>
+      <h1 className='sign-up'>Sign Up</h1>
       <p className='lead'><i className='fas fa-user' /> Create Your Account</p>
       <form className='form' onSubmit={e => onSubmit(e)} action='create-profile.html'>
         <div className='form-group'>
