@@ -27,6 +27,26 @@ strong {
     font-family: 'Great Vibes', cursive;
 }
 
+.directions-btn {
+    background-color: #DA7A22;
+    color: white;
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 1.5em;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 10px;
+    border: none;
+}
+
+.directions-btn a {
+    color: white;
+}
+
 p {
     font-size: 1em;
     color: #CECDC9;
