@@ -143,6 +143,10 @@
   color: black;
 }
 
+.collapsibleHeader .Collapsible__contentInner p {
+ margin-bottom:0;
+}
+
 /* wider screen view */
 @media only screen and (min-width:1019px){
   .narrowView {
