@@ -5,7 +5,7 @@
     background-color: rgb(73, 105, 109);
 }
 
-.class-signup-btn {
+.class-signup-btn, .directions-btn {
     background-color: #DA7A22;
     color: white;
     font-family: 'Fredericka the Great', cursive;
@@ -25,6 +25,10 @@ strong {
     font-size: 1.5em;
     color: #DA7A22;
     font-family: 'Great Vibes', cursive;
+}
+
+.directions-btn a {
+    color: white;
 }
 
 p {
