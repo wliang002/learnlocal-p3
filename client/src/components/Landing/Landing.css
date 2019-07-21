@@ -6,6 +6,8 @@
   padding-top: 65px;
   background-color:#007B89;
   padding-bottom: 10px;
+  padding-left:15px;
+  padding-right: 15px;
 }
 
 .landing-header hr {
@@ -45,6 +47,7 @@
     font-size: 17px;
     color: #CECDC9;
 }
+
 .landing-inner .btn {
     background-color: #E4B320;
     color: white;

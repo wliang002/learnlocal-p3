@@ -334,7 +334,7 @@ button {
 .landing {
   position: relative;
   background: url('./images/craftbakground.jpg') no-repeat center center/cover;
-  height: 100vh;
+  min-height: 80vh;
 }
 
 /* Profiles Page */
