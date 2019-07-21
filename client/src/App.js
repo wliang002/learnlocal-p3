@@ -4,14 +4,12 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Login from './components/auth/Login'
 import Register from './components/auth/Register'
 import Header from './components/Header/Header'
-import CollapsibleHeader from './components/Header/CollapsibleHeader'
 import CategoryBtns from './components/CategoryBtns/CategoryBtns'
 import Footer from './components/Footer/Footer'
 import TeachForm from './components/TeachForm/TeachForm'
 import TeacherProfile from './components/ClassDisplays/TeacherProfile'
 import LearnByCategory from './components/ClassDisplays/LearnByCategory'
 import Landing from './components/Landing/Landing'
-import ClassCard from './components/ClassCard/ClassCard'
 
 class App extends Component {
   render () {
@@ -32,7 +30,6 @@ class App extends Component {
           <CategoryBtns />
           <Footer />
         </div>
-
       </Router>
 
     )

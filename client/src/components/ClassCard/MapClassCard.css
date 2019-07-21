@@ -1,0 +1,25 @@
+.MapClass-card #map {
+position: fixed;
+width:50%;
+}
+#MapClassCard-features {
+width: 50%;
+margin-left: 50%;
+font-family: sans-serif;
+overflow-y: scroll;
+background-color: #fafafa;
+}
+.MapClass-card section {
+padding:  25px 50px;
+line-height: 25px;
+border-bottom: 1px solid #ddd;
+opacity: 0.25;
+font-size: 13px;
+}
+.MapClass-card section.active {
+opacity: 1;
+}
+.MapClass-card section:last-child {
+border-bottom: none;
+margin-bottom: 200px;
+}
