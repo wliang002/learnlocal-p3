@@ -19,10 +19,10 @@ const Landing = () => {
         <p>Log in or create an account to host a class of your own.</p>
         <div className='buttons'>
           <Link to='/login' className='btn btn-success'>
-            Log in
+            Log In
           </Link>
           <Link to='/register' className='btn btn-success'>
-            Create an account
+            Create Account
           </Link>
         </div>
       </div>
