@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 import './ClassCard.css'
 
 const ClassCard = props => (
-  <div className="class-card">
-    <h1>Class: Wooden heart pendants</h1>
+  <div className='class-card'>
+    <h2 className='class-title'>Class: Wooden heart pendants</h2>
     <p>
       <strong>Taught by:</strong> Hetty Chin
     </p>
@@ -20,11 +20,11 @@ const ClassCard = props => (
     <p>
       <strong>Description:</strong> Wooden blanks and carving tools provided.
       Beginners welcome. Come learn how to carve a wooden heart pendant, add an
-      eyelet, and braid a new cord for your new necklace.{" "}
+      eyelet, and braid a new cord for your new necklace.{' '}
     </p>
 
-    <button className="class-signup-btn">Sign Up</button>
+    <button className='class-signup-btn'>Sign Up</button>
   </div>
-);
+)
 
 export default ClassCard
