@@ -10,6 +10,6 @@ export const setAlert = (msg, alertType, timeout = 5000) => dispatch => {
     // send payload to reducer
     payload: { msg, alertType, id }
   })
-
+  // alert removed after 5 seconds
   setTimeout(() => dispatch({ type: REMOVE_ALERT, payload: id }), timeout)
 }
