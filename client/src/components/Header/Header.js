@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import './Header.css'
+import './header.css'
 import CollapsibleHeader from './CollapsibleHeader'
 
 const Header = props => (
