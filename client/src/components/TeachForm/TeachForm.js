@@ -1,7 +1,9 @@
 import React from 'react'
 import './TeachForm.css'
+import { connect } from 'react-redux'
 
 const TeachForm = (props) => (
+
   <div className='container'>
 
     <h1>Teach</h1>

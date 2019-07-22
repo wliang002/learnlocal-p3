@@ -7,7 +7,6 @@ const { check, validationResult } = require('express-validator/check')
 
 const Profile = require('../../models/Profile')
 const User = require('../../models/User')
-const Post = require('../../models/Post')
 
 // @route    GET api/profile/me
 // @desc     Get current users profile
@@ -45,22 +44,18 @@ router.post(
     }
 
     const {
-      website,
       location,
       bio,
       skills,
-      youtube,
       facebook,
       twitter,
-      instagram,
-      linkedin
+      instagram
     } = req.body
 
     // Build profile object
     const profileFields = {}
     profileFields.user = req.user.id
     // if field is not empty, insert in profile obj
-    if (website) profileFields.website = website
     if (location) profileFields.location = location
     if (bio) profileFields.bio = bio
     // turn string into an array
@@ -70,10 +65,8 @@ router.post(
 
     // Build social object
     profileFields.social = {}
-    if (youtube) profileFields.social.youtube = youtube
     if (twitter) profileFields.social.twitter = twitter
     if (facebook) profileFields.social.facebook = facebook
-    if (linkedin) profileFields.social.linkedin = linkedin
     if (instagram) profileFields.social.instagram = instagram
 
     // update & insert data

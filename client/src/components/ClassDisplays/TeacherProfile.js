@@ -1,28 +1,49 @@
-import React, { useEffect } from 'react'
+import React, { Fragment, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import './ClassDisplays.css'
 import { Link, Redirect } from 'react-router-dom'
 import ClassCard from '../ClassCard/ClassCard'
 import { connect } from 'react-redux'
 import { getCurrentProfile } from '../../actions/profile'
+import Spinner from '../Landing/Spinner'
 
-const TeacherProfile = ({ getCurrentProfile, auth, profile }) => {
+const TeacherProfile = ({ getCurrentProfile, auth: { user }, profile: { profile, loading } }) => {
   useEffect(() => {
     getCurrentProfile()
   }, [])
 
-  return [
-    <div className='teacherProfile'>
-      <h1>Teacher&rsquo;s Classes:</h1>
-      <hr />
-      {/* insert profile */}
-      {/* classes they're teaching */}
-      <ClassCard />
-      <hr />
+  return loading && profile === null ? (
+    <Spinner />
+  ) : (
+    <Fragment>
+      <div className='teacherProfile'>
+        <h1>Dashboard</h1>
+        <hr />
+        <div className='container'>
+          <p className='lead'>
+            <i className='fas fa-user' /> Welcome {user && user.name} !
+          </p>
+          {profile !== null ? (
+            <Fragment>has</Fragment>
+          ) : (
+            <Fragment>
+              <p>You have not yet setup a profile, please add some info</p>
+              <Link to='/create-profile' className='btn btn-primary my-1'>
+                    Create Profile
+              </Link>
+            </Fragment>
+          )}
+        </div>
 
+        {/* insert profile */}
+        {/* classes they're teaching */}
+        {/* <ClassCard /> */}
+        <hr />
 
-    </div>
-  ]
+      </div>
+
+    </Fragment>
+  )
 }
 
 TeacherProfile.propTypes = {

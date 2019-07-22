@@ -11,9 +11,10 @@ const Header = ({ auth: { isAuthenticated, loading }, logout }) => {
     <div style={{ float: 'right' }}>
       <div className='LogInBtns'>
         <Link to='/dashboard' className='btn btn-success'>
-          Dashboard
+          <i className='fas fa-user' />{' '}
+          <span className='hide-sm'>Dashboard</span>
         </Link>
-        <a onClick={logout} href='#!'>
+        <a onClick={logout} href='#!' className='btn btn-success'>
           <i className='fas fa-sign-out-alt' />{' '}
           <span className='hide-sm'>Logout</span>
         </a>
