@@ -8,7 +8,7 @@ import './ClassCard.css'
 
 const ClassCard = ({ event, deleteEvent }) => {
   const events = event.map(eve => (
-    <div>
+    <div className='class-card'>
       <h2 className='class-title'>Class: {eve.eventName}</h2>
       <p>
         <strong>Taught by:</strong> {eve.teachersName}
@@ -35,9 +35,9 @@ const ClassCard = ({ event, deleteEvent }) => {
   ))
 
   return (
-    <div className='class-card'>
+   
       <div className='class-body'>{events}</div>
-    </div>
+   
   )
 }
 

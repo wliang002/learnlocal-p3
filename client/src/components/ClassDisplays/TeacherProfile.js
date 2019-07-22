@@ -20,7 +20,7 @@ const TeacherProfile = ({ getCurrentProfile, auth: { user }, profile: { profile,
       <div className='teacherProfile'>
         <h1>Dashboard</h1>
         <hr />
-        <div className='container'>
+        <div className='events-container'>
           <p className='lead'>
             <i className='fas fa-user' /> Welcome {user && user.name} !
           </p>
