@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { setAlert } from '../../actions/alert'
 import { register } from '../../actions/auth'
 import PropTypes from 'prop-types'
 
-const Register = ({ setAlert, register }) => {
+const Register = ({ setAlert, register, isAuthenticated }) => {
   // formData is the state
   // use setFormData to update the state
   const [formData, setFormData] = useState({
@@ -22,6 +22,12 @@ const Register = ({ setAlert, register }) => {
     setAlert('Success', 'success')
     register({ name, email, password })
   }
+
+  // if login success, redirect
+  if (isAuthenticated) {
+    return <Redirect to='/teachers' />
+  }
+
   return (
     <div className='wrapper'>
       <h1 className='sign-up'>Sign Up</h1>
@@ -66,7 +72,15 @@ const Register = ({ setAlert, register }) => {
 
 Register.propTypes = {
   setAlert: PropTypes.func.isRequired,
-  register: PropTypes.func.isRequired
+  register: PropTypes.func.isRequired,
+  isAuthenticated: PropTypes.bool
 }
-// takes in the state and actions
-export default connect(null, { setAlert, register })(Register)
+
+const mapStateToProps = state => ({
+  isAuthenticated: state.auth.isAuthenticated
+})
+
+export default connect(
+  mapStateToProps,
+  { setAlert, register }
+)(Register)
