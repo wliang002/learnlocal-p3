@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import axios from 'axios'
+import { connect } from 'react-redux'
+import { setAlert } from '../../actions/alert'
+import PropTypes from 'prop-types'
 
-const Register = () => {
+const Register = ({ setAlert }) => {
   // formData is the state
   // use setFormData to update the state
   const [formData, setFormData] = useState({
@@ -16,28 +18,7 @@ const Register = () => {
   const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value })
   const onSubmit = async e => {
     e.preventDefault()
-    const newUser = {
-      name,
-      email,
-      password
-    }
-    try {
-      const config = {
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      }
-      const body = JSON.stringify(newUser)
-      const res = await axios.post('/api/users', body, config)
-      setFormData({
-        name: '',
-        email: '',
-        password: ''
-      })
-      console.log(res.data)
-    } catch (err) {
-      console.log(err)
-    }
+    setAlert('Success', 'success')
   }
   return (
     <div className='wrapper'>
@@ -81,4 +62,8 @@ const Register = () => {
   )
 }
 
-export default Register
+Register.propTypes = {
+  setAlert: PropTypes.func.isRequired
+}
+// takes in the state and actions
+export default connect(null, { setAlert })(Register)
