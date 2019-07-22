@@ -10,8 +10,8 @@ const Header = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (
     <div style={{ float: 'right' }}>
       <div className='LogInBtns'>
-        <Link to='/profile' className='btn btn-success'>
-          Profile
+        <Link to='/dashboard' className='btn btn-success'>
+          Dashboard
         </Link>
         <a onClick={logout} href='#!'>
           <i className='fas fa-sign-out-alt' />{' '}
