@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 import './LoginRegister.css'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
@@ -20,6 +20,11 @@ const Login = ({ login, isAuthenticated }) => {
     e.preventDefault()
     login(email, password)
   }
+  // if login success, redirect
+  if (isAuthenticated) {
+    return <Redirect to='/teachers' />
+  }
+
   return (
     <div className='wrapper'>
       <h1 className='sign-in'>Login</h1>
@@ -62,7 +67,12 @@ Login.propTypes = {
   isAuthenticated: PropTypes.bool
 }
 
+// check if state is authenticated
+const mapStateToProps = state => ({
+  isAuthenticated: state.auth.isAuthenticated
+})
+
 export default connect(
-  null,
+  mapStateToProps,
   { login }
 )(Login)
