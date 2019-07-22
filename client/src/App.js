@@ -12,7 +12,7 @@ import LearnByCategory from './components/ClassDisplays/LearnByCategory'
 import Landing from './components/Landing/Landing'
 import Alert from './components/LoginRegister/Alert'
 import PrivateRoute from './components/routing/PrivateRoute'
-
+import CreateProfile from './components/TeachForm/CreateProfile'
 // Redux
 import { Provider } from 'react-redux'
 import store from './store'
@@ -42,6 +42,7 @@ const App = () => {
                 <Route exact path='/login' component={Login} />
                 <PrivateRoute exact path='/dashboard' component={TeacherProfile} />
                 <PrivateRoute exact path='/teachform' component={TeachForm} />
+                <PrivateRoute exact path='/create-profile' component={CreateProfile} />
                 <Route exact path='/learn-by-category' component={LearnByCategory} />
               </Switch>
               <Alert />
