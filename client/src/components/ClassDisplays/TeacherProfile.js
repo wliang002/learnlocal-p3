@@ -6,6 +6,7 @@ import ClassCard from '../ClassCard/ClassCard'
 import { connect } from 'react-redux'
 import { getCurrentProfile } from '../../actions/profile'
 import Spinner from '../Landing/Spinner'
+import DashboardActions from './DashboardActions'
 
 const TeacherProfile = ({ getCurrentProfile, auth: { user }, profile: { profile, loading } }) => {
   useEffect(() => {
@@ -24,7 +25,9 @@ const TeacherProfile = ({ getCurrentProfile, auth: { user }, profile: { profile,
             <i className='fas fa-user' /> Welcome {user && user.name} !
           </p>
           {profile !== null ? (
-            <Fragment>has</Fragment>
+            <Fragment>
+              <DashboardActions />
+            </Fragment>
           ) : (
             <Fragment>
               <p>You have not yet setup a profile, please add some info</p>

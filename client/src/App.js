@@ -13,11 +13,13 @@ import Landing from './components/Landing/Landing'
 import Alert from './components/LoginRegister/Alert'
 import PrivateRoute from './components/routing/PrivateRoute'
 import CreateProfile from './components/TeachForm/CreateProfile'
+import EditProfile from './components/TeachForm/EditProfile'
 // Redux
 import { Provider } from 'react-redux'
 import store from './store'
 import { loadUser } from './actions/auth'
 import setAuthToken from './utils/setAuthToken'
+
 
 if (localStorage.token) {
   setAuthToken(localStorage.token)
@@ -43,6 +45,7 @@ const App = () => {
                 <PrivateRoute exact path='/dashboard' component={TeacherProfile} />
                 <PrivateRoute exact path='/teachform' component={TeachForm} />
                 <PrivateRoute exact path='/create-profile' component={CreateProfile} />
+                <PrivateRoute exact path='/edit-profile' component={EditProfile} />
                 <Route exact path='/learn-by-category' component={LearnByCategory} />
               </Switch>
               <Alert />
