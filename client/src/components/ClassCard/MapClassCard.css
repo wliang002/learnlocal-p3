@@ -1,25 +1,54 @@
-.MapClass-card #map {
-position: fixed;
-width:50%;
+.MapClassCardContainer {
+    display: block;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
 }
-#MapClassCard-features {
-width: 50%;
-margin-left: 50%;
-font-family: sans-serif;
-overflow-y: scroll;
-background-color: #fafafa;
+.MapClassCardContainer .the-map {
+    display: block;
+    width: 50%;
+    height: 500px;
+    z-index: -5;
+    margin: 0;
+    position: fixed;
 }
-.MapClass-card section {
-padding:  25px 50px;
+
+.MapClassCardContainer #features {
+    width: 50%;
+    margin-left: 50%;
+    font-family: sans-serif;
+    background-color: #fafafa;
+    }
+
+.MapClassCardContainer section {
+padding:  25px 25px;
 line-height: 25px;
 border-bottom: 1px solid #ddd;
 opacity: 0.25;
 font-size: 13px;
 }
-.MapClass-card section.active {
+
+.MapClassCardContainer section.active {
 opacity: 1;
 }
-.MapClass-card section:last-child {
+
+.MapClassCardContainer section:last-child {
 border-bottom: none;
 margin-bottom: 200px;
+}
+
+#features .class-card {
+    margin:0;
+}
+
+/* don't display directions with map view */
+.MapClassCardContainer .directions-btn{
+  display: none;
+}
+
+/* do not display map on mobile view */
+@media (max-width: 782px) {
+    .MapClassCardContainer {
+        display: none;
+    }
 }

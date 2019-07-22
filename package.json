@@ -11,10 +11,12 @@
     "express-validator": "^6.1.1",
     "gravatar": "^1.8.0",
     "jsonwebtoken": "^8.5.1",
+    "mapbox-gl": "^1.1.1",
     "mongoose": "^5.6.4",
     "react": "^16.8.6",
     "react-collapsible": "^2.6.0",
     "react-dom": "^16.8.6",
+    "react-mapbox-gl": "^4.5.1",
     "react-scripts": "^3.0.1"
   },
   "devDependencies": {},

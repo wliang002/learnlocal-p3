@@ -46,3 +46,10 @@ p {
     color: #CECDC9;
     font-family: 'Lustria', serif;
 }
+
+/* don't display regular cards on desktop view */
+@media (min-width: 782px) {
+    .mobileViewCards .class-card {
+        display:none;
+    }
+}
