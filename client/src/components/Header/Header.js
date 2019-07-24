@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import { Link } from 'react-router-dom'
-import './header.css'
+import './Header.css'
 import CollapsibleHeader from './CollapsibleHeader'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
@@ -97,6 +97,9 @@ const Header = ({ auth: { isAuthenticated, loading }, logout }) => {
             </a>
           </div>
         </div>
+        {!loading && (
+          <Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>
+        )}
 
       </div >
       {/* for narrower and mobile view */}
@@ -106,9 +109,7 @@ const Header = ({ auth: { isAuthenticated, loading }, logout }) => {
         </div>
         <CollapsibleHeader />
       </div >
-      {!loading && (
-        <Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>
-      )}
+
     </header >
   )
 }
