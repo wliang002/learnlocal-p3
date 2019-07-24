@@ -38,10 +38,6 @@ const TeacherProfile = ({ getCurrentProfile, auth: { user }, profile: { profile,
             </Fragment>
           )}
         </div>
-
-        {/* insert profile */}
-        {/* classes they're teaching */}
-        {/* <ClassCard /> */}
         <hr />
 
       </div>

@@ -119,7 +119,7 @@ class MapClassCard extends React.Component {
         />
         <div id='features'>
           <section id='wooden-heart-pendants' class='active'>
-            <ClassCard />
+            {/* <ClassCard /> */}
           </section>
           <section id='aldgate'>
             <h3>Aldgate Station</h3>
