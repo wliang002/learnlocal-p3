@@ -14,6 +14,7 @@ import Alert from './components/LoginRegister/Alert'
 import PrivateRoute from './components/routing/PrivateRoute'
 import CreateProfile from './components/TeachForm/CreateProfile'
 import EditProfile from './components/TeachForm/EditProfile'
+import Profiles from './components/TeachersDisplays/Profiles'
 // Redux
 import { Provider } from 'react-redux'
 import store from './store'
@@ -42,6 +43,7 @@ const App = () => {
                 <Route exact path='/' component={Landing} />
                 <Route exact path='/register' component={Register} />
                 <Route exact path='/login' component={Login} />
+                <Route exact path='/profiles' component={Profiles} />
                 <PrivateRoute exact path='/dashboard' component={TeacherProfile} />
                 <PrivateRoute exact path='/add-classes' component={TeachForm} />
                 <PrivateRoute exact path='/create-profile' component={CreateProfile} />

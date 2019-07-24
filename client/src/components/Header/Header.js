@@ -10,6 +10,9 @@ const Header = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (
     <div style={{ float: 'right' }}>
       <div className='LogInBtns'>
+        <Link to='/profiles' className='btn btn-success'>
+          <span className='hide-sm'>Teachers</span>
+        </Link>
         <Link to='/dashboard' className='btn btn-success'>
           <i className='fas fa-user' />{' '}
           <span className='hide-sm'>Dashboard</span>
@@ -25,6 +28,9 @@ const Header = ({ auth: { isAuthenticated, loading }, logout }) => {
   const guestLinks = (
     <div style={{ float: 'right' }}>
       <div className='LogInBtns'>
+        <Link to='/profiles' className='btn btn-success'>
+          <span className='hide-sm'>Teachers</span>
+        </Link>
         <Link to='/login' className='btn btn-success'>
           Login
         </Link>
