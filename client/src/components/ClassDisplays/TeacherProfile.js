@@ -27,6 +27,7 @@ const TeacherProfile = ({ getCurrentProfile, auth: { user }, profile: { profile,
           {profile !== null ? (
             <Fragment>
               <DashboardActions />
+            
               <ClassCard event={profile.events} />
             </Fragment>
           ) : (
