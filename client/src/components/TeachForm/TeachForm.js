@@ -79,11 +79,12 @@ const TeachForm = ({ addClasses, history }) => {
               value={eventType}
               onChange={e => onChange(e)}
             >
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
+              <option value='0'>* Select a Category</option>
+              <option value='Art'>Art</option>
+              <option value='Craft'>Craft</option>
+              <option value='Movement'>Movement</option>
+              <option value='Social'>Social</option>
+              <option value='Other'>Other</option>
             </select>
           </div>
 

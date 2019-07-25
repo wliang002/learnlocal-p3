@@ -36,8 +36,6 @@ const Profile = ({
               </Link>
             )}
             <div className='profile-grid my-1'>
-              {/* <ProfileTop profile={profile} />
-            <ProfileAbout profile={profile} /> */}
               <div className='profile-exp bg-white p-2'>
                 <h2 className='text-primary'>Classes</h2>
                 {profile.events.length > 0 ? (

@@ -12,10 +12,13 @@ const ProfileClasses = ({
     eventTime,
     description }
 }) => (
-  <div>
+  <div className='class-card'>
     <h3 className='text-dark'>{eventName}</h3>
     <p>
       <strong>Teacher: </strong> {teachersName}
+    </p>
+    <p>
+      <strong>Category:</strong> {eventType}
     </p>
     <p>
       <Moment format='YYYY/MM/DD'>{moment.utc(eventDate)}</Moment> -{' '}
@@ -29,6 +32,9 @@ const ProfileClasses = ({
     <p>
       <strong>Description: </strong> {description}
     </p>
+    <button className='directions-btn' > <a href={`https://www.google.com/maps/dir/?api=1&destination=${location.replace(/ /g, '+')}`} target='_blank'>
+      Get directions</a>
+    </button >
   </div>
 )
 
