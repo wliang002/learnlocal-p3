@@ -1,10 +1,10 @@
 import React, { Fragment, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { getProfiles } from '../../actions/profile'
-import AllClasses from './AllClasses'
+import { getProfiles } from '../../../actions/profile'
+import ArtEvents from './ArtEvents'
 
-const AllEvents = ({ getProfiles, profile: { profiles, loading } }) => {
+const AllArt = ({ getProfiles, profile: { profiles, loading } }) => {
   useEffect(() => {
     getProfiles()
   }, [getProfiles])
@@ -20,7 +20,7 @@ const AllEvents = ({ getProfiles, profile: { profiles, loading } }) => {
         <div className='profiles'>
           {profiles.length > 0 ? (
             profiles.map(profile => (
-              <AllClasses key={profile._id} profile={profile} />
+              <ArtEvents key={profile._id} profile={profile} />
             ))
           ) : (
             <h4>No profiles found...</h4>
@@ -31,7 +31,7 @@ const AllEvents = ({ getProfiles, profile: { profiles, loading } }) => {
 
   )
 }
-AllEvents.propTypes = {
+AllArt.propTypes = {
   getProfiles: PropTypes.func.isRequired,
   profile: PropTypes.object.isRequired
 }
@@ -41,4 +41,4 @@ const mapStateToProps = state => ({
 export default connect(
   mapStateToProps,
   { getProfiles }
-)(AllEvents)
+)(AllArt)

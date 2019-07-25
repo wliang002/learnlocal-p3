@@ -17,6 +17,11 @@ import EditProfile from './components/TeachForm/EditProfile'
 import Profiles from './components/TeachersDisplays/Profiles'
 import Profile from './components/StudentView/Profile'
 import AllEvents from './components/StudentView/AllEvents'
+import AllCraft from './components/StudentView/ByCategory/AllCraft'
+import AllArt from './components/StudentView/ByCategory/AllArt'
+import AllMovement from './components/StudentView/ByCategory/AllMovement'
+import AllSocial from './components/StudentView/ByCategory/AllSocial'
+import AllOther from './components/StudentView/ByCategory/AllOther'
 // Redux
 import { Provider } from 'react-redux'
 import store from './store'
@@ -48,7 +53,11 @@ const App = () => {
                 <Route exact path='/profiles' component={Profiles} />
                 <Route exact path='/classes/:id' component={Profile} />
                 <Route exact path='/allclasses' component={AllEvents} />
-                
+                <Route exact path='/craft' component={AllCraft} />
+                <Route exact path='/art' component={AllArt} />
+                <Route exact path='/movement' component={AllMovement} />
+                <Route exact path='/social' component={AllSocial} />
+                <Route exact path='/other' component={AllOther} />
                 <PrivateRoute exact path='/dashboard' component={TeacherProfile} />
                 <PrivateRoute exact path='/add-classes' component={TeachForm} />
                 <PrivateRoute exact path='/create-profile' component={CreateProfile} />
