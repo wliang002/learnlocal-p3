@@ -15,6 +15,7 @@ import PrivateRoute from './components/routing/PrivateRoute'
 import CreateProfile from './components/TeachForm/CreateProfile'
 import EditProfile from './components/TeachForm/EditProfile'
 import Profiles from './components/TeachersDisplays/Profiles'
+import Events from './components/StudentView/Events'
 // Redux
 import { Provider } from 'react-redux'
 import store from './store'
@@ -44,6 +45,7 @@ const App = () => {
                 <Route exact path='/register' component={Register} />
                 <Route exact path='/login' component={Login} />
                 <Route exact path='/profiles' component={Profiles} />
+                <Route exact path='/classes/:id' component={Events} />
                 <PrivateRoute exact path='/dashboard' component={TeacherProfile} />
                 <PrivateRoute exact path='/add-classes' component={TeachForm} />
                 <PrivateRoute exact path='/create-profile' component={CreateProfile} />
