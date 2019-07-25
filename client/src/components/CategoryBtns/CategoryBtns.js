@@ -6,14 +6,17 @@ const CategoryBtns = props => (
   <div className='categoryBtnContainer'>
     <p>Search for a class happening in your neighborhood.</p>
     <div className='buttons'>
-      <Link to='' className='btn btn-success'>
-                dummy category 1
+      <Link to='/art' className='btn btn-success'>
+                Art
       </Link>
-      <Link to='' className='btn btn-success'>
-                dummy category 2
+      <Link to='/craft' className='btn btn-success'>
+                Craft
       </Link>
-      <Link to='' className='btn btn-success'>
-                dummy category 3
+      <Link to='/movement' className='btn btn-success'>
+                Movement
+      </Link>
+      <Link to='/social' className='btn btn-success'>
+                Social
       </Link>
     </div>
   </div>

@@ -63,18 +63,21 @@ const Header = ({ auth: { isAuthenticated, loading }, logout }) => {
           </a>
           <div className='dropdown-content'>
             <Link to='/learn-by-category' className='dropdown-item'>Category placeholder</Link>
-            <a className='dropdown-item' href='#'>
-              Creative
-            </a>
-            <a className='dropdown-item' href='#'>
-              Business
-            </a>
-            <a className='dropdown-item' href='#'>
-              Lifestyle
-            </a>
-            <a className='dropdown-item' href='#'>
+            <Link to='/art' className='dropdown-item'>
+              Art
+            </Link>
+            <Link to='/craft' className='dropdown-item'>
+              Craft
+            </Link>
+            <Link to='/movement' className='dropdown-item'>
+              Movement
+            </Link>
+            <Link to='/social' className='dropdown-item'>
+              Social
+            </Link>
+            <Link to='/other' className='dropdown-item'>
               Other
-            </a>
+            </Link>
           </div>
         </div>
         {/* teachers */}
