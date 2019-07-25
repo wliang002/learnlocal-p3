@@ -14,6 +14,9 @@ const ClassCard = ({ event, deleteEvent }) => {
         <strong>Taught by:</strong> {eve.teachersName}
       </p>
       <p>
+        <strong>Category:</strong> {eve.eventType}
+      </p>
+      <p>
         <strong>Location:</strong> {eve.location}
       </p>
       {/* need to code it to read the address -- https://www.google.com/maps/dir/?api=1&destination= PARAMETERS */ }
@@ -22,7 +25,7 @@ const ClassCard = ({ event, deleteEvent }) => {
       Get directions</a>
       </button >
       <p>
-        <strong>Date:</strong> {eve.eventDate}
+        <Moment format='YYYY/MM/DD'>{moment.utc(eve.eventDate)}</Moment> -{' '}
       </p>
       <p>
         <strong>Time:</strong> {eve.eventTime}
