@@ -6,7 +6,6 @@ import ClassCard from './ClassCard'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { getProfiles } from '../../actions/profile'
-import AllClasses from '../StudentView/AllClasses'
 
 const Map = ReactMapboxGl({
   accessToken: 'pk.eyJ1IjoibGVhcm5sb2NhbCIsImEiOiJjanlkZ2dram4wcHY1M2ptZm8wNGZrNzVkIn0.SnFaLsmeVQkX5XSj8-pp-A'
