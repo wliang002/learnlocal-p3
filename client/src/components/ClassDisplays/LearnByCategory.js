@@ -3,6 +3,7 @@ import './ClassDisplays.css'
 import { Link, Redirect } from 'react-router-dom'
 import ClassCard from '../ClassCard/ClassCard'
 import MapClassCard from '../ClassCard/MapClassCard'
+import MapBox from '../ClassCard/MapBox'
 
 const LearnByCategory = (props) => {
   return [
@@ -16,7 +17,7 @@ const LearnByCategory = (props) => {
       {/* <div className='mobileViewCards'>
         <ClassCard />
       </div> */}
-      <MapClassCard />
+      <MapBox />
       <hr />
 
     </div>
