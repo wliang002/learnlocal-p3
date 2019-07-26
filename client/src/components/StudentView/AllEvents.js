@@ -2,7 +2,7 @@ import React, { Fragment, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { getProfiles } from '../../actions/profile'
-import AllClasses from './AllClasses'
+import ClassCard from '../ClassCard/ClassCard'
 
 const AllEvents = ({ getProfiles, profile: { profiles, loading } }) => {
   useEffect(() => {
@@ -20,7 +20,7 @@ const AllEvents = ({ getProfiles, profile: { profiles, loading } }) => {
         <div className='profiles'>
           {profiles.length > 0 ? (
             profiles.map(profile => (
-              <AllClasses key={profile._id} profile={profile} />
+              <ClassCard event={profile.events} />
             ))
           ) : (
             <h4>No profiles found...</h4>

@@ -24,7 +24,7 @@ const ClassCard = ({ event, deleteEvent }) => {
       Get directions</a>
       </button >
       <p>
-        <Moment format='YYYY/MM/DD'>{moment.utc(eve.eventDate)}</Moment> -{' '}
+        <strong>Date:</strong> <Moment format='YYYY/MM/DD'>{moment.utc(eve.eventDate)}</Moment>
       </p>
       <p>
         <strong>Time:</strong> {eve.eventTime}
@@ -38,9 +38,9 @@ const ClassCard = ({ event, deleteEvent }) => {
   ))
 
   return (
-   
-      <div className='class-body'>{events}</div>
-   
+
+    <div className='class-body'>{events}</div>
+
   )
 }
 
