@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import Spinner from '../Landing/Spinner'
 import { getProfileById } from '../../actions/profile'
-import ProfileClasses from './ProfileClasses'
+import ClassCard from '../ClassCard/ClassCard'
 
 const Profile = ({
   getProfileById,
@@ -21,37 +21,26 @@ const Profile = ({
     <Fragment>
       <div className='container'>
         {profile === null || loading ? (
-            <Spinner />
+          <Spinner />
         ) : (
           <Fragment>
 
             <Link to='/profiles' className='btn btn-light'>
-          Back To Teachers
+                Back To Teachers
             </Link>
             {auth.isAuthenticated &&
-          auth.loading === false &&
-          auth.user._id === profile.user._id && (
-          <Link to='/edit-profile' className='btn btn-dark'>
-              Edit Profile
+                auth.loading === false &&
+                auth.user._id === profile.user._id && (
+              <Link to='/edit-profile' className='btn btn-dark'>
+                    Edit Profile
               </Link>
             )}
-            <div className='profile-grid my-1'>
-              <div className='profile-exp bg-white p-2'>
-                <h2 className='text-primary'>Classes</h2>
-                {profile.events.length > 0 ? (
-                  <Fragment>
-                    {profile.events.map(events => (
-                      <ProfileClasses
-                        key={events._id}
-                        events={events}
-                      />
-                    ))}
-                  </Fragment>
-                ) : (
-                  <h4>No class available for this teacher </h4>
-                )}
-              </div>
-            </div>
+            {profile.events.length > 0 ? (
+              <ClassCard event={profile.events} />
+            ) : (
+              <h4>No class available for this teacher </h4>
+            )}
+
           </Fragment>
         )}
       </div>
