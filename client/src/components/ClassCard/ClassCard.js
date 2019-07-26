@@ -19,8 +19,7 @@ const ClassCard = ({ event, deleteEvent }) => {
       <p>
         <strong>Location:</strong> {eve.location}
       </p>
-      {/* need to code it to read the address -- https://www.google.com/maps/dir/?api=1&destination= PARAMETERS */ }
-      {/* https://www.google.com/maps/dir/?api=1&destination= */}
+
       <button className='directions-btn' > <a href={`https://www.google.com/maps/dir/?api=1&destination=${eve.location.replace(/ /g, '+')}`} target='_blank'>
       Get directions</a>
       </button >
