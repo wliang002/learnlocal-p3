@@ -89,13 +89,13 @@ const MapBox = ({ getProfiles, profile: { profiles, loading } }) => {
           <h3>Aldgate Station</h3>
           <p>Arthur Cadogan West was found dead, head crushed in on train tracks at Aldgate Station at 6AM Tuesday morning. West worked at Woolwich Arsenal on the Bruce-Partington submarine, a secret military project. Plans for the submarine had been stolen and seven of the ten missing papers were found in West's possession. Mycroft implores Sherlock to take the case and recover the three missing papers.</p>
         </section>
-        <section id='charing-cross'>
-          <h3>Charing Cross Hotel</h3>
-          <p>Walter writes to Oberstein and convinces him to meet in the smoking room of the Charing Cross Hotel where he promises additional plans for the submarine in exchange for money. The plan works and Holmes and Watson catch both criminals.</p>
-          <small id='citation'>
-            Adapted from <a href='http://www.gutenberg.org/files/2346/2346-h/2346-h.htm'>Project Gutenberg</a>
-          </small>
-        </section>
+        {profiles.length > 0 ? (
+            profiles.map(profile => (
+              <ClassCard event={profile.events} />
+            ))
+          ) : (
+            <h4>No profiles found...</h4>
+          )}
       </div>
     </div>
   )
