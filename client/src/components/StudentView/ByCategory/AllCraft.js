@@ -23,7 +23,7 @@ const AllCraft = ({ getProfiles, profile: { profiles, loading } }) => {
         <div className='profiles'>
           {profiles.length > 0 ? (
             profiles.map(profile => (
-              <CraftEvents key={profile._id} profile={profile} />
+              <CraftEvents key={profile._id} profile={profile} category={'craft '} />
             ))
           ) : (
             <p className='sorry'>We&rsquo;re sorry, we did not find any classes in that category...</p>

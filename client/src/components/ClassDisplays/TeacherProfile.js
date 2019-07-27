@@ -21,7 +21,7 @@ const TeacherProfile = ({ getCurrentProfile, auth: { user }, profile: { profile,
         <h1>{user && user.name}&rsquo;s Dashboard</h1>
         <hr />
         <div className='events-container'>
-          <h2><i className='fas fa-user' />&nbsp;Welcome <span class='selectedCategory'>{user && user.name}</span>!</h2>
+          <h2><i className='fas fa-feather-alt' />&nbsp;Welcome <span class='selectedCategory'>{user && user.name}</span>!</h2>
           {profile !== null ? (
             <Fragment>
               <DashboardActions />

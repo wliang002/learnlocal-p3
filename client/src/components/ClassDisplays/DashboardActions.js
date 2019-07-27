@@ -6,10 +6,10 @@ const DashboardActions = () => {
   return (
     <div className='dash-buttons'>
       <Link to='/edit-profile' className='btn btn-light'>
-        <i className='fas fa-user-circle' />&nbsp;Edit Profile
+        <i className='fa fa-address-card' />&nbsp;Edit Profile
       </Link>
       <Link to='/add-classes' className='btn btn-light'>
-        <i className='fab fa-black-tie' />&nbsp;Add Classes
+        <i className='fas fa-book' />&nbsp;Add Classes
       </Link>
     </div>
   )
