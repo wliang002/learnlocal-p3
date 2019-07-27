@@ -16,9 +16,6 @@ const Landing = ({ isAuthenticated }) => {
         <h1>Learn Local</h1>
         <hr />
         <h2>Building&nbsp;community by learning from one&nbsp;another.</h2>
-        <Link to='/allclasses' className='btn btn-success'>
-          <span className='hide-sm'>All Classes</span>
-        </Link>
         <div className='appDescriptionContainer'>
           <p><strong>Learn Local</strong> is a community building skillshare platform that connects passionate
                 local artisans with one another.

@@ -1,4 +1,4 @@
-.teacherProfile, .LearnByCategory {
+.teacherProfile, .LearnByCategoryContainer {
     padding-top: 70px;
 }
 
@@ -9,7 +9,34 @@ hr {
     border-top: 1px solid #eee;
 }
 
+.LearnByCategoryContainer .sorry, .AppDescriptionContainer p {
+    text-align: center;
+}
+
+.selectedCategory {
+    color: #E4B320;
+    font-family: 'Fredericka the Great', cursive;
+}
+
 .events-container {
     width: 80%;
     margin: auto;
+}
+
+/* dashboard actions */
+.dash-buttons {
+    text-align: center;
+}
+
+.dash-buttons .btn {
+    background-color: #E4B320;
+    color: white;
+    font-size: 17px;
+    font-family: 'Fredericka the Great', cursive;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
 }

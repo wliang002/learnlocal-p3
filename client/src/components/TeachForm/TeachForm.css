@@ -2,6 +2,67 @@
     padding-top: 70px;
     width: 50%;
 }
+.teachersProfileContainer {
+  padding-top: 70px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.teachersProfileContainer .form .form-group .form-text {
+  color: #CECDC9;
+  font-family: 'Lustria', serif;
+}
+
+.teachersProfileContainer .socialLinks .btn {
+  background-color: #E4B320;
+  color: white;
+  font-size: 17px;
+  font-family: 'Fredericka the Great', cursive;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-bottom: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+.teachersProfileContainer .submit-btn{
+  background-color: #DA7A22;
+  color: white;
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 1.5em;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-bottom: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 10px;
+  border: none;
+}
+
+.teachersProfileContainer .back-btn{
+  background-color: #DA7A22;
+  color: white;
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 1.5em;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-bottom: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 10px;
+  border: none;
+}
+
+.teachersProfileContainer .socialOptional {
+  font-family: 'Lustria', serif;
+  font-size: 17px;
+}
+
 .teachForm {
   margin: 20px;
   padding: 20px;
@@ -29,3 +90,4 @@ h2 {
    font-family: 'Great Vibes', cursive;
    font-size: 40px;
 }
+
