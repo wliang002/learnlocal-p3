@@ -45,6 +45,7 @@ router.post(
 
     const {
       location,
+      titles,
       bio,
       skills,
       facebook,
@@ -57,6 +58,7 @@ router.post(
     profileFields.user = req.user.id
     // if field is not empty, insert in profile obj
     if (location) profileFields.location = location
+    if (titles) profileFields.titles = titles
     if (bio) profileFields.bio = bio
     // turn string into an array
     if (skills) {
