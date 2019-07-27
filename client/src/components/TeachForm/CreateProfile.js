@@ -9,6 +9,7 @@ const CreateProfile = ({ createProfile,
   history }) => {
   const [formData, setFormData] = useState({
     bio: '',
+    titles: '',
     location: '',
     skills: '',
     facebook: '',
@@ -18,6 +19,7 @@ const CreateProfile = ({ createProfile,
   const [displaySocialInputs, toggleSocialInputs] = useState(false)
   const {
     bio,
+    titles,
     location,
     skills,
     facebook,
@@ -45,6 +47,15 @@ const CreateProfile = ({ createProfile,
               onChange={e => onChange(e)}
             />
             <small className='form-text'>What would you like us to know about you?</small>
+          </div>
+          <div className='form-group'>
+            <textarea
+              placeholder='Titles'
+              name='titles'
+              value={titles}
+              onChange={e => onChange(e)}
+            />
+            <small className='form-text'>What do you call yourself?</small>
           </div>
           <div className='form-group'>
             <input

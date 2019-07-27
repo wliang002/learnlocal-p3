@@ -10,6 +10,7 @@ const EditProfile = ({ profile: { profile, loading },
   history, getCurrentProfile }) => {
   const [formData, setFormData] = useState({
     bio: '',
+    titles: '',
     location: '',
     skills: '',
     facebook: '',
@@ -23,6 +24,7 @@ const EditProfile = ({ profile: { profile, loading },
 
     setFormData({
       bio: loading || !profile.bio ? '' : profile.bio,
+      titles: loading || !profile.titles ? '' : profile.titles,
       location: loading || !profile.location ? '' : profile.location,
       skills: loading || !profile.skills ? '' : profile.skills.join(','),
       twitter: loading || !profile.social ? '' : profile.social.twitter,
@@ -33,6 +35,7 @@ const EditProfile = ({ profile: { profile, loading },
 
   const {
     bio,
+    titles,
     location,
     skills,
     facebook,
@@ -60,6 +63,15 @@ const EditProfile = ({ profile: { profile, loading },
               onChange={e => onChange(e)}
             />
             <small className='form-text'>What would you like us to know about you?</small>
+          </div>
+          <div className='form-group'>
+            <textarea
+              placeholder='Titles'
+              name='titles'
+              value={titles}
+              onChange={e => onChange(e)}
+            />
+            <small className='form-text'>What do you call yourself?</small>
           </div>
           <div className='form-group'>
             <input
