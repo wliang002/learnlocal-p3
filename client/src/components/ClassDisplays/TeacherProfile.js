@@ -18,16 +18,17 @@ const TeacherProfile = ({ getCurrentProfile, auth: { user }, profile: { profile,
   ) : (
     <Fragment>
       <div className='teacherProfile'>
-        <h1>Dashboard</h1>
+        <h1>{user && user.name}&rsquo;s Dashboard</h1>
         <hr />
         <div className='events-container'>
-          <p className='lead'>
-            <i className='fas fa-user' /> Welcome {user && user.name} !
-          </p>
+          <h2><i className='fas fa-user' />&nbsp;Welcome <span class='selectedCategory'>{user && user.name}</span>!</h2>
           {profile !== null ? (
             <Fragment>
               <DashboardActions />
-            
+              <hr />
+              <div className='AppDescriptionContainer'>
+                <p>These are the classes you are teaching:</p>
+              </div>
               <ClassCard event={profile.events} />
             </Fragment>
           ) : (

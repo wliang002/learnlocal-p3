@@ -29,8 +29,7 @@ const Login = ({ login, isAuthenticated }) => {
     <div className='wrapper'>
       <h1 className='sign-in'>Login</h1>
       <p className='lead'>
-        <i className='fas fa-user' /> Login To Your Account
-      </p>
+        <i className='fas fa-user' /> Login to your account</p>
       <form className='form' onSubmit={e => onSubmit(e)}>
         <div className='form-group'>
           <input
@@ -55,7 +54,7 @@ const Login = ({ login, isAuthenticated }) => {
         {/* <div id='validator' className='alert alert-danger' style={{ display: 'none' }}>Invalid credentials</div> */}
         <input type='submit' className='btn btn-success log' value='Login' />
       </form>
-      <p className='my-1'>
+      <p className='haveAcctQ'>
         Don't have an account? <Link to='/register'>Create One!</Link>
       </p>
     </div>

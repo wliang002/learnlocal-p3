@@ -1,4 +1,4 @@
-import React, { useEffect, useState, Fragment } from 'react'
+import React, { useState, Fragment } from 'react'
 import './TeachForm.css'
 import { Link, withRouter, Redirect } from 'react-router-dom'
 import PropTypes from 'prop-types'
@@ -34,17 +34,17 @@ const CreateProfile = ({ createProfile,
 
   return (
     <Fragment>
-      <div className='container'>
-        <h1 className='large text-primary'>Create Your Profile</h1>
+      <div className='teachersProfileContainer'>
+        <h1>Create Your Profile</h1>
         <form className='form' onSubmit={e => onSubmit(e)}>
           <div className='form-group'>
             <textarea
-              placeholder='A short bio of yourself'
+              placeholder='Bio'
               name='bio'
               value={bio}
               onChange={e => onChange(e)}
             />
-            <small className='form-text'>Tell us a little about yourself</small>
+            <small className='form-text'>What would you like us to know about you?</small>
           </div>
           <div className='form-group'>
             <input
@@ -54,6 +54,7 @@ const CreateProfile = ({ createProfile,
               value={location}
               onChange={e => onChange(e)}
             />
+            <small className='form-text'>Where are you located?</small>
           </div>
           <div className='form-group'>
             <input
@@ -63,8 +64,9 @@ const CreateProfile = ({ createProfile,
               value={skills}
               onChange={e => onChange(e)}
             />
+            <small className='form-text'>What skills do you have?</small>
           </div>
-          <div className='my-2'>
+          <div className='socialLinks'>
             <button
               onClick={() => toggleSocialInputs(!displaySocialInputs)}
               type='button'
@@ -72,7 +74,7 @@ const CreateProfile = ({ createProfile,
             >
               Add Social Network Links
             </button>
-            <span>Optional</span>
+            <span className='socialOptional'>(Optional)</span>
           </div>
           {displaySocialInputs && (
             <Fragment>
@@ -108,14 +110,13 @@ const CreateProfile = ({ createProfile,
               </div>
             </Fragment>
           )}
-          <input type='submit' className='btn btn-primary my-1' />
-          <Link className='btn btn-light my-1' to='/dashboard'>
+          <input type='submit' className='btn btn-primary submit-btn' />
+          <Link className='btn btn-light back-btn' to='/dashboard'>
             Go Back
           </Link>
         </form>
       </div>
     </Fragment>
-
   )
 }
 

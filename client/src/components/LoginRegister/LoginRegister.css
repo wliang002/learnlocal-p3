@@ -15,11 +15,16 @@
   padding-bottom: 20px;
 }
 
-.my-1 {
-    padding-top: 10px;
+.haveAcctQ {
+  padding-top: 10px;
 }
 
-.log, .reg{
+.haveAcctQ a {
+  color: #E4B320;
+}
+
+
+.log, .create-btn{
   background-color: #E4B320;
   color: white;
   font-size:17px;

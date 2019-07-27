@@ -260,11 +260,6 @@ img {
   border: 1px solid #ccc;
 }
 
-.form input[type='submit'],
-button {
-  font: inherit;
-}
-
 .form .social-input {
   display: flex;
 }
@@ -480,10 +475,6 @@ button {
 
 /* Mobile Styles */
 @media (max-width: 700px) {
-  .container {
-    margin-top: 8rem;
-  }
-
   .hide-sm {
     display: none;
   }
