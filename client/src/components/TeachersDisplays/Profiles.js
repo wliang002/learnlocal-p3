@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import ProfileItem from './ProfileItem'
 import { getProfiles } from '../../actions/profile'
+import './Profiles.css'
 
 const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
   useEffect(() => {
@@ -11,11 +12,11 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
   return (
 
     <Fragment>
-      <div className='container'>
+      <div className='listOfTeachersContainer'>
 
-        <h1 className='large text-primary'>Our Teachers</h1>
+        <h1><i className='fab fa-earlybirds' />&nbsp;Our Teachers</h1>
         <p className='lead'>
-          <i className='fas fa-cat' /> Browse and connect with
+           Browse and connect with
             teachers
         </p>
         <div className='profiles'>
@@ -24,7 +25,7 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
               <ProfileItem key={profile._id} profile={profile} />
             ))
           ) : (
-            <h4>No profiles found...</h4>
+            <p>We're sorry, we did not find any profiles...</p>
           )}
         </div>
       </div>
