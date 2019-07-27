@@ -7,10 +7,11 @@ import moment from 'moment'
 const CraftEvents = ({
   profile: {
     user: { name, avatar },
-    events
+    events,
+    category
   }
 }) => {
-  const targets = events.filter(e => e.eventType === 'Craft')
+  const targets = events.filter(e => e.eventType === category)
   return (
     <div>
       {targets.map(e => (

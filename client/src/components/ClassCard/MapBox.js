@@ -6,6 +6,11 @@ import ClassCard from './ClassCard'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { getProfiles } from '../../actions/profile'
+import Geocode from 'react-geocode'
+
+Geocode.setApiKey('AIzaSyBKMivIunMptvLe8cBRYFsGZ3PBZKPp3yU')
+
+Geocode.enableDebug()
 
 const Map = ReactMapboxGl({
   accessToken: 'pk.eyJ1IjoibGVhcm5sb2NhbCIsImEiOiJjanlkZ2dram4wcHY1M2ptZm8wNGZrNzVkIn0.SnFaLsmeVQkX5XSj8-pp-A'
@@ -71,6 +76,20 @@ const MapBox = ({ getProfiles, profile: { profiles, loading } }) => {
       window.removeEventListener('scroll', handleScroll)
     }
   }, [getProfiles])
+
+  profiles.map(prof => {
+    Geocode.fromAddress("san francisco, CA").then(
+      response => {
+        const { lat, lng } = response.results[0].geometry.location
+        console.log('')
+        console.log(lat, lng)
+      },
+      error => {
+        console.error(error)
+      }
+    )
+  })
+  
   return (
     <div className='MapClassCardContainer'>
       <Map
@@ -90,12 +109,12 @@ const MapBox = ({ getProfiles, profile: { profiles, loading } }) => {
           <p>Arthur Cadogan West was found dead, head crushed in on train tracks at Aldgate Station at 6AM Tuesday morning. West worked at Woolwich Arsenal on the Bruce-Partington submarine, a secret military project. Plans for the submarine had been stolen and seven of the ten missing papers were found in West's possession. Mycroft implores Sherlock to take the case and recover the three missing papers.</p>
         </section>
         {profiles.length > 0 ? (
-            profiles.map(profile => (
-              <ClassCard event={profile.events} />
-            ))
-          ) : (
-            <h4>No profiles found...</h4>
-          )}
+          profiles.map(profile => (
+            <ClassCard event={profile.events} />
+          ))
+        ) : (
+          <h4>No profiles found...</h4>
+        )}
       </div>
     </div>
   )
