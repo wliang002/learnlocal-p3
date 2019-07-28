@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import './ClassDisplays.css'
-import { Link, Redirect } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import ClassCard from '../ClassCard/ClassCard'
 import { connect } from 'react-redux'
 import { getCurrentProfile } from '../../actions/profile'
@@ -12,7 +12,7 @@ import ProfileItem from '../TeachersDisplays/ProfileItem'
 const TeacherProfile = ({ getCurrentProfile, auth: { user }, profile: { profile, loading } }) => {
   useEffect(() => {
     getCurrentProfile()
-  }, [])
+  }, [getCurrentProfile])
 
   return loading && profile === null ? (
     <Spinner />
@@ -22,10 +22,12 @@ const TeacherProfile = ({ getCurrentProfile, auth: { user }, profile: { profile,
         <h1>{user && user.name}&rsquo;s Dashboard</h1>
         <hr />
         <div className='events-container'>
-          <h2><i className='fas fa-feather-alt' />&nbsp;Welcome <span class='selectedCategory'>{user && user.name}</span>!</h2>
-          <ProfileItem key={profile._id} profile={profile} />
+          <h2>
+            <i className='fas fa-feather-alt' />&nbsp;Welcome <span class='selectedCategory'>{user && user.name}</span>!
+          </h2>
           {profile !== null ? (
             <Fragment>
+              {/* <ProfileItem key={profile._id} profile={profile} /> */}
               <DashboardActions />
               <hr />
               <div className='AppDescriptionContainer'>

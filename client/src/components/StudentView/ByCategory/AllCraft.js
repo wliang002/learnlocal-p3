@@ -2,8 +2,8 @@ import React, { Fragment, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { getProfiles } from '../../../actions/profile'
-import CraftEvents from './CraftEvents'
 import '../../ClassDisplays/ClassDisplays.css'
+import ClassCard from '../../ClassCard/ClassCard'
 
 const AllCraft = ({ getProfiles, profile: { profiles, loading } }) => {
   useEffect(() => {
@@ -23,7 +23,7 @@ const AllCraft = ({ getProfiles, profile: { profiles, loading } }) => {
         <div className='profiles'>
           {profiles.length > 0 ? (
             profiles.map(profile => (
-              <CraftEvents key={profile._id} profile={profile} category={'craft '} />
+              <ClassCard event={profile.events.filter(e => e.eventType === 'Craft')} />
             ))
           ) : (
             <p className='sorry'>We&rsquo;re sorry, we did not find any classes in that category...</p>

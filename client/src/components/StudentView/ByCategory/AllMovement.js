@@ -2,8 +2,8 @@ import React, { Fragment, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { getProfiles } from '../../../actions/profile'
-import MovementEvents from './MovementEvents'
 import '../../ClassDisplays/ClassDisplays.css'
+import ClassCard from '../../ClassCard/ClassCard'
 
 const AllMovement = ({ getProfiles, profile: { profiles, loading } }) => {
   useEffect(() => {
@@ -23,7 +23,7 @@ const AllMovement = ({ getProfiles, profile: { profiles, loading } }) => {
         <div className='profiles'>
           {profiles.length > 0 ? (
             profiles.map(profile => (
-              <MovementEvents key={profile._id} profile={profile} />
+              <ClassCard event={profile.events.filter(e => e.eventType === 'Movement')} />
             ))
           ) : (
             <p className='sorry'>We&rsquo;re sorry, we did not find any classes in that category...</p>
