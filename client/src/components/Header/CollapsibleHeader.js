@@ -75,51 +75,6 @@ const CollapsibleHeader = ({ auth: { isAuthenticated, loading }, logout }) => {
   )
 }
 
-// const CollapsibleHeader = () => {
-//   return [
-//     <div className='collapsibleHeader'>
-//       <Collapsible trigger='☰'>
-//         <div className='collapsibleCategories'>
-//           <Collapsible trigger='Browse Classes'>
-//             <Link to='/learn-by-category' className='dropdown-item'>Category placeholder</Link>
-//             <Link to='/art' className='dropdown-item'>
-//               Art
-//             </Link>
-//             <Link to='/craft' className='dropdown-item'>
-//               Craft
-//             </Link>
-//             <Link to='/movement' className='dropdown-item'>
-//               Movement
-//             </Link>
-//             <Link to='/social' className='dropdown-item'>
-//               Social
-//             </Link>
-//             <Link to='/other' className='dropdown-item'>
-//               Other
-//             </Link>
-//           </Collapsible>
-//         </div>
-//         <div className='collapsibleTeachersBtn '>
-//           <p>
-//             <Link to='/profiles' className='dropdown-item'>
-//             Teacher Directory
-//             </Link>
-//           </p>
-//         </div>
-//         <div className='collapsibleLogInBtns'>
-//           <Link to='/login'className='dropdown-item'>
-//             Log In
-//           </Link>
-//         </div>
-//         <div className='collapsibleLogInBtns'>
-//           <Link to='/register' className='dropdown-item'>
-//             Create an Account
-//           </Link>
-//         </div>
-//       </Collapsible>
-//     </div>
-//   ]
-// }
 CollapsibleHeader.propTypes = {
   logout: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired
