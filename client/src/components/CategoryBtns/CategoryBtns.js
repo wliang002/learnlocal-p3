@@ -9,8 +9,20 @@ const CategoryBtns = props => (
       <Link to='/allclasses' className='btn btn-success'>
         All Classes
       </Link>
-      <Link to='/art' className='btn btn-success'>
-        Art
+      <Link to='/cooking' className='btn btn-success'>
+        Cooking
+      </Link>
+      <Link to='/garden' className='btn btn-success'>
+        Garden
+      </Link>
+      <Link to='/wellness' className='btn btn-success'>
+        Wellness
+      </Link>
+      <Link to='/technology' className='btn btn-success'>
+        Technology
+      </Link>
+      <Link to='/creative' className='btn btn-success'>
+        Creative
       </Link>
       <Link to='/craft' className='btn btn-success'>
         Craft
@@ -21,8 +33,8 @@ const CategoryBtns = props => (
       <Link to='/social' className='btn btn-success'>
         Social
       </Link>
-      <Link to='/other' className='btn btn-success'>
-        Other
+      <Link to='/misc' className='btn btn-success'>
+        Misc
       </Link>
     </div>
   </div>

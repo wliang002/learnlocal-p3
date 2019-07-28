@@ -69,7 +69,7 @@ const Header = ({ auth: { isAuthenticated, loading }, logout }) => {
             <Link to='/creative' className='dropdown-item'>
               Creative
             </Link>
-            <Link to='/Technology' className='dropdown-item'>
+            <Link to='/technology' className='dropdown-item'>
               Technology
             </Link>
             <Link to='/craft' className='dropdown-item'>
@@ -81,7 +81,7 @@ const Header = ({ auth: { isAuthenticated, loading }, logout }) => {
             <Link to='/social' className='dropdown-item'>
               Social
             </Link>
-            <Link to='/Misc' className='dropdown-item'>
+            <Link to='/misc' className='dropdown-item'>
               Misc
             </Link>
           </div>
