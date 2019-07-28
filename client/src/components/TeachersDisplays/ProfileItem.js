@@ -5,6 +5,7 @@ const ProfileItem = ({
   profile: {
     user: { _id, name, avatar },
     location,
+    titles,
     bio,
     skills
   }
@@ -14,21 +15,25 @@ const ProfileItem = ({
       <div className='bioPhoto'>
         <img src={avatar} alt='' className='round-img' />
         <h1>{name}</h1>
+        <p><strong>{location && <span>{location}</span>}</strong></p>
+        <p>{titles}</p>
       </div>
       <div className='bioSection'>
-        <p>Bio: {bio}</p>
-        <p className='my-1'>{location && <span>{location}</span>}</p>
-        <Link to={`/classes/${_id}`} className='btn btn-primary'>
-          View Classes
+        <h1>About Me:</h1>
+        <p>{bio}</p>
+      </div>
+      <div className='teachersSkills'><p><strong>My Skills:</strong></p>
+        <ul>
+          {skills.slice(0, 8).map((skill, index) => (
+            <li key={index}>
+              <p><i className='fas fa-check' /> {skill}</p>
+            </li>
+          ))}
+        </ul>
+        <Link to={`/classes/${_id}`} className='selectTeachersClassesBtn btn'>
+          My Classes
         </Link>
       </div>
-      <ul>
-        {skills.slice(0, 4).map((skill, index) => (
-          <li key={index} className='text-primary'>
-            <i className='fas fa-check' /> {skill}
-          </li>
-        ))}
-      </ul>
     </div>
   )
 }

@@ -7,19 +7,69 @@
     font-size: 30px;
 }
 
+.bioPhoto p, .teachersSkills p {
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.bioPhoto {
+    text-align: center;
+}
+
+.bioPhoto p:first-of-type {
+    padding-top: 5px;
+}
+
+.bioSection h1{
+    text-align: left;
+}
+
 .TeachersProfile {
-    max-width:600px;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-    display: grid;
-    grid-template-columns: 2fr 4fr 2fr;
-    grid-gap: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     padding: 1rem;
     line-height: 1.8;
     margin-bottom: 1rem;
     background-color: rgb(73, 105, 109);
-  }
+    border-radius: 10px;
+}
+
+.TeachersProfile > div {
+    width: 200px;
+    margin: 10px;
+}
 
   .TeachersProfile .bioSection {
       text-align:left;
+      padding-left: 10px;
+      width: 300px;
   }
+
+ .TeachersProfile .teachersSkills {
+    margin-top: 25px;
+    padding-left: 10px;
+}
+
+  .TeachersProfile .selectTeachersClassesBtn {
+    background-color: #E4B320;
+    color: white;
+    font-size: 17px;
+    font-family: 'Fredericka the Great', cursive;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+  }
+/* give it padding when the screen narrows */
+@media only screen and (max-width:840px) {
+ .TeachersProfile {
+    margin-left: 20px;
+    margin-right: 20px;
+ }
+}

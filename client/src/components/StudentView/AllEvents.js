@@ -26,7 +26,7 @@ const AllEvents = ({ getProfiles, profile: { profiles, loading } }) => {
               <ClassCard event={profile.events} />
             ))
           ) : (
-            <p>We&rsquo;re sorry, we did not find any classes...</p>
+            <p className='sorry'>We&rsquo;re sorry, we did not find any classes...</p>
           )}
         </div>
       </div>

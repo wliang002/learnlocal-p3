@@ -7,6 +7,7 @@ import { connect } from 'react-redux'
 import { getCurrentProfile } from '../../actions/profile'
 import Spinner from '../Landing/Spinner'
 import DashboardActions from './DashboardActions'
+import ProfileItem from '../TeachersDisplays/ProfileItem'
 
 const TeacherProfile = ({ getCurrentProfile, auth: { user }, profile: { profile, loading } }) => {
   useEffect(() => {
@@ -22,6 +23,7 @@ const TeacherProfile = ({ getCurrentProfile, auth: { user }, profile: { profile,
         <hr />
         <div className='events-container'>
           <h2><i className='fas fa-feather-alt' />&nbsp;Welcome <span class='selectedCategory'>{user && user.name}</span>!</h2>
+          <ProfileItem key={profile._id} profile={profile} />
           {profile !== null ? (
             <Fragment>
               <DashboardActions />
