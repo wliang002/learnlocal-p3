@@ -8,7 +8,7 @@ const setAuthToken = token => {
     // send the request
     axios.defaults.headers.common['x-auth-token'] = token
   } else {
-    // if there's no token passed in delete it  
+    // if there's no token passed in delete it
     delete axios.defaults.headers.common['x-auth-token']
   }
 }

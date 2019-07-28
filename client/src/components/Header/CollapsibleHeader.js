@@ -1,44 +1,135 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Collapsible from 'react-collapsible'
 import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
+import { logout } from '../../actions/auth'
 
-const CollapsibleHeader = () => {
-  return [
+const CollapsibleHeader = ({ auth: { isAuthenticated, loading }, logout }) => {
+  const authLinks = (
+    <div>
+      <div className='collapsibleLogInBtns'>
+        <Link to='/dashboard' className='dropdown-item'>
+          <i className='fas fa-user' />&nbsp;Dashboard
+        </Link>
+      </div>
+      <div className='collapsibleLogInBtns'>
+        <a onClick={logout} href='#!' className='dropdown-item'>
+          <i className='fas fa-sign-out-alt' />&nbsp;Logout
+        </a>
+      </div>
+    </div>
+  )
+
+  const guestLinks = (
+    <div>
+      <div className='collapsibleLogInBtns'>
+        <Link to='/login'className='dropdown-item'>
+          <i className='fas fa-user' />&nbsp;Login
+        </Link>
+      </div>
+      <div className='collapsibleLogInBtns'>
+        <Link to='/register' className='dropdown-item'>
+          <i className='fas fa-user' />&nbsp;Create an Account
+        </Link>
+      </div>
+    </div>
+  )
+
+  return (
     <div className='collapsibleHeader'>
       <Collapsible trigger='☰'>
         <div className='collapsibleCategories'>
           <Collapsible trigger='Browse Classes'>
-            <p>
-              <Link to='/learn-by-category' className='dropdown-item'>Category placeholder</Link>
-            </p>
-            <p>
-              <Link to='/learn-by-category' className='dropdown-item'>Category placeholder</Link>
-            </p>
+            <Link to='/learn-by-category' className='dropdown-item'>Category placeholder</Link>
+            <Link to='/art' className='dropdown-item'>
+            Art
+            </Link>
+            <Link to='/craft' className='dropdown-item'>
+            Craft
+            </Link>
+            <Link to='/movement' className='dropdown-item'>
+            Movement
+            </Link>
+            <Link to='/social' className='dropdown-item'>
+            Social
+            </Link>
+            <Link to='/other' className='dropdown-item'>
+            Other
+            </Link>
           </Collapsible>
         </div>
-        <div className='collapsibleTeachers'>
-          <Collapsible trigger='Browse Teachers'>
-            <p>
-              <Link to='/teacher-profile' className='dropdown-item'>TeacherProfile placeholder</Link>
-            </p>
-            <p>
-              <Link to='/teacher-profile' className='dropdown-item'>TeacherProfile placeholder</Link>
-            </p>
-          </Collapsible>
+        <div className='collapsibleTeachersBtn'>
+          <p>
+            <Link to='/profiles' className='dropdown-item'>
+              Teacher Directory
+            </Link>
+          </p>
         </div>
-        <div className='collapsibleLogInBtns'>
-          <Link to='/login'className='dropdown-item'>
-            Log In
-          </Link>
-        </div>
-        <div className='collapsibleLogInBtns'>
-          <Link to='/register' className='dropdown-item'>
-            Create an Account
-          </Link>
-        </div>
+        {/* different buttons depending on whether logged in */}
+        {!loading && (
+          <Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>
+        )}
       </Collapsible>
     </div>
-  ]
+  )
 }
 
-export default CollapsibleHeader
+// const CollapsibleHeader = () => {
+//   return [
+//     <div className='collapsibleHeader'>
+//       <Collapsible trigger='☰'>
+//         <div className='collapsibleCategories'>
+//           <Collapsible trigger='Browse Classes'>
+//             <Link to='/learn-by-category' className='dropdown-item'>Category placeholder</Link>
+//             <Link to='/art' className='dropdown-item'>
+//               Art
+//             </Link>
+//             <Link to='/craft' className='dropdown-item'>
+//               Craft
+//             </Link>
+//             <Link to='/movement' className='dropdown-item'>
+//               Movement
+//             </Link>
+//             <Link to='/social' className='dropdown-item'>
+//               Social
+//             </Link>
+//             <Link to='/other' className='dropdown-item'>
+//               Other
+//             </Link>
+//           </Collapsible>
+//         </div>
+//         <div className='collapsibleTeachersBtn '>
+//           <p>
+//             <Link to='/profiles' className='dropdown-item'>
+//             Teacher Directory
+//             </Link>
+//           </p>
+//         </div>
+//         <div className='collapsibleLogInBtns'>
+//           <Link to='/login'className='dropdown-item'>
+//             Log In
+//           </Link>
+//         </div>
+//         <div className='collapsibleLogInBtns'>
+//           <Link to='/register' className='dropdown-item'>
+//             Create an Account
+//           </Link>
+//         </div>
+//       </Collapsible>
+//     </div>
+//   ]
+// }
+CollapsibleHeader.propTypes = {
+  logout: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired
+}
+
+const mapStateToProps = state => ({
+  auth: state.auth
+})
+
+export default connect(
+  mapStateToProps,
+  { logout }
+)(CollapsibleHeader)
