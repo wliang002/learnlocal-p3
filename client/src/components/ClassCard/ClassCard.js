@@ -24,7 +24,7 @@ const ClassCard = ({ event, deleteEvent }) => {
       Get directions</a>
       </button >
       <p>
-        <strong>Date:</strong> <Moment format='YYYY/MM/DD'>{moment.utc(eve.eventDate)}</Moment>
+        <strong>Date:</strong> <Moment format='MM/DD/YYYY'>{moment.utc(eve.eventDate)}</Moment>
       </p>
       <p>
         <strong>Time:</strong> {eve.eventTime}
