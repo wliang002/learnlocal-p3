@@ -43,7 +43,7 @@ router.post(
 
     try {
       let user = await User.findOne({ email })
-    
+
       // if user doesn't exist
       if (!user) {
         return res

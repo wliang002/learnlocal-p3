@@ -19,9 +19,8 @@
   text-decoration: none;
 }
 
-/* Dropdown Buttons */
-
-.dropdown {
+/* Dropdown*/
+.dropdown, .teacherLinkBtn {
   position: relative;
   float: left;
   font-family: 'Lustria', serif;
@@ -34,14 +33,6 @@
 .dropdown #categoryDropdownMenuLink {
   font-size: 17px;
   color:#DA7A22;
-  font-weight: bold;
-  text-shadow: 1px 1px 0 rgba(0,0,0,0.4), 0 0 15px rgba(255,255,255,0.4);
-  margin-top: 5px;
-}
-
-.dropdown #teacherDropdownMenuLink {
-  font-size: 17px;
-  color:#E4B320;
   font-weight: bold;
   text-shadow: 1px 1px 0 rgba(0,0,0,0.4), 0 0 15px rgba(255,255,255,0.4);
   margin-top: 5px;
@@ -75,6 +66,18 @@
   background-color: #3e8e41;
 }
 
+/* teacher button */
+.site-header .teacherLinkBtn.btn {
+  margin-top: 5px;
+}
+
+.site-header .teacherLinkBtn.btn a{
+  font-size: 17px;
+  color:#E4B320;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 rgba(0,0,0,0.4), 0 0 15px rgba(255,255,255,0.4);
+}
+
 /* Login Button */
 .LogInBtns .btn {
   background-color: #E4B320;
@@ -90,19 +93,18 @@
 }
 
 /* collapsible header styling */
-
 .collapsibleHeader{
   padding-top: 23px;
 }
 
-.collapsibleCategories, .collapsibleTeachers, .collapsibleLogInBtns {
+.collapsibleCategories, .collapsibleTeachersBtn a, .collapsibleLogInBtns {
   font-size: 17px;
   font-family: 'Fredericka the Great', cursive;
   font-weight: bold;
   text-shadow: 1px 1px 0 rgba(0,0,0,0.4), 0 0 15px rgba(255,255,255,0.4);
 }
 
-.collapsibleCategories, .collapsibleTeachers {
+.collapsibleCategories, .collapsibleTeachersBtn {
   background: var(--light-color);
   padding-top:5px;
 }
@@ -111,7 +113,7 @@
   padding: .25rem 1.5rem;
 }
 
-.collapsibleCategories .Collapsible__trigger::after, .collapsibleTeachers .Collapsible__trigger::after {
+.collapsibleCategories .Collapsible__trigger::after {
   display: inline-block;
   margin-left: .255em;
   vertical-align: .255em;
@@ -126,7 +128,7 @@
   color: #DA7A22;
 }
 
-.collapsibleTeachers {
+.collapsibleTeachersBtn a {
   color: #E4B320;
   padding-bottom:5px;
 }
@@ -136,13 +138,17 @@
 }
 
 .collapsibleLogInBtns .dropdown-item {
-  color: white;
+  color:  #f4f4f4;;
 }
 
-.collapsibleLogInBtns .dropdown-item:hover {
+.collapsibleLogInBtns .dropdown-item:hover, .collapsibleTeachersBtn .dropdown-item:hover {
   color: black;
+  background:rgb(247, 207, 61);
 }
 
+.collapsibleCategories .dropdown-item:hover {
+  background: rgb(230, 141, 58);
+}
 .collapsibleHeader .Collapsible__contentInner p {
  margin-bottom:0;
 }
