@@ -28,7 +28,7 @@ hr {
     text-align: center;
 }
 
-.dash-buttons .btn {
+.dash-buttons .btn, .my-1 {
     background-color: #E4B320;
     color: white;
     font-size: 17px;

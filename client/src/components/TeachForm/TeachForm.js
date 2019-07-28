@@ -80,11 +80,15 @@ const TeachForm = ({ addClasses, history }) => {
               onChange={e => onChange(e)}
             >
               <option value='0'>* Select a Category</option>
-              <option value='Art'>Art</option>
+              <option value='Cooking'>Cooking</option>
+              <option value='Garden'>Garden</option>
+              <option value='Wellness'>Wellness</option>
+              <option value='Technology'>Technology</option>
+              <option value='Creative'>Creative</option>
               <option value='Craft'>Craft</option>
               <option value='Movement'>Movement</option>
               <option value='Social'>Social</option>
-              <option value='Other'>Other</option>
+              <option value='Misc'>Misc</option>
             </select>
           </div>
 
