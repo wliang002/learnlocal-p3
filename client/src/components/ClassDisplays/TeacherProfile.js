@@ -27,7 +27,7 @@ const TeacherProfile = ({ getCurrentProfile, auth: { user }, profile: { profile,
           </h2>
           {profile !== null ? (
             <Fragment>
-              {/* <ProfileItem key={profile._id} profile={profile} /> */}
+              <ProfileItem key={profile._id} profile={profile} />
               <DashboardActions />
               <hr />
               <div className='AppDescriptionContainer'>
