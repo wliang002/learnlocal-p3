@@ -16,7 +16,7 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
 
         <h1><i className='fab fa-earlybirds' />&nbsp;Our Teachers</h1>
         <p className='lead'>
-          Learn a little bit about our teaches and see what classes they&rsquo;re teaching!
+          Learn a bit about our teachers and see what classes they&rsquo;re teaching!
         </p>
         <div className='profiles'>
           {profiles.length > 0 ? (
