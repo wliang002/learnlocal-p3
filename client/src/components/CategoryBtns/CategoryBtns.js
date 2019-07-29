@@ -33,8 +33,8 @@ const CategoryBtns = props => (
       <Link to='/social' className='btn btn-success'>
         Social
       </Link>
-      <Link to='/misc' className='btn btn-success'>
-        Misc
+      <Link to='/other' className='btn btn-success'>
+        Other
       </Link>
     </div>
   </div>

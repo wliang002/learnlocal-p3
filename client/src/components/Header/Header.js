@@ -60,6 +60,9 @@ const Header = ({ auth: { isAuthenticated, loading }, logout }) => {
             <Link to='/cooking' className='dropdown-item'>
               Cooking
             </Link>
+            <Link to='/art' className='dropdown-item'>
+              Art
+            </Link>
             <Link to='/garden' className='dropdown-item'>
               Garden
             </Link>
@@ -81,8 +84,8 @@ const Header = ({ auth: { isAuthenticated, loading }, logout }) => {
             <Link to='/social' className='dropdown-item'>
               Social
             </Link>
-            <Link to='/misc' className='dropdown-item'>
-              Misc
+            <Link to='/Other' className='dropdown-item'>
+              Other
             </Link>
           </div>
         </div>
