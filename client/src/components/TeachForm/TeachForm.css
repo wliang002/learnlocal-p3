@@ -91,3 +91,10 @@ h2 {
    font-size: 40px;
 }
 
+.teachersProfileContainer .fa-twitter, .teachersProfileContainer .fa-facebook, .teachersProfileContainer .fa-instagram  {
+  text-align: center;
+  background-color: lightgray;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+

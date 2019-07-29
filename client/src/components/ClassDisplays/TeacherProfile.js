@@ -42,15 +42,15 @@ const TeacherProfile = ({ getCurrentProfile,
             </Fragment>
           ) : (
             <Fragment>
-              <p>Create a profile so students can learn more about you!</p>
-              <Link to='/create-profile' className='btn btn-primary my-1'>
-                    Create Profile
+              <div className='AppDescriptionContainer'>
+                <p>Before you host a class, tell us a little about yourself.</p>
+              </div>
+              <Link to='/create-profile' className='createProfileBtn btn'>
+                Create a Profile
               </Link>
             </Fragment>
           )}
         </div>
-        <hr />
-
       </div>
 
     </Fragment>

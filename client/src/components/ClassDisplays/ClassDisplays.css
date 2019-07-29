@@ -1,4 +1,4 @@
-.teacherProfile, .LearnByCategoryContainer {
+.teacherProfile, .LearnByCategoryContainer, .SpecificTeachersClassesContainer {
     padding-top: 70px;
 }
 
@@ -9,7 +9,7 @@ hr {
     border-top: 1px solid #eee;
 }
 
-.LearnByCategoryContainer .sorry, .AppDescriptionContainer p {
+.LearnByCategoryContainer .sorry, .AppDescriptionContainer p, .SpecificTeachersClassesContainer .sorry {
     text-align: center;
 }
 
@@ -21,6 +21,7 @@ hr {
 .events-container {
     width: 80%;
     margin: auto;
+    text-align: center;
 }
 
 /* dashboard actions */
@@ -28,7 +29,7 @@ hr {
     text-align: center;
 }
 
-.dash-buttons .btn, .my-1 {
+.dash-buttons .btn, .teacherProfile .createProfileBtn.btn {
     background-color: #E4B320;
     color: white;
     font-size: 17px;

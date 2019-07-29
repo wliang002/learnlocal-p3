@@ -13,7 +13,6 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
 
     <Fragment>
       <div className='listOfTeachersContainer'>
-
         <h1><i className='fab fa-earlybirds' />&nbsp;Our Teachers</h1>
         <p className='lead'>
           Learn a bit about our teachers and see what classes they&rsquo;re teaching!

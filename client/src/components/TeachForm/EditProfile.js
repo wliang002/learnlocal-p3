@@ -86,7 +86,7 @@ const EditProfile = ({ profile: { profile, loading },
           <div className='form-group'>
             <input
               type='text'
-              placeholder='* Skills'
+              placeholder='Skills'
               name='skills'
               value={skills}
               onChange={e => onChange(e)}
