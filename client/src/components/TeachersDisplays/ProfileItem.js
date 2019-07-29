@@ -7,7 +7,8 @@ const ProfileItem = ({
     location,
     titles,
     bio,
-    skills
+    skills,
+    social: { facebook, twitter, instagram }
   }
 }) => {
   return (
@@ -21,6 +22,7 @@ const ProfileItem = ({
       <div className='bioSection'>
         <h1>About Me:</h1>
         <p>{bio}</p>
+        <p><a href={`${facebook}`} target='_blank'><i className='fab fa-facebook fa-2x' /></a><a href={`${twitter}`} target='_blank'><i className='fab fa-twitter fa-2x' /></a> <a href={`${instagram}`} target='_blank'><i className='fab fa-instagram fa-2x' /></a></p>
       </div>
       <div className='teachersSkills'><p><strong>My Skills:</strong></p>
         <ul>

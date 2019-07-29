@@ -1,6 +1,6 @@
 import React, { useState, Fragment } from 'react'
 import './TeachForm.css'
-import { Link, withRouter, Redirect } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { createProfile } from '../../actions/profile'
@@ -70,7 +70,7 @@ const CreateProfile = ({ createProfile,
           <div className='form-group'>
             <input
               type='text'
-              placeholder='* Skills'
+              placeholder='Skills'
               name='skills'
               value={skills}
               onChange={e => onChange(e)}

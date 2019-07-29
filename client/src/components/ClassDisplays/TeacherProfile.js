@@ -37,15 +37,15 @@ const TeacherProfile = ({ getCurrentProfile, auth: { user }, profile: { profile,
             </Fragment>
           ) : (
             <Fragment>
-              <p>You have not yet setup a profile, please add some info</p>
-              <Link to='/create-profile' className='btn btn-primary my-1'>
-                    Create Profile
+              <div className='AppDescriptionContainer'>
+                <p>Before you host a class, tell us a little about yourself.</p>
+              </div>
+              <Link to='/create-profile' className='createProfileBtn btn'>
+                Create a Profile
               </Link>
             </Fragment>
           )}
         </div>
-        <hr />
-
       </div>
 
     </Fragment>

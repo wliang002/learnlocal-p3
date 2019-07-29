@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 
 const CategoryBtns = props => (
   <div className='categoryBtnContainer'>
+    <hr />
     <p>Search for a class happening in your neighborhood.</p>
     <div className='buttons'>
       <Link to='/allclasses' className='btn btn-success'>

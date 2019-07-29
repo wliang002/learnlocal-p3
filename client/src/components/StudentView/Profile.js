@@ -1,4 +1,3 @@
-
 import React, { Fragment, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
@@ -6,6 +5,7 @@ import { connect } from 'react-redux'
 import Spinner from '../Landing/Spinner'
 import { getProfileById } from '../../actions/profile'
 import ClassCard from '../ClassCard/ClassCard'
+import '../ClassDisplays/ClassDisplays.css'
 
 const Profile = ({
   getProfileById,
@@ -19,28 +19,25 @@ const Profile = ({
 
   return (
     <Fragment>
-      <div className='container'>
+      <div className='SpecificTeachersClassesContainer'>
         {profile === null || loading ? (
           <Spinner />
         ) : (
           <Fragment>
-
-            <Link to='/profiles' className='btn btn-light'>
-                Back To Teachers
-            </Link>
-            {auth.isAuthenticated &&
+            <h1><i className='fab fa-earlybirds' />
+              &nbsp;{profile.user.name}&rsquo;s Classes</h1>
+            {/* {auth.isAuthenticated &&
                 auth.loading === false &&
                 auth.user._id === profile.user._id && (
               <Link to='/edit-profile' className='btn btn-dark'>
-                    Edit Profile
-              </Link>
-            )}
+                  Edit Profile
+                </Link>
+            )} */}
             {profile.events.length > 0 ? (
               <ClassCard event={profile.events} />
             ) : (
-              <h4>No class available for this teacher </h4>
+              <p className='sorry'>We&rsquo;re sorry &mdash; this teacher is not hosting any classes right now.</p>
             )}
-
           </Fragment>
         )}
       </div>
