@@ -57,8 +57,20 @@ const Header = ({ auth: { isAuthenticated, loading }, logout }) => {
           </a>
           <div className='dropdown-content'>
             <Link to='/learn-by-category' className='dropdown-item'>Category placeholder</Link>
-            <Link to='/art' className='dropdown-item'>
-              Art
+            <Link to='/cooking' className='dropdown-item'>
+              Cooking
+            </Link>
+            <Link to='/garden' className='dropdown-item'>
+              Garden
+            </Link>
+            <Link to='/wellness' className='dropdown-item'>
+              Wellness
+            </Link>
+            <Link to='/creative' className='dropdown-item'>
+              Creative
+            </Link>
+            <Link to='/technology' className='dropdown-item'>
+              Technology
             </Link>
             <Link to='/craft' className='dropdown-item'>
               Craft
@@ -69,8 +81,8 @@ const Header = ({ auth: { isAuthenticated, loading }, logout }) => {
             <Link to='/social' className='dropdown-item'>
               Social
             </Link>
-            <Link to='/other' className='dropdown-item'>
-              Other
+            <Link to='/misc' className='dropdown-item'>
+              Misc
             </Link>
           </div>
         </div>

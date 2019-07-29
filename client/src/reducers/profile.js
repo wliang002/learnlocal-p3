@@ -3,7 +3,8 @@ import {
   GET_PROFILES,
   PROFILE_ERROR,
   CLEAR_PROFILE,
-  UPDATE_PROFILE
+  UPDATE_PROFILE,
+  DELETE_ACCOUNT
 } from '../actions/types'
 
 // create initial state
@@ -40,6 +41,7 @@ export default function (state = initialState, action) {
         loading: false
       }
     case CLEAR_PROFILE:
+    case DELETE_ACCOUNT:
       return {
         ...state,
         profile: null,
