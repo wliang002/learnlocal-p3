@@ -8,8 +8,12 @@ import { getCurrentProfile } from '../../actions/profile'
 import Spinner from '../Landing/Spinner'
 import DashboardActions from './DashboardActions'
 import ProfileItem from '../TeachersDisplays/ProfileItem'
+import { deleteAccount } from '../../actions/profile'
 
-const TeacherProfile = ({ getCurrentProfile, auth: { user }, profile: { profile, loading } }) => {
+const TeacherProfile = ({ getCurrentProfile, 
+  auth: { user }, 
+  profile: { profile, loading }, 
+  deleteAccount }) => {
   useEffect(() => {
     getCurrentProfile()
   }, [getCurrentProfile])
@@ -34,6 +38,7 @@ const TeacherProfile = ({ getCurrentProfile, auth: { user }, profile: { profile,
                 <p>These are the classes you are teaching:</p>
               </div>
               <ClassCard event={profile.events} />
+              <button class='btn btn-primary danger' onClick={() => deleteAccount()} >Delete Account</button>
             </Fragment>
           ) : (
             <Fragment>
@@ -63,4 +68,4 @@ const mapStateToProps = state => ({
   profile: state.profile
 })
 
-export default connect(mapStateToProps, { getCurrentProfile })(TeacherProfile)
+export default connect(mapStateToProps, { getCurrentProfile, deleteAccount })(TeacherProfile)

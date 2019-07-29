@@ -6,7 +6,8 @@ import {
   GET_PROFILES,
   PROFILE_ERROR,
   UPDATE_PROFILE,
-  CLEAR_PROFILE
+  CLEAR_PROFILE,
+  DELETE_ACCOUNT
 } from './types'
 
 // Get current users profile
@@ -127,6 +128,21 @@ export const getProfileById = userId => async dispatch => {
     dispatch({
       type: GET_PROFILE,
       payload: res.data
+    })
+  } catch (err) {
+    dispatch({
+      type: PROFILE_ERROR,
+      payload: { msg: err.response.statusText, status: err.response.status }
+    })
+  }
+}
+
+export const deleteAccount = async dispatch => {
+  try {
+    const res = await axios.delete(`/api/profile`)
+
+    dispatch({
+      type: DELETE_ACCOUNT
     })
   } catch (err) {
     dispatch({
