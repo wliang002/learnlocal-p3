@@ -22,6 +22,11 @@ import AllArt from './components/StudentView/ByCategory/AllArt'
 import AllMovement from './components/StudentView/ByCategory/AllMovement'
 import AllSocial from './components/StudentView/ByCategory/AllSocial'
 import AllOther from './components/StudentView/ByCategory/AllOther'
+import AllCooking from './components/StudentView/ByCategory/AllCooking'
+import AllGarden from './components/StudentView/ByCategory/AllGarden'
+import AllWellness from './components/StudentView/ByCategory/AllWellness'
+import AllCreative from './components/StudentView/ByCategory/AllCreative'
+import AllTechnology from './components/StudentView/ByCategory/AllTechnology'
 // Redux
 import { Provider } from 'react-redux'
 import store from './store'
@@ -55,7 +60,12 @@ const App = () => {
                 <Route exact path='/allclasses' component={AllEvents} />
                 <Route exact path='/craft' component={AllCraft} />
                 <Route exact path='/art' component={AllArt} />
+                <Route exact path='/cooking' component={AllCooking} />
+                <Route exact path='/garden' component={AllGarden} />
+                <Route exact path='/wellness' component={AllWellness} />
                 <Route exact path='/movement' component={AllMovement} />
+                <Route exact path='/creative' component={AllCreative} />
+                <Route exact path='/technology' component={AllTechnology} />
                 <Route exact path='/social' component={AllSocial} />
                 <Route exact path='/other' component={AllOther} />
                 <PrivateRoute exact path='/dashboard' component={TeacherProfile} />
