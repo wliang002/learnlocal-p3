@@ -139,10 +139,13 @@ export const getProfileById = userId => async dispatch => {
 
 export const deleteAccount = async dispatch => {
   try {
-    const res = await axios.delete(`/api/profile`)
+    await axios.delete(`/api/profile`)
 
     dispatch({
       type: DELETE_ACCOUNT
+    })
+    dispatch({
+      type: CLEAR_PROFILE
     })
   } catch (err) {
     dispatch({
