@@ -104,7 +104,7 @@ export const addClasses = (formData, history) => async dispatch => {
 // get request to api/profile
 export const getProfiles = () => async dispatch => {
   // clear past user profile
-  dispatch({ type: CLEAR_PROFILE })
+  // dispatch({ type: CLEAR_PROFILE })
 
   try {
     const res = await axios.get('/api/profile')
@@ -139,10 +139,13 @@ export const getProfileById = userId => async dispatch => {
 
 export const deleteAccount = async dispatch => {
   try {
-    const res = await axios.delete(`/api/profile`)
+    await axios.delete(`/api/profile`)
 
     dispatch({
       type: DELETE_ACCOUNT
+    })
+    dispatch({
+      type: CLEAR_PROFILE
     })
   } catch (err) {
     dispatch({

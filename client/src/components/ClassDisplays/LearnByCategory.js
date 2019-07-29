@@ -4,6 +4,7 @@ import { Link, Redirect } from 'react-router-dom'
 import ClassCard from '../ClassCard/ClassCard'
 import MapClassCard from '../ClassCard/MapClassCard'
 import MapBox from '../ClassCard/MapBox'
+import MapTest from '../ClassCard/MapTest';
 
 const LearnByCategory = (props) => {
   return [
@@ -17,7 +18,7 @@ const LearnByCategory = (props) => {
       {/* <div className='mobileViewCards'>
         <ClassCard />
       </div> */}
-      <MapBox />
+      <MapTest />
       <hr />
 
     </div>
