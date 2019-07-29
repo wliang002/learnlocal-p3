@@ -8,7 +8,7 @@ const ProfileItem = ({
     titles,
     bio,
     skills,
-    social: { facebook, twitter, instagram }
+    social
   }
 }) => {
   return (
@@ -22,7 +22,12 @@ const ProfileItem = ({
       <div className='bioSection'>
         <h1>About Me:</h1>
         <p>{bio}</p>
-        <p><a href={`${facebook}`} target='_blank'><i className='fab fa-facebook fa-2x' /></a><a href={`${twitter}`} target='_blank'><i className='fab fa-twitter fa-2x' /></a> <a href={`${instagram}`} target='_blank'><i className='fab fa-instagram fa-2x' /></a></p>
+        {social ? (<p>
+          {social.facebook ? (<a href={`${social.facebook}`} target='_blank'><i className='fab fa-facebook fa-2x' /></a>) : (<span />)}
+          {social.twitter ? (<a href={`${social.twitter}`} target='_blank'><i className='fab fa-twitter fa-2x' /></a>) : (<span />)}
+          {social.instagram ? (<a href={`${social.instagram}`} target='_blank'><i className='fab fa-instagram fa-2x' /></a>) : (<span />)}
+        </p>) : (<h4>no here</h4>)}
+        
       </div>
       <div className='teachersSkills'><p><strong>My Skills:</strong></p>
         <ul>
