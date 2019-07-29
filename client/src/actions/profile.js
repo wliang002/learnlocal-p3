@@ -104,7 +104,7 @@ export const addClasses = (formData, history) => async dispatch => {
 // get request to api/profile
 export const getProfiles = () => async dispatch => {
   // clear past user profile
-  dispatch({ type: CLEAR_PROFILE })
+  // dispatch({ type: CLEAR_PROFILE })
 
   try {
     const res = await axios.get('/api/profile')
