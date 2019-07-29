@@ -1,11 +1,12 @@
-import React from 'react'
+import React, {Fragment} from 'react'
 import Moment from 'react-moment'
 import moment from 'moment'
 import './ClassCard.css'
 
-const GeoCode = ({ event }) => {
+const GeoCard = ({ event }) => {
   const events = event.map(eve => (
-    <div className='class-card'>
+
+    <section id={eve.eventName.replace(/\s+/g, '-').toLowerCase()}>
       <h2 className='class-title'>Class: {eve.eventName}</h2>
       <p>
         <strong>Taught by:</strong> {eve.teachersName}
@@ -16,10 +17,6 @@ const GeoCode = ({ event }) => {
       <p>
         <strong>Location:</strong> {eve.location}
       </p>
-
-      <button className='directions-btn' > <a href={`https://www.google.com/maps/dir/?api=1&destination=${eve.location.replace(/ /g, '+')}`} target='_blank'>
-      Get directions</a>
-      </button >
       <p>
         <strong>Date:</strong> <Moment format='MM/DD/YYYY'>{moment.utc(eve.eventDate)}</Moment>
       </p>
@@ -29,16 +26,15 @@ const GeoCode = ({ event }) => {
       <p>
         <strong>Description:</strong> {eve.description}
       </p>
+    </section>
 
-      <button className='class-signup-btn'>Sign Up</button>
-    </div>
   ))
 
   return (
 
-    <div className='class-body'>{events}</div>
+    <Fragment>{events}</Fragment>
 
   )
 }
 
-export default GeoCode
+export default GeoCard
