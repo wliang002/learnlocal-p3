@@ -16,7 +16,7 @@ const AllGarden = ({ getProfiles, profile: { profiles, loading } }) => {
         <hr />
         <h2>
           <i className="fas fa-cat" />
-          &nbsp;Sign up for an <span class="selectedCategory">Garden</span> class
+          &nbsp;Sign up for a <span class="selectedCategory">Garden</span> class
           happening in your&nbsp;neighborhood.
         </h2>
         <div className="AppDescriptionContainer">
@@ -30,7 +30,7 @@ const AllGarden = ({ getProfiles, profile: { profiles, loading } }) => {
           {profiles.length > 0 ? (
             profiles.map(profile => (
               <ClassCard
-                event={profile.events.filter(e => e.eventType === "Art")}
+                event={profile.events.filter(e => e.eventType === "Garden")}
               />
             ))
           ) : (
