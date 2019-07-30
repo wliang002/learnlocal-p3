@@ -7,6 +7,7 @@ const GeoCard = ({ event }) => {
   const events = event.map(eve => (
 
     <section id={eve.eventName.replace(/\s+/g, '-').toLowerCase()}>
+      <div className='class-card'>
       <h2 className='class-title'>Class: {eve.eventName}</h2>
       <p>
         <strong>Taught by:</strong> {eve.teachersName}
@@ -26,6 +27,7 @@ const GeoCard = ({ event }) => {
       <p>
         <strong>Description:</strong> {eve.description}
       </p>
+      </div>
     </section>
 
   ))
