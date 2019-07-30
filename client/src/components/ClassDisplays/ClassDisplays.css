@@ -40,3 +40,16 @@ hr {
     margin-right: 5px;
     margin-top: 5px;
 }
+
+.btn .delete-account {
+    background-color: red;
+    color: white;
+    font-size: 17px;
+    font-family: 'Fredericka the Great', cursive;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+}

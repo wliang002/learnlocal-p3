@@ -38,7 +38,7 @@ const TeacherProfile = ({
                 <p>These are the classes you are teaching:</p>
               </div>
               <ClassCard event={profile.events} />
-              <button class='btn btn-primary danger' onClick={() => deleteAccount()} >Delete Account</button>
+              <button class='btn delete-account' onClick={() => deleteAccount()}>Delete Account</button>
             </Fragment>
           ) : (
             <Fragment>

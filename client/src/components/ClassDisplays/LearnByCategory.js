@@ -1,10 +1,7 @@
 import React from 'react'
 import './ClassDisplays.css'
-import { Link, Redirect } from 'react-router-dom'
-import ClassCard from '../ClassCard/ClassCard'
-import MapClassCard from '../ClassCard/MapClassCard'
 import MapBox from '../ClassCard/MapBox'
-import MapTest from '../ClassCard/MapTest';
+import ClassCard from '../ClassCard/ClassCard'
 
 const LearnByCategory = (props) => {
   return [
@@ -15,11 +12,10 @@ const LearnByCategory = (props) => {
     neighborhood.
       </h2>
       {/* classes in this category */}
-      {/* <div className='mobileViewCards'>
+      <div className='mobileViewCards'>
         <ClassCard />
-      </div> */}
-      <MapTest />
-      {/* <MapClassCard /> */}
+      </div>
+      <MapBox />
       <hr />
 
     </div>
