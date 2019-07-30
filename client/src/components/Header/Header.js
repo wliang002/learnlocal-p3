@@ -56,7 +56,7 @@ const Header = ({ auth: { isAuthenticated, loading }, logout }) => {
             Browse Classes
           </a>
           <div className='dropdown-content'>
-            <Link to='/learn-by-category' className='dropdown-item'>Category placeholder</Link>
+            <Link to='/learn-by-category' className='dropdown-item'>All Classes</Link>
             <Link to='/cooking' className='dropdown-item'>
               Cooking
             </Link>

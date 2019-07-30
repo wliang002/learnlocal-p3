@@ -7,7 +7,7 @@ const CategoryBtns = props => (
     <hr />
     <p>Search for a class happening in your neighborhood.</p>
     <div className='buttons'>
-      <Link to='/allclasses' className='btn btn-success'>
+      <Link to='/learn-by-category' className='btn btn-success'>
         All Classes
       </Link>
       <Link to='/cooking' className='btn btn-success'>

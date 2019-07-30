@@ -1,7 +1,6 @@
 import React from 'react'
 import './ClassDisplays.css'
 import MapBox from '../ClassCard/MapBox'
-import ClassCard from '../ClassCard/ClassCard'
 
 const LearnByCategory = (props) => {
   return [
@@ -12,9 +11,8 @@ const LearnByCategory = (props) => {
     neighborhood.
       </h2>
       {/* classes in this category */}
-      {/* <div className='mobileViewCards'>
-        <ClassCard />
-      </div> */}
+      <div className='mobileViewCards' />
+      </div>
       <MapBox />
       <hr />
 

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
+
 const ProfileItem = ({
   profile: {
     user: { _id, name, avatar },
@@ -26,7 +27,7 @@ const ProfileItem = ({
           {social.facebook ? (<a href={`${social.facebook}`} target='_blank'><i className='fab fa-facebook fa-2x' /></a>) : (<span />)}
           {social.twitter ? (<a href={`${social.twitter}`} target='_blank'><i className='fab fa-twitter fa-2x' /></a>) : (<span />)}
           {social.instagram ? (<a href={`${social.instagram}`} target='_blank'><i className='fab fa-instagram fa-2x' /></a>) : (<span />)}
-        </p>) : (<h4>no here</h4>)}
+        </p>) : (<span />)}
         
       </div>
       <div className='teachersSkills'><p><strong>My Skills:</strong></p>
