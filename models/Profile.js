@@ -15,9 +15,6 @@ const ProfileSchema = new mongoose.Schema({
   skills: {
     type: [String]
   },
-  website: {
-    type: String
-  },
   bio: {
     type: String
   },
@@ -39,6 +36,9 @@ const ProfileSchema = new mongoose.Schema({
         type: String,
         required: true
       },
+      geocode: {
+        type: Array
+      },
       eventDate: {
         type: Date,
         required: true
@@ -54,16 +54,10 @@ const ProfileSchema = new mongoose.Schema({
     }
   ],
   social: {
-    youtube: {
-      type: String
-    },
     twitter: {
       type: String
     },
     facebook: {
-      type: String
-    },
-    linkedin: {
       type: String
     },
     instagram: {

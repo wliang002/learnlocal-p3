@@ -4,43 +4,17 @@ import styles from './MapClassCard.css'
 import ReactMapboxGl from 'react-mapbox-gl'
 import ClassCard from './ClassCard'
 import axios from 'axios'
-import Geocode from 'react-geocode'
 import GeoCard from './GeoCard'
 
 
-Geocode.setApiKey('AIzaSyDnRYpEtmDx_-7PQ_xHhiF9els9bGTI6t4')
 
-Geocode.enableDebug()
 
 const Map = ReactMapboxGl({
   accessToken: 'pk.eyJ1IjoibGVhcm5sb2NhbCIsImEiOiJjanlkZ2dram4wcHY1M2ptZm8wNGZrNzVkIn0.SnFaLsmeVQkX5XSj8-pp-A'
 })
 
 
-const chapters = {
-  'wooden-heart-pendants': {
-    bearing: 27,
-    center: [-122.59213, 37.983088],
-    zoom: 15.5,
-    pitch: 20
-  },
-  'aldgate': {
-    duration: 6000,
-    center: [-0.07571203, 51.51424049],
-    bearing: 150,
-    zoom: 15,
-    pitch: 0
-  },
-  'london-bridge': {
-    bearing: 90,
-    center: [-0.08533793, 51.50438536],
-    zoom: 13,
-    speed: 0.6,
-    pitch: 40
-  }
-}
-
-let activeChapterName = 'wooden-heart-pendants';
+let activeChapterName = 'learn-javascript-with-me';
 
 class MapTest extends React.Component {
   state = {
@@ -53,17 +27,6 @@ class MapTest extends React.Component {
   }
 
 
-
-  getGeocode(address) {
-    Geocode.fromAddress(address).then(
-      response => {
-        const { lat, lng } = response.results[0].geometry.location;
-      },
-      error => {
-        console.error(error);
-      }
-    )
-  }
 
 
   componentDidMount() { 
@@ -101,6 +64,7 @@ class MapTest extends React.Component {
           })
         }
     })
+    console.log(newChaps)
     this.setState({ chapters: newChaps })
   }
 
@@ -110,7 +74,7 @@ class MapTest extends React.Component {
       allevents[event.eventName.replace(/\s+/g, '-').toLowerCase()] = {
         address: event.location,
         bearing: 90,
-        center: [-0.08533793, 51.50438536],
+        center: event.geocode,
         zoom: 13,
         pitch: 40
       }
@@ -130,7 +94,7 @@ class MapTest extends React.Component {
   handleScroll = () => {
     
     const chapterNames = Object.keys(this.state.chapters);
-    console.log(chapterNames)
+    // console.log(chapterNames)
     for (let i = 0; i < chapterNames.length; i++) {
       let chapterName = chapterNames[i];
       if (this.isElementOnScreen(chapterName)) {
@@ -143,6 +107,8 @@ class MapTest extends React.Component {
 
   setActiveChapter = (chapterName) => {
     if (chapterName === activeChapterName) return;
+    // console.log(this.state.chapters)
+    // console.log(this.state.chapters)
     console.log('setActiveChapter | setState to', this.state.chapters[activeChapterName]['center'])
     this.setState({ 'center': this.state.chapters[activeChapterName]['center'] })
 
@@ -154,7 +120,7 @@ class MapTest extends React.Component {
 
   isElementOnScreen = (id) => {
     const element = document.getElementById(id);
-    console.log(element)
+    // console.log(element)
     const bounds = element.getBoundingClientRect();
     return bounds.top < window.innerHeight && bounds.bottom - 1000 > 0;
   }
@@ -165,7 +131,7 @@ class MapTest extends React.Component {
 
         <Map
           style='mapbox://styles/mapbox/streets-v10'
-          center={[-122.27087, 37.87189]}
+          center={this.state.center}
           zoom={[15.0]}
           bearing={[0]}
           pitch={[0]}
