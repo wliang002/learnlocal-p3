@@ -11,7 +11,7 @@ const LearnByCategory = (props) => {
     neighborhood.
       </h2>
       {/* classes in this category */}
-      <div className='mobileViewCards'>
+      <div className='mobileViewCards' />
       </div>
       <MapBox />
       <hr />
