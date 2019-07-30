@@ -64,7 +64,9 @@ class MapTest extends React.Component {
           })
         }
     })
+
     console.log(newChaps)
+
     this.setState({ chapters: newChaps })
   }
 
@@ -74,7 +76,7 @@ class MapTest extends React.Component {
       allevents[event.eventName.replace(/\s+/g, '-').toLowerCase()] = {
         address: event.location,
         bearing: 90,
-        center: event.geocode,
+        center: event.geocode[0].split(',').map(parseFloat),
         zoom: 13,
         pitch: 40
       }
