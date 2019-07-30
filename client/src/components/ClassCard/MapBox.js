@@ -5,6 +5,8 @@ import ReactMapboxGl from 'react-mapbox-gl'
 import ClassCard from './ClassCard'
 import axios from 'axios'
 import GeoCard from './GeoCard'
+import StickyBox from 'react-sticky-box'
+
 
 const Map = ReactMapboxGl({
   accessToken: 'pk.eyJ1IjoibGVhcm5sb2NhbCIsImEiOiJjanlkZ2dram4wcHY1M2ptZm8wNGZrNzVkIn0.SnFaLsmeVQkX5XSj8-pp-A'
@@ -109,25 +111,40 @@ class MapBox extends React.Component {
   isElementOnScreen = (id) => {
     const element = document.getElementById(id);
     const bounds = element.getBoundingClientRect();
-    return bounds.top-800 < window.innerHeight && bounds.bottom - 800 > 0;
+    return bounds.top < window.innerHeight && bounds.bottom - 800 > 0;
     console.log('the element on screen', id)
   }
 
   render() {
     return (
-      <div className='MapClassCardContainer'>
-        <Map
-          style='mapbox://styles/mapbox/streets-v10'
-          center={this.state.center}
-          zoom={[15.0]}
-          bearing={[0]}
-          pitch={[0]}
-          className='the-map'
-        />
-        <div id='features'>
-          {this.addClassCard()}
+
+        <div className='MapClassCardContainer'>
+          <StickyBox>
+            <Map
+              style='mapbox://styles/mapbox/streets-v10'
+              center={this.state.center}
+              zoom={[15.0]}
+              bearing={[0]}
+              pitch={[0]}
+              className='the-map'
+            />
+          </StickyBox>
+          <div id='features'>
+            <p>what if i just added a ton of words here before the cards start forming so it will start reading the first card?</p>
+            <p>what if i just added a ton of words here before the cards start forming so it will start reading the first card?</p>
+            <p>what if i just added a ton of words here before the cards start forming so it will start reading the first card?</p>
+            <p>what if i just added a ton of words here before the cards start forming so it will start reading the first card?</p>
+            <p>what if i just added a ton of words here before the cards start forming so it will start reading the first card?</p>
+            {this.addClassCard()}
+            <p>what if i just added a ton of words here AFTER the cards start forming so it will start reading the first card?</p>
+            <p>what if i just added a ton of words here AFTER the cards start forming so it will start reading the first card?</p>
+            <p>what if i just added a ton of words here AFTER the cards start forming so it will start reading the first card?</p>
+            <p>what if i just added a ton of words here AFTER the cards start forming so it will start reading the first card?</p>
+            <p>what if i just added a ton of words here AFTER the cards start forming so it will start reading the first card?</p>
+            <p>what if i just added a ton of words here AFTER the cards start forming so it will start reading the first card?</p>
+          </div>
         </div>
-      </div>
+
     )
   }
 }
