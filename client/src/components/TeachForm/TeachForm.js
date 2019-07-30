@@ -4,6 +4,11 @@ import { Link, withRouter } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { addClasses } from '../../actions/profile'
+import Geocode from 'react-geocode'
+
+Geocode.setApiKey('AIzaSyDzL-I-3I1yMaayEkrru4qpNj_R33HTRdg')
+
+Geocode.enableDebug()
 
 const TeachForm = ({ addClasses, history }) => {
   const [formData, setFormData] = useState({
@@ -11,6 +16,7 @@ const TeachForm = ({ addClasses, history }) => {
     eventName: '',
     eventType: '',
     location: '',
+    geocode: [],
     eventDate: '',
     eventTime: '',
     description: ''
@@ -20,13 +26,49 @@ const TeachForm = ({ addClasses, history }) => {
     eventName,
     eventType,
     location,
+    geocode,
     eventDate,
     eventTime,
     description
   } = formData
 
-  const onChange = e =>
+  const onClick = e => {
+    Geocode.fromAddress('Eiffel Tower').then(
+      response => {
+        const { lat, lng } = response.results[0].geometry.location
+        console.log(lat, lng)
+      },
+      error => {
+        console.error(error)
+      }
+    )
+    let address = document.getElementById('location').value
+    if (address) {
+      Geocode.fromAddress(address).then(
+        response => {
+          const { lat, lng } = response.results[0].geometry.location
+          console.log(lat, lng)
+        },
+        error => {
+          console.error(error)
+        }
+      )
+    }
+  }
+  const onChange = e => {
+    if (e.target.name === 'location') {
+      Geocode.fromAddress(e.target.value).then(
+        response => {
+          const { lat, lng } = response.results[0].geometry.location
+          setFormData({ geocode: [lat, lng] })
+        },
+        error => {
+          console.error(error)
+        }
+      )
+    }
     setFormData({ ...formData, [e.target.name]: e.target.value })
+  }
 
   return (
     <div className='container'>
@@ -80,6 +122,7 @@ const TeachForm = ({ addClasses, history }) => {
               onChange={e => onChange(e)}
             >
               <option value='0'>* Select a Category</option>
+              <option value='Art'>Art</option>
               <option value='Cooking'>Cooking</option>
               <option value='Garden'>Garden</option>
               <option value='Wellness'>Wellness</option>
@@ -88,7 +131,7 @@ const TeachForm = ({ addClasses, history }) => {
               <option value='Craft'>Craft</option>
               <option value='Movement'>Movement</option>
               <option value='Social'>Social</option>
-              <option value='Misc'>Misc</option>
+              <option value='Other'>Other</option>
             </select>
           </div>
 
@@ -104,6 +147,20 @@ const TeachForm = ({ addClasses, history }) => {
               onChange={e => onChange(e)}
               required
             />
+          </div>
+
+          <div className='form-group'>
+            <label for='location'>Geo location:</label>
+            <textarea
+              className='form-control'
+              id='geocode'
+              rows='1'
+              placeholder='geocode'
+              name='geocode'
+              value={geocode}
+              onChange={e => onChange(e)}
+              required
+            /> <button onClick={e => onClick(e)}>convert</button>
           </div>
 
           <div className='form-group'>

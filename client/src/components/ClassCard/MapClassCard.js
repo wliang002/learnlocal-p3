@@ -70,6 +70,7 @@ class MapClassCard extends React.Component {
         pitch: [0]
     }
     componentDidMount() {
+
         window.addEventListener('scroll', this.handleScroll);
     }
 
@@ -84,7 +85,7 @@ class MapClassCard extends React.Component {
         for (let i = 0; i < chapterNames.length; i++) {
 
             let chapterName = chapterNames[i];
-            console.log(chapterName)
+            // console.log(chapterName)
             if (this.isElementOnScreen(chapterName)) {
                 console.log('handleScroll | chapterName', chapterName)
                 this.setActiveChapter(chapterName);
@@ -95,6 +96,7 @@ class MapClassCard extends React.Component {
 
     setActiveChapter = (chapterName) => {
         if (chapterName === activeChapterName) return;
+        // console.log(this.state.chapters[activeChapterName])
         console.log('setActiveChapter | setState to', chapters[activeChapterName]['center'])
         this.setState({'center': chapters[activeChapterName]['center']})
          
@@ -107,7 +109,7 @@ class MapClassCard extends React.Component {
     isElementOnScreen = (id) => {
         const element = document.getElementById(id);
         const bounds = element.getBoundingClientRect();
-        console.log(element)
+        // console.log(element)
         return bounds.top < window.innerHeight && bounds.bottom-1000 > 0;
     }
 
@@ -125,6 +127,8 @@ class MapClassCard extends React.Component {
         <div id='features'>
           <section id='wooden-heart-pendants' className='active'>
             {/* <ClassCard /> */}
+            <h3>Aldgate Station</h3>
+            <p>Arthur Cadogan West w</p>
           </section>
           <section id='aldgate'>
             <h3>Aldgate Station</h3>

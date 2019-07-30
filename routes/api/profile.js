@@ -195,6 +195,7 @@ router.put(
       eventName,
       eventType,
       location,
+      geocode,
       eventDate,
       eventTime,
       description
@@ -205,6 +206,7 @@ router.put(
       eventName,
       eventType,
       location,
+      geocode,
       eventDate,
       eventTime,
       description
