@@ -27,18 +27,18 @@ const TeacherProfile = ({
         <hr />
         <div className='events-container'>
           <h2>
-            <i className='fas fa-feather-alt' />&nbsp;Welcome <span class='selectedCategory'>{user && user.name}</span>!
+            <i className='fas fa-feather-alt' />&nbsp;Welcome <span className='selectedCategory'>{user && user.name}</span>!
           </h2>
           {profile !== null ? (
             <Fragment>
-              {/* <ProfileItem key={profile._id} profile={profile} /> */}
+              <ProfileItem profile={profile} />
               <DashboardActions />
               <hr />
               <div className='AppDescriptionContainer'>
                 <p>These are the classes you are teaching:</p>
               </div>
               <ClassCard event={profile.events} />
-              <button class='btn delete-account' onClick={() => deleteAccount()}>Delete Account</button>
+              <button className='btn delete-account btn-danger' onClick={() => deleteAccount()}>Delete Account</button>
             </Fragment>
           ) : (
             <Fragment>
