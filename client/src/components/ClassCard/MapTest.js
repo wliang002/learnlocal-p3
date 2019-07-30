@@ -65,8 +65,6 @@ class MapTest extends React.Component {
         }
     })
 
-    console.log(newChaps)
-
     this.setState({ chapters: newChaps })
   }
 
@@ -130,7 +128,6 @@ class MapTest extends React.Component {
   render() {
     return (
       <div className='MapClassCardContainer'>
-
         <Map
           style='mapbox://styles/mapbox/streets-v10'
           center={this.state.center}
@@ -142,7 +139,6 @@ class MapTest extends React.Component {
         <div id='features'>
         
           {this.addClassCard()}
-          {/* {this.addChapters()} */}
         </div>
       </div>
     )
