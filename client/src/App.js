@@ -27,6 +27,7 @@ import AllGarden from './components/StudentView/ByCategory/AllGarden'
 import AllWellness from './components/StudentView/ByCategory/AllWellness'
 import AllCreative from './components/StudentView/ByCategory/AllCreative'
 import AllTechnology from './components/StudentView/ByCategory/AllTechnology'
+import NotFound from './components/Landing/NotFound'
 // Redux
 import { Provider } from 'react-redux'
 import store from './store'
@@ -73,6 +74,7 @@ const App = () => {
                 <PrivateRoute exact path='/create-profile' component={CreateProfile} />
                 <PrivateRoute exact path='/edit-profile' component={EditProfile} />
                 <Route exact path='/learn-by-category' component={LearnByCategory} />
+                <Route component={NotFound} />
               </Switch>
               <Alert />
             </section>
