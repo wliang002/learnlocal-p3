@@ -17,7 +17,9 @@
     "react-collapsible": "^2.6.0",
     "react-dom": "^16.8.6",
     "react-mapbox-gl": "^4.5.1",
-    "react-scripts": "^3.0.1"
+    "react-scripts": "^3.0.1",
+    "react-sticky": "^6.0.3",
+    "react-sticky-box": "^0.8.0"
   },
   "devDependencies": {},
   "scripts": {
