@@ -5,7 +5,7 @@ import ReactMapboxGl from 'react-mapbox-gl'
 import ClassCard from './ClassCard'
 import axios from 'axios'
 import GeoCard from './GeoCard'
-
+import './MapClassCard.css'
 
 
 

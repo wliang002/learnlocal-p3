@@ -1,7 +1,7 @@
 import uuid from 'uuid'
 import { SET_ALERT, REMOVE_ALERT } from './types'
 // thunk middleware allows multiple dispatch actions, setAlert action is called from Alert component
-export const setAlert = (msg, alertType, timeout = 5000) => dispatch => {
+export const setAlert = (msg, alertType, timeout = 3000) => dispatch => {
   const id = uuid.v4()
   // dispatch this type in reducer
   dispatch({

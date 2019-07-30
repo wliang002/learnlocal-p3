@@ -137,20 +137,28 @@ export const getProfileById = userId => async dispatch => {
   }
 }
 
-export const deleteAccount = async dispatch => {
-  try {
-    await axios.delete(`/api/profile`)
+// delete account and profile
+// delete request to /api/profile
+export const deleteAccount = () => async dispatch => {
+  if (window.confirm('Are you sure?')) {
+    try {
+      await axios.delete(`/api/profile`)
 
-    dispatch({
-      type: DELETE_ACCOUNT
-    })
-    dispatch({
-      type: CLEAR_PROFILE
-    })
-  } catch (err) {
-    dispatch({
-      type: PROFILE_ERROR,
-      payload: { msg: err.response.statusText, status: err.response.status }
-    })
+      dispatch({
+        type: DELETE_ACCOUNT
+      })
+      dispatch({
+        type: CLEAR_PROFILE
+      })
+      dispatch(setAlert('Account Deleted '))
+    } catch (err) {
+      dispatch({
+        type: PROFILE_ERROR,
+        payload: { msg: err.response.statusText, status: err.response.status }
+      })
+    }
   }
 }
+
+// delete classes
+// delete request to/ api/profile/events/:event_id

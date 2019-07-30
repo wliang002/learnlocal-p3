@@ -4,15 +4,15 @@ import './ClassDisplays.css'
 import { Link } from 'react-router-dom'
 import ClassCard from '../ClassCard/ClassCard'
 import { connect } from 'react-redux'
-import { getCurrentProfile } from '../../actions/profile'
+import { getCurrentProfile, deleteAccount } from '../../actions/profile'
 import Spinner from '../Landing/Spinner'
 import DashboardActions from './DashboardActions'
 import ProfileItem from '../TeachersDisplays/ProfileItem'
-import { deleteAccount } from '../../actions/profile'
 
-const TeacherProfile = ({ getCurrentProfile, 
-  auth: { user }, 
-  profile: { profile, loading }, 
+const TeacherProfile = ({
+  getCurrentProfile,
+  auth: { user },
+  profile: { profile, loading },
   deleteAccount }) => {
   useEffect(() => {
     getCurrentProfile()
@@ -31,7 +31,7 @@ const TeacherProfile = ({ getCurrentProfile,
           </h2>
           {profile !== null ? (
             <Fragment>
-              <ProfileItem key={profile._id} profile={profile} />
+              {/* <ProfileItem key={profile._id} profile={profile} /> */}
               <DashboardActions />
               <hr />
               <div className='AppDescriptionContainer'>
@@ -59,6 +59,7 @@ const TeacherProfile = ({ getCurrentProfile,
 
 TeacherProfile.propTypes = {
   getCurrentProfile: PropTypes.func.isRequired,
+  deleteAccount: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,
   profile: PropTypes.object.isRequired
 }

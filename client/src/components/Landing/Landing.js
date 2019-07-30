@@ -1,14 +1,10 @@
 import React from 'react'
 import './Landing.css'
-import { Link, Redirect } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
 const Landing = ({ isAuthenticated }) => {
-  // after user login they can't access landing
-  if (isAuthenticated) {
-    return <Redirect to='/dashboard' />
-  }
 
   return (
     <section className='landing'>
@@ -22,17 +18,22 @@ const Landing = ({ isAuthenticated }) => {
           </p>
         </div>
       </div>
-      <div className='landing-inner'>
-        <p>Log in or create an account to host a class of your own.</p>
-        <div className='buttons'>
-          <Link to='/login' className='btn btn-success'>
+      {isAuthenticated ? (
+        <span />
+      ) : (
+        <div className='landing-inner'>
+          <p>Log in or create an account to host a class of your own.</p>
+          <div className='buttons'>
+            <Link to='/login' className='btn btn-success'>
             Login
-          </Link>
-          <Link to='/register' className='btn btn-success'>
+            </Link>
+            <Link to='/register' className='btn btn-success'>
             Create Account
-          </Link>
+            </Link>
+          </div>
         </div>
-      </div>
+      )}
+
     </section>
 
   )
