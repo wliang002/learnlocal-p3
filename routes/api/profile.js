@@ -229,7 +229,7 @@ router.put(
 )
 
 // delete a class
-// @route    DELETE api/profile/events/:exp_id
+// @route    DELETE api/profile/events/:event_id
 // @desc     Delete a class from profile
 // @access   Private
 router.delete('/events/:event_id', auth, async (req, res) => {

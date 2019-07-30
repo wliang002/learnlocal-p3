@@ -2,6 +2,7 @@ import React, { Fragment } from 'react'
 import Moment from 'react-moment'
 import moment from 'moment'
 import './ClassCard.css'
+import './MapClassCard.css'
 
 const GeoCard = ({ event }) => {
   const events = event.map(eve => (

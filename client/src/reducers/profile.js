@@ -41,7 +41,6 @@ export default function (state = initialState, action) {
         loading: false
       }
     case CLEAR_PROFILE:
-    case DELETE_ACCOUNT:
       return {
         ...state,
         profile: null,
