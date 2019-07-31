@@ -2,11 +2,11 @@
     /* display flex and align-items flex-start is needed to keep the map sticky */
     display:flex;
     align-items:flex-start;
-
     width: 100%;
 
 }
 .MapClassCardContainer .the-map {
+    /* this sets the width to fit half the viewport */
     width: 50vw;
     /* this sets the height to fit the entire viewport */
     height: 100vh;
@@ -16,7 +16,6 @@
 .MapClassCardContainer #features {
     width: 50%;
     font-family: sans-serif;
-    background-color: #fafafa;
     }
 
 .MapClassCardContainer section {
@@ -40,14 +39,12 @@
     margin:0;
 }
 
-/* don't display directions with map view */
-.MapClassCardContainer .directions-btn{
-  display: none;
-}
-
 /* do not display map on mobile view */
 @media (max-width: 782px) {
-    .MapClassCardContainer {
+    .MapClassCardContainer .the-map {
         display: none;
+    }
+    .MapClassCardContainer #features {
+        width: 100%
     }
 }
