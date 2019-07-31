@@ -34,7 +34,6 @@ import store from './store'
 import { loadUser } from './actions/auth'
 import setAuthToken from './utils/setAuthToken'
 
-
 if (localStorage.token) {
   setAuthToken(localStorage.token)
 }
@@ -50,8 +49,9 @@ const App = () => {
       <Router>
         <Fragment>
           <Header />
-          <div>
+          <div className='main-container'>
             <section>
+              <Alert />
               <Switch>
                 <Route exact path='/' component={Landing} />
                 <Route exact path='/register' component={Register} />
@@ -76,7 +76,6 @@ const App = () => {
                 <Route exact path='/learn-by-category' component={LearnByCategory} />
                 <Route component={NotFound} />
               </Switch>
-              <Alert />
             </section>
             <CategoryBtns />
             <Footer />

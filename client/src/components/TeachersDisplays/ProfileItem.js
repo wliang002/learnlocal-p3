@@ -10,7 +10,8 @@ const ProfileItem = ({
     bio,
     skills,
     social
-  }
+  },
+  auth
 }) => {
   return (
     <div className='TeachersProfile'>
@@ -28,7 +29,7 @@ const ProfileItem = ({
           {social.twitter ? (<a href={`${social.twitter}`} target='_blank'><i className='fab fa-twitter fa-2x' /></a>) : (<span />)}
           {social.instagram ? (<a href={`${social.instagram}`} target='_blank'><i className='fab fa-instagram fa-2x' /></a>) : (<span />)}
         </p>) : (<span />)}
-        
+
       </div>
       <div className='teachersSkills'><p><strong>My Skills:</strong></p>
         <ul>
@@ -38,9 +39,14 @@ const ProfileItem = ({
             </li>
           ))}
         </ul>
-        <Link to={`/classes/${_id}`} className='selectTeachersClassesBtn btn'>
+        {auth ? (
+          <span />
+        ) : (
+          <Link to={`/classes/${_id}`} className='selectTeachersClassesBtn btn'>
           My Classes
-        </Link>
+          </Link>
+        )}
+
       </div>
     </div>
   )

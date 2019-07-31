@@ -11,7 +11,7 @@ import ProfileItem from '../TeachersDisplays/ProfileItem'
 
 const TeacherProfile = ({
   getCurrentProfile,
-  auth: { user },
+  auth: { isAuthenticated, user },
   profile: { profile, loading },
   deleteAccount }) => {
   useEffect(() => {
@@ -31,13 +31,13 @@ const TeacherProfile = ({
           </h2>
           {profile !== null ? (
             <Fragment>
-              <ProfileItem profile={profile} />
+              <ProfileItem profile={profile} auth={isAuthenticated} />
               <DashboardActions />
               <hr />
               <div className='AppDescriptionContainer'>
                 <p>These are the classes you are teaching:</p>
               </div>
-              <ClassCard event={profile.events} />
+              <ClassCard event={profile.events} auth={isAuthenticated} />
               <button className='btn delete-account btn-danger' onClick={() => deleteAccount()}>Delete Account</button>
             </Fragment>
           ) : (

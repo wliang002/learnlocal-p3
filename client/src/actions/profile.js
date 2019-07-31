@@ -162,3 +162,20 @@ export const deleteAccount = () => async dispatch => {
 
 // delete classes
 // delete request to/ api/profile/events/:event_id
+export const deleteEvent = id => async dispatch => {
+  try {
+    const res = await axios.delete(`/api/profile/events/${id}`)
+
+    dispatch({
+      type: UPDATE_PROFILE,
+      payload: res.data
+    })
+
+    dispatch(setAlert('Class Deleted', 'success'))
+  } catch (err) {
+    dispatch({
+      type: PROFILE_ERROR,
+      payload: { msg: err.response.statusText, status: err.response.status }
+    })
+  }
+}
