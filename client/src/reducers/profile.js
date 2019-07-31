@@ -3,8 +3,7 @@ import {
   GET_PROFILES,
   PROFILE_ERROR,
   CLEAR_PROFILE,
-  UPDATE_PROFILE,
-  DELETE_ACCOUNT
+  UPDATE_PROFILE
 } from '../actions/types'
 
 // create initial state

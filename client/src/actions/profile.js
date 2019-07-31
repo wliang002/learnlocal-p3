@@ -179,3 +179,4 @@ export const deleteEvent = id => async dispatch => {
     })
   }
 }
+
