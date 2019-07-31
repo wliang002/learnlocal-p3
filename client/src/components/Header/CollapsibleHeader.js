@@ -38,7 +38,7 @@ const CollapsibleHeader = ({ auth: { isAuthenticated, loading }, logout }) => {
 
   return (
     <div className='collapsibleHeader'>
-      <Collapsible trigger='☰'>
+      <Collapsible trigger='☰' className='three-Lines'>
         <div className='collapsibleCategories'>
           <Collapsible trigger='Browse Classes'>
             <Link to='/learn-by-category' className='dropdown-item'>All Classes</Link>

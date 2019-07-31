@@ -10,6 +10,9 @@ const CategoryBtns = props => (
       <Link to='/learn-by-category' className='btn btn-success'>
         All Classes
       </Link>
+      <Link to='/art' className='btn btn-success'>
+            Art
+      </Link>
       <Link to='/cooking' className='btn btn-success'>
         Cooking
       </Link>

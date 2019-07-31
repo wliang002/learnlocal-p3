@@ -153,6 +153,15 @@
  margin-bottom:0;
 }
 
+/* .Collapsible.three-Lines span:first-child {
+  color:red;
+}
+
+.collapsibleHeader .Collapsible .Collapsible__trigger.is-open {
+  color: green;
+} */
+
+
 /* wider screen view */
 @media only screen and (min-width:1019px){
   .narrowView {
