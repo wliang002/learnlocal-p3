@@ -53,9 +53,7 @@ const ClassCard = ({ event, deleteEvent, auth }) => {
   ))
 
   return (
-
     <div className='class-body'>{events}</div>
-
   )
 }
 
