@@ -2,6 +2,7 @@ import React, { Fragment, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import ProfileItem from './ProfileItem'
+import Spinner from '../Landing/Spinner'
 import { getProfiles } from '../../actions/profile'
 import './Profiles.css'
 
@@ -10,23 +11,29 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
     getProfiles()
   }, [getProfiles])
   return (
-
     <Fragment>
-      <div className='listOfTeachersContainer'>
-        <h1><i className='fab fa-earlybirds' />&nbsp;Our Teachers</h1>
-        <p className='lead'>
-          Learn a bit about our teachers and see what classes they&rsquo;re teaching!
-        </p>
-        <div className='profiles'>
-          {profiles.length > 0 ? (
-            profiles.map(profile => (
-              <ProfileItem profile={profile} />
-            ))
-          ) : (
-            <p>We're sorry, we did not find any profiles...</p>
-          )}
-        </div>
-      </div>
+      {loading ? (
+        <Spinner />
+      ) : (
+        <Fragment>
+          <div className='listOfTeachersContainer'>
+            <h1><i className='fab fa-earlybirds' />&nbsp;Our Teachers</h1>
+            <p className='lead'>
+                Learn a bit about our teachers and see what classes they&rsquo;re teaching!
+            </p>
+            <div className='profiles'>
+              {profiles.length > 0 ? (
+                profiles.map(profile => (
+                  <ProfileItem profile={profile} />
+                ))
+              ) : (
+                <p>We're sorry, we did not find any profiles...</p>
+              )}
+            </div>
+          </div>
+        </Fragment>
+      )}
+
     </Fragment>
 
   )
