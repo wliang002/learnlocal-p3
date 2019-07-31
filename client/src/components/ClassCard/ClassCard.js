@@ -40,8 +40,10 @@ const ClassCard = ({ event, deleteEvent, auth }) => {
       {auth ? (
         <div className='dash-buttons'>
           <button className='btn'
-            onClick={() => deleteEvent(eve._id)}>delelet</button>
-          <button className='btn'>update</button>
+            onClick={() => deleteEvent(eve._id)}>
+              <i class="fas fa-times"></i>&nbsp;Delete</button>
+          <button className='btn'>
+          <i class="fas fa-pen"></i>&nbsp;Update</button>
         </div>
       ) : (
         <button className='class-signup-btn'>Sign Up</button>

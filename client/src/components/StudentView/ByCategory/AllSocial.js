@@ -15,7 +15,7 @@ const AllSocial = ({ getProfiles, profile: { profiles, loading } }) => {
       <div className='LearnByCategoryContainer'>
         <h1>Learn!</h1>
         <hr />
-        <h2><i className='fas fa-cat' />&nbsp;Sign up for a <span className='selectedCategory'>Social</span> class happening in your&nbsp;neighborhood.</h2>
+        <h2><i className='fas fa-glass-cheers' />&nbsp;Sign up for a <span className='selectedCategory'>Social</span> class happening in your&nbsp;neighborhood.</h2>
         <div className='AppDescriptionContainer'>
           <p>If there’s a class you’d like to take, click the “Sign up” buttom to&nbsp;RSVP.</p>
         </div>

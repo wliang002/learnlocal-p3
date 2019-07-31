@@ -4,11 +4,8 @@ import { Link, withRouter } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { addClasses } from '../../actions/profile'
-import Geocode from 'react-geocode'
 
-Geocode.setApiKey('AIzaSyDzL-I-3I1yMaayEkrru4qpNj_R33HTRdg')
 
-Geocode.enableDebug()
 
 const TeachForm = ({ addClasses, history }) => {
   const [formData, setFormData] = useState({
@@ -32,41 +29,9 @@ const TeachForm = ({ addClasses, history }) => {
     description
   } = formData
 
-  const onClick = e => {
-    Geocode.fromAddress('Eiffel Tower').then(
-      response => {
-        const { lat, lng } = response.results[0].geometry.location
-        console.log(lat, lng)
-      },
-      error => {
-        console.error(error)
-      }
-    )
-    let address = document.getElementById('location').value
-    if (address) {
-      Geocode.fromAddress(address).then(
-        response => {
-          const { lat, lng } = response.results[0].geometry.location
-          console.log(lat, lng)
-        },
-        error => {
-          console.error(error)
-        }
-      )
-    }
-  }
+
   const onChange = e => {
-    if (e.target.name === 'location') {
-      Geocode.fromAddress(e.target.value).then(
-        response => {
-          const { lat, lng } = response.results[0].geometry.location
-          setFormData({ geocode: [lat, lng] })
-        },
-        error => {
-          console.error(error)
-        }
-      )
-    }
+  
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
@@ -160,7 +125,7 @@ const TeachForm = ({ addClasses, history }) => {
               value={geocode}
               onChange={e => onChange(e)}
               required
-            /> <button onClick={e => onClick(e)}>convert</button>
+            /> <button>convert</button>
           </div>
 
           <div className='form-group'>
@@ -216,6 +181,7 @@ const TeachForm = ({ addClasses, history }) => {
 TeachForm.propTypes = {
   addClasses: PropTypes.func.isRequired
 }
+
 
 export default connect(
   null,
