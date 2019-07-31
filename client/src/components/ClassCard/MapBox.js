@@ -129,20 +129,8 @@ class MapBox extends React.Component {
             />
           </StickyBox>
           <div id='features'>
-            {/* <p>what if i just added a ton of words here before the cards start forming so it will start reading the first card?</p>
-            <p>what if i just added a ton of words here before the cards start forming so it will start reading the first card?</p>
-            <p>what if i just added a ton of words here before the cards start forming so it will start reading the first card?</p>
-            <p>what if i just added a ton of words here before the cards start forming so it will start reading the first card?</p>
-            <p>what if i just added a ton of words here before the cards start forming so it will start reading the first card?</p> */}
-            <br></br><br></br><br></br><br></br>
+          <h2>Sign up for a class happening in your neighborhood.</h2>
             {this.addClassCard()}
-            <br></br><br></br><br></br><br></br>
-            {/* <p>what if i just added a ton of words here AFTER the cards start forming so it will start reading the first card?</p>
-            <p>what if i just added a ton of words here AFTER the cards start forming so it will start reading the first card?</p>
-            <p>what if i just added a ton of words here AFTER the cards start forming so it will start reading the first card?</p>
-            <p>what if i just added a ton of words here AFTER the cards start forming so it will start reading the first card?</p>
-            <p>what if i just added a ton of words here AFTER the cards start forming so it will start reading the first card?</p>
-            <p>what if i just added a ton of words here AFTER the cards start forming so it will start reading the first card?</p> */}
           </div>
         </div>
 

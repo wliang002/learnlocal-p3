@@ -19,6 +19,9 @@ const GeoCard = ({ event }) => {
         <p>
           <strong>Location:</strong> {eve.location}
         </p>
+        <button className='directions-btn' > <a href={`https://www.google.com/maps/dir/?api=1&destination=${eve.location.replace(/ /g, '+')}`} target='_blank'>
+        Get directions</a>
+        </button >
         <p>
           <strong>Date:</strong> <Moment format='MM/DD/YYYY'>{moment.utc(eve.eventDate)}</Moment>
         </p>
