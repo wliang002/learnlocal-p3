@@ -24,7 +24,7 @@ const ClassCard = ({ event, deleteEvent, auth }) => {
         <span />
       ) : (
         <button className='directions-btn' > <a href={`https://www.google.com/maps/dir/?api=1&destination=${eve.location.replace(/ /g, '+')}`} target='_blank'>
-        Get directions</a>
+            Get directions</a>
         </button >
       )}
 
@@ -41,9 +41,9 @@ const ClassCard = ({ event, deleteEvent, auth }) => {
         <div className='dash-buttons'>
           <button className='btn'
             onClick={() => deleteEvent(eve._id)}>
-              <i class="fas fa-times"></i>&nbsp;Delete</button>
+            <i class='fas fa-times' />&nbsp;Delete</button>
           <button className='btn'>
-          <i class="fas fa-pen"></i>&nbsp;Update</button>
+            <i class='fas fa-pen' />&nbsp;Update</button>
         </div>
       ) : (
         <button className='class-signup-btn'>Sign Up</button>
