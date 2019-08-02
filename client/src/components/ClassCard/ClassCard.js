@@ -23,7 +23,7 @@ const ClassCard = ({ event, deleteEvent, auth }) => {
       {auth ? (
         <span />
       ) : (
-        <button className='directions-btn' > <a href={`https://www.google.com/maps/dir/?api=1&destination=${eve.location.replace(/ /g, '+')}`} target='_blank'>
+        <button className='directions-btn' > <a href={`https://www.google.com/maps/dir/?api=1&destination=${eve.location.replace(/ /g, '+')}`} target='_blank' rel='noopener noreferrer'>
             Get directions</a>
         </button >
       )}
