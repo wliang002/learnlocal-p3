@@ -20,7 +20,7 @@ const AllArt = ({ getProfiles, profile: { profiles, loading } }) => {
           <p>If there’s a class you’d like to take, click the “Sign up” buttom to&nbsp;RSVP.</p>
         </div>
         <hr />
-        <div className='profiles'>
+        <div className='profiles row'>
           {profiles.length > 0 ? (
             profiles.map(profile => (
               <ClassCard event={profile.events.filter(e => e.eventType === 'Art')} />

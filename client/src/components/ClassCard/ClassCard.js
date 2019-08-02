@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import Moment from 'react-moment'
 import moment from 'moment'
@@ -24,7 +24,7 @@ const ClassCard = ({ event, deleteEvent, auth }) => {
         <span />
       ) : (
         <button className='directions-btn' > <a href={`https://www.google.com/maps/dir/?api=1&destination=${eve.location.replace(/ /g, '+')}`} target='_blank'>
-            Get directions</a>
+              Get directions</a>
         </button >
       )}
 
@@ -53,7 +53,7 @@ const ClassCard = ({ event, deleteEvent, auth }) => {
   ))
 
   return (
-    <div className='class-body'>{events}</div>
+    <Fragment>{events}</Fragment>
   )
 }
 
