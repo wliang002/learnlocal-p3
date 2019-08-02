@@ -38,8 +38,8 @@ const TeacherProfile = ({
                 <p>These are the classes you are teaching:</p>
               </div>
               <ClassCard event={profile.events} auth={isAuthenticated} />
-              <button className='btn delete-account btn-danger' onClick={() => deleteAccount()}>
-              <i className="fas fa-heart-broken"></i>&nbsp;Delete Account
+              <button className='btn delete-account' onClick={() => deleteAccount()}>
+                <i className='fas fa-heart-broken' />&nbsp;Delete Account
               </button>
             </Fragment>
           ) : (
