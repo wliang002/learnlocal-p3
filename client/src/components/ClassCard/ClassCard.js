@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Moment from 'react-moment'
 import moment from 'moment'
+import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { deleteEvent } from '../../actions/profile'
 import './ClassCard.css'
@@ -29,10 +30,13 @@ const ClassCard = ({ event, deleteEvent, auth }) => {
       )}
 
       <p>
-        <strong>Date:</strong> <Moment format='MM/DD/YYYY'>{moment.utc(eve.eventDate)}</Moment>
+        <strong>Date: </strong> <Moment format='MM/DD/YYYY'>{moment.utc(eve.eventDate)}</Moment>
       </p>
       <p>
-        <strong>Time:</strong> {eve.eventTime}
+        <strong>Time: </strong>{eve.eventTime}
+      </p>
+      <p>
+        <strong>Class Size: </strong>{eve.eventSize}
       </p>
       <p>
         <strong>Description:</strong> {eve.description}
@@ -42,11 +46,11 @@ const ClassCard = ({ event, deleteEvent, auth }) => {
           <button className='DeleteBtn btn'
             onClick={() => deleteEvent(eve._id)}>
             <i class='fas fa-times' />&nbsp;Delete</button>
-          <button className='UpdateBtn btn'>
-            <i class='fas fa-pen' />&nbsp;Update</button>
         </div>
       ) : (
-        <button className='class-signup-btn'>Sign Up</button>
+        <Link className='btn class-signup-btn' to='/sign-up'>
+          Sign Up
+        </Link>
       )}
 
     </div>
