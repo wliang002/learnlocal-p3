@@ -16,6 +16,7 @@ const TeachForm = ({ addClasses, history }) => {
     geocode: [],
     eventDate: '',
     eventTime: '',
+    eventSize: '',
     description: ''
   })
   const {
@@ -26,6 +27,7 @@ const TeachForm = ({ addClasses, history }) => {
     geocode,
     eventDate,
     eventTime,
+    eventSize,
     description
   } = formData
 
@@ -56,7 +58,7 @@ const TeachForm = ({ addClasses, history }) => {
               className='form-control'
               id='teachersName'
               rows='1'
-              placeholder='Teachers Name'
+              placeholder='Your name ...'
               name='teachersName'
               value={teachersName}
               onChange={e => onChange(e)}
@@ -70,7 +72,7 @@ const TeachForm = ({ addClasses, history }) => {
               className='form-control'
               id='eventName'
               rows='2'
-              placeholder='event Name'
+              placeholder='Class title ...'
               name='eventName'
               value={eventName}
               onChange={e => onChange(e)}
@@ -106,7 +108,7 @@ const TeachForm = ({ addClasses, history }) => {
               className='form-control'
               id='location'
               rows='2'
-              placeholder='location'
+              placeholder='street, city, state'
               name='location'
               value={location}
               onChange={e => onChange(e)}
@@ -120,7 +122,7 @@ const TeachForm = ({ addClasses, history }) => {
               className='form-control'
               id='geocode'
               rows='1'
-              placeholder='geocode'
+              placeholder='-122.3223, 37.23232'
               name='geocode'
               value={geocode}
               onChange={e => onChange(e)}
@@ -134,7 +136,7 @@ const TeachForm = ({ addClasses, history }) => {
               className='form-control'
               id='date'
               type='date'
-              placeholder='event Date'
+              placeholder='date'
               name='eventDate'
               value={eventDate}
               onChange={e => onChange(e)}
@@ -147,9 +149,22 @@ const TeachForm = ({ addClasses, history }) => {
               className='form-control'
               id='time'
               rows='1'
-              placeholder='event Time'
+              placeholder='hh:mm am/pm'
               name='eventTime'
               value={eventTime}
+              onChange={e => onChange(e)}
+              required />
+          </div>
+
+          <div className='form-group'>
+            <label for='location'>Class Size: </label>
+            <textarea
+              className='form-control'
+              id='eventSize'
+              rows='1'
+              placeholder='how big is your class ...'
+              name='eventSize'
+              value={eventSize}
               onChange={e => onChange(e)}
               required />
           </div>
@@ -160,7 +175,7 @@ const TeachForm = ({ addClasses, history }) => {
               className='form-control'
               id='description'
               rows='8'
-              placeholder='event description'
+              placeholder='Class description ...'
               name='description'
               value={description}
               onChange={e => onChange(e)}

@@ -198,6 +198,7 @@ router.put(
       geocode,
       eventDate,
       eventTime,
+      eventSize,
       description
     } = req.body
 
@@ -209,6 +210,7 @@ router.put(
       geocode,
       eventDate,
       eventTime,
+      eventSize,
       description
     }
 
