@@ -37,8 +37,8 @@ hr {
     margin-top: 5px;
 }
 
-.btn .delete-account {
-    background-color: red;
+.btn.delete-account {
+    background-color:rgb(218, 68, 34);
     color: white;
     font-size: 17px;
     font-family: 'Fredericka the Great', cursive;
@@ -48,4 +48,12 @@ hr {
     margin-left: 5px;
     margin-right: 5px;
     margin-top: 5px;
+}
+
+.fa-palette, .fa-utensils, .fa-drafting-compass, .fa-lightbulb, .fa-seedling, .fa-running,.fa-glass-cheers, .fa-laptop, .fa-spa, .fa-cat, .fa-feather-alt {
+    color: #E4B320;
+}
+
+.fa-earlybirds {
+    color: #DA7A22;
 }

@@ -31,6 +31,14 @@
     border: none;
 }
 
+.dash-buttons .DeleteBtn {
+    background-color:rgb(218, 68, 34);
+}
+
+.dash-buttons .UpdateBtn {
+    background-color:rgb(24, 143, 40);
+}
+
 strong {
     font-size: 1.5em;
     color: #DA7A22;
