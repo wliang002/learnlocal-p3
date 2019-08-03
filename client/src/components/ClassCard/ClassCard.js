@@ -50,7 +50,7 @@ const ClassCard = ({ userId, event, deleteEvent, auth }) => {
             type='button'
             className='btn class-signup-btn'
           >
-            <i className='fas fa-users' />&nbsp;Students
+            <i className='fas fa-users' />&nbsp;Students Enrolled
           </button>
           {eve.students.length > 0 ? (
             <Fragment>
@@ -67,7 +67,7 @@ const ClassCard = ({ userId, event, deleteEvent, auth }) => {
           <div className='dash-buttons'>
             <button className='DeleteBtn btn'
               onClick={() => deleteEvent(eve._id)}>
-              <i className='fas fa-times' />&nbsp;Delete</button>
+              <i className='fas fa-times' />&nbsp;Delete Class</button>
           </div>
         </Fragment>
       ) : (
