@@ -54,7 +54,20 @@ const ProfileSchema = new mongoose.Schema({
       description: {
         type: String,
         required: true
-      }
+      },
+      students: [
+        {
+          studentsName: {
+            type: String
+          },
+          studentsEmail: {
+            type: String
+          },
+          studentsPhone: {
+            type: String
+          }
+        }
+      ]
     }
   ],
   social: {
