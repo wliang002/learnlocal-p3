@@ -14,7 +14,7 @@
   color: #E4B320;
   font-size: 30px;
   font-family: 'Fredericka the Great', Verdana, Tahoma, sans-serif;
-  text-shadow: 1px 1px 0 rgba(0,0,0,0.4), 0 0 15px rgba(255,255,255,0.4);
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4), 0 0 15px rgba(255,255,255,0.4);
 
   text-decoration: none;
 }
@@ -99,7 +99,7 @@
 
 .collapsibleCategories, .collapsibleTeachersBtn a, .collapsibleLogInBtns {
   font-size: 17px;
-  font-family: 'Fredericka the Great', cursive;
+  font-family: 'Quicksand', sans-serif;
   font-weight: bold;
   text-shadow: 1px 1px 0 rgba(0,0,0,0.4), 0 0 15px rgba(255,255,255,0.4);
 }
