@@ -3,11 +3,11 @@ import './TeachForm.css'
 import { Link, withRouter } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { addClasses } from '../../actions/profile'
+import { studentSignUp } from '../../actions/profile'
 
 
 
-const StudentForm = ({ addClasses, history }) => {
+const StudentForm = ({ studentSignUp, history, userId, match }) => {
   const [formData, setFormData] = useState({
     studentsName: '',
     studentsEmail: '',
@@ -35,7 +35,7 @@ const StudentForm = ({ addClasses, history }) => {
           className='form'
           onSubmit={e => {
             e.preventDefault()
-            addClasses(formData, history)
+            studentSignUp(match.params.userId, match.params.id, formData, history)
           }}
         >
 
@@ -93,11 +93,11 @@ const StudentForm = ({ addClasses, history }) => {
 }
 
 StudentForm.propTypes = {
-  addClasses: PropTypes.func.isRequired
+  studentSignUp: PropTypes.func.isRequired
 }
 
 
 export default connect(
   null,
-  { addClasses }
+  { studentSignUp }
 )(withRouter(StudentForm))

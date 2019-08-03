@@ -7,7 +7,7 @@ import { connect } from 'react-redux'
 import { deleteEvent } from '../../actions/profile'
 import './ClassCard.css'
 
-const ClassCard = ({ event, deleteEvent, auth }) => {
+const ClassCard = ({ userId, event, deleteEvent, auth }) => {
   const events = event.map(eve => (
     <div className='class-card' key={eve._id}>
       <h2 className='class-title'>Class: {eve.eventName}</h2>
@@ -48,7 +48,7 @@ const ClassCard = ({ event, deleteEvent, auth }) => {
             <i class='fas fa-times' />&nbsp;Delete</button>
         </div>
       ) : (
-        <Link className='btn class-signup-btn' to='/sign-up'>
+        <Link className='btn class-signup-btn' to={`/sign-up/${userId}/${eve._id}`}>
           Sign Up
         </Link>
       )}

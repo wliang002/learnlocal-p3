@@ -70,7 +70,7 @@ const App = () => {
                 <Route exact path='/technology' component={AllTechnology} />
                 <Route exact path='/social' component={AllSocial} />
                 <Route exact path='/other' component={AllOther} />
-                <Route exact path='/sign-up' component={StudentForm} />
+                <Route exact path='/sign-up/:userId/:id' component={StudentForm} />
                 
                 <PrivateRoute exact path='/dashboard' component={TeacherProfile} />
                 <PrivateRoute exact path='/add-classes' component={TeachForm} />
