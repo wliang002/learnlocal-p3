@@ -44,9 +44,8 @@
 }
 
 strong {
-    font-size: 1.5em;
     color: #DA7A22;
-    font-family: 'Great Vibes', cursive;
+    font-family: 'Fredericka the Great', cursive;
 }
 
 .directions-btn a {
@@ -55,8 +54,8 @@ strong {
 
 p {
     font-size: 20px;
-    color: #CECDC9;
-    font-family: 'Lustria', serif;
+    color: rgba(238, 237, 234, 0.911);
+    font-family: 'Quicksand', sans-serif;
 }
 
 /* don't display regular cards on desktop view */
