@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { getProfiles } from '../../../actions/profile'
 import '../../ClassDisplays/ClassDisplays.css'
-import ClassCard from '../../ClassCard/ClassCard'
+import GeoCard from '../../ClassCard/GeoCard'
 
 const AllMovement = ({ getProfiles, profile: { profiles, loading } }) => {
   useEffect(() => {
@@ -23,7 +23,7 @@ const AllMovement = ({ getProfiles, profile: { profiles, loading } }) => {
         <div className='profiles'>
           {profiles.length > 0 ? (
             profiles.map(profile => (
-              <ClassCard event={profile.events.filter(e => e.eventType === 'Movement')} />
+              <GeoCard userId={profile.user._id} event={profile.events.filter(e => e.eventType === 'Movement')} />
             ))
           ) : (
             <p className='sorry'>We&rsquo;re sorry, we did not find any classes in that category...</p>

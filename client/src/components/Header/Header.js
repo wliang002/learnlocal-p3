@@ -44,17 +44,15 @@ const Header = ({ auth: { isAuthenticated, loading }, logout }) => {
         </div>
         {/* class categories */}
         <div className='dropdown first'>
-          <a
+          <button
             className='btn btn-secondary dropdown-toggle'
-            href='#'
-            role='button'
             id='categoryDropdownMenuLink'
             data-toggle='dropdown'
             aria-haspopup='true'
             aria-expanded='false'
           >
             Browse Classes
-          </a>
+          </button>
           <div className='dropdown-content'>
             <Link to='/learn-by-category' className='dropdown-item'>All Classes</Link>
             <Link to='/art' className='dropdown-item'>

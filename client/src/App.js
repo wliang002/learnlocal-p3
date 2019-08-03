@@ -28,6 +28,7 @@ import AllWellness from './components/StudentView/ByCategory/AllWellness'
 import AllCreative from './components/StudentView/ByCategory/AllCreative'
 import AllTechnology from './components/StudentView/ByCategory/AllTechnology'
 import NotFound from './components/Landing/NotFound'
+import StudentForm from './components/TeachForm/StudentForm'
 // Redux
 import { Provider } from 'react-redux'
 import store from './store'
@@ -69,6 +70,8 @@ const App = () => {
                 <Route exact path='/technology' component={AllTechnology} />
                 <Route exact path='/social' component={AllSocial} />
                 <Route exact path='/other' component={AllOther} />
+                <Route exact path='/sign-up/:userId/:id' component={StudentForm} />
+                
                 <PrivateRoute exact path='/dashboard' component={TeacherProfile} />
                 <PrivateRoute exact path='/add-classes' component={TeachForm} />
                 <PrivateRoute exact path='/create-profile' component={CreateProfile} />

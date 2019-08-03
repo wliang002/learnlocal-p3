@@ -1,10 +1,9 @@
-import React, { Fragment, useEffect } from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
-import { getProfiles } from '../../../actions/profile'
-import '../../ClassDisplays/ClassDisplays.css'
-import ClassCard from '../../ClassCard/ClassCard'
-import Wrapper from '../../ClassCard/Wrapper'
+import React, { Fragment, useEffect } from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { getProfiles } from "../../../actions/profile";
+import "../../ClassDisplays/ClassDisplays.css";
+import GeoCard from '../../ClassCard/GeoCard'
 
 const AllTechnology = ({ getProfiles, profile: { profiles, loading } }) => {
   useEffect(() => {
@@ -27,20 +26,18 @@ const AllTechnology = ({ getProfiles, profile: { profiles, loading } }) => {
           </p>
         </div>
         <hr />
-        <div className='profiles'>
-          <Wrapper>
-            {profiles.length > 0 ? (
-              profiles.map(profile => (
-                <ClassCard
-                  event={profile.events.filter(e => e.eventType === 'Technology')}
-                />
-              ))
-            ) : (
-              <p className='sorry'>
-                  We&rsquo;re sorry, we did not find any classes in that category...
-              </p>
-            )}
-          </Wrapper>
+        <div className="profiles">
+          {profiles.length > 0 ? (
+            profiles.map(profile => (
+              <GeoCard userId={profile.user._id}
+                event={profile.events.filter(e => e.eventType === "Technology")}
+              />
+            ))
+          ) : (
+            <p className="sorry">
+              We&rsquo;re sorry, we did not find any classes in that category...
+            </p>
+          )}
         </div>
       </div>
     </Fragment>

@@ -47,10 +47,27 @@ const ProfileSchema = new mongoose.Schema({
         type: String,
         required: true
       },
+      eventSize: {
+        type: String,
+        require: true
+      },
       description: {
         type: String,
         required: true
-      }
+      },
+      students: [
+        {
+          studentsName: {
+            type: String
+          },
+          studentsEmail: {
+            type: String
+          },
+          studentsPhone: {
+            type: String
+          }
+        }
+      ]
     }
   ],
   social: {
