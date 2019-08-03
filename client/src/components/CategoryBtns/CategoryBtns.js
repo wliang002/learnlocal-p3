@@ -11,34 +11,36 @@ const CategoryBtns = props => (
         All Classes
       </Link>
       <Link to='/art' className='btn btn-success'>
-            Art
+        <i className='fas fa-palette' />&nbsp; Art
       </Link>
       <Link to='/cooking' className='btn btn-success'>
-        Cooking
+        <i className='fas fa-utensils' />&nbsp;Cooking
       </Link>
       <Link to='/craft' className='btn btn-success'>
-        Craft
+        <i className='fas fa-drafting-compass' />&nbsp;Craft
       </Link>
       <Link to='/creative' className='btn btn-success'>
-        Creative
+        <i className='far fa-lightbulb' />&nbsp;Creative
       </Link>
       <Link to='/garden' className='btn btn-success'>
-        Garden
+        <i className='fas fa-seedling' />&nbsp;Garden
       </Link>
       <Link to='/movement' className='btn btn-success'>
-        Movement
+        <i className='fas fa-running' />&nbsp;Movement
       </Link>
       <Link to='/social' className='btn btn-success'>
-        Social
+        <i className='fas fa-glass-cheers' />&nbsp;Social
       </Link>
       <Link to='/technology' className='btn btn-success'>
-        Technology
+        <i className='fas fa-laptop' />
+          &nbsp;Technology
       </Link>
       <Link to='/wellness' className='btn btn-success'>
-        Wellness
+        <i className='fas fa-spa' />
+          &nbsp;Wellness
       </Link>
       <Link to='/other' className='btn btn-success'>
-        Other
+        <i className='fas fa-cat' />&nbsp;Other
       </Link>
     </div>
   </div>
