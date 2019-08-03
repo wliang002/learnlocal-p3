@@ -36,7 +36,7 @@ class MapBox extends React.Component {
 
   addClassCard() {
     return this.state.profiles.map(profile => {
-      return <GeoCard event={profile.events} />
+      return <GeoCard userId={profile.user._id} event={profile.events} />
     })
   }
 

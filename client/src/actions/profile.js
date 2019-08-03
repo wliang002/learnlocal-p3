@@ -152,6 +152,7 @@ export const studentSignUp = (userId, id, formData, history) => async dispatch =
       payload: res.data
     })
     dispatch(setAlert('Signed Up!', 'success'))
+    history.push(`/classes/${userId}`)
   } catch (err) {
     const errors = err.response.data.errors
 

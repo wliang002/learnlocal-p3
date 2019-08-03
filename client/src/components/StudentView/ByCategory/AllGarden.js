@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { getProfiles } from "../../../actions/profile";
 import "../../ClassDisplays/ClassDisplays.css";
-import ClassCard from "../../ClassCard/ClassCard";
+import GeoCard from '../../ClassCard/GeoCard'
 
 const AllGarden = ({ getProfiles, profile: { profiles, loading } }) => {
   useEffect(() => {
@@ -29,7 +29,7 @@ const AllGarden = ({ getProfiles, profile: { profiles, loading } }) => {
         <div className="profiles">
           {profiles.length > 0 ? (
             profiles.map(profile => (
-              <ClassCard
+              <GeoCard userId={profile.user._id}
                 event={profile.events.filter(e => e.eventType === "Garden")}
               />
             ))
