@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { getProfiles } from '../../../actions/profile'
 import GeoCard from '../../ClassCard/GeoCard'
+import Wrapper from '../../ClassCard/Wrapper'
 
 const AllOther = ({ getProfiles, profile: { profiles, loading } }) => {
   useEffect(() => {
@@ -20,13 +21,15 @@ const AllOther = ({ getProfiles, profile: { profiles, loading } }) => {
         </div>
         <hr />
         <div className='profiles'>
-          {profiles.length > 0 ? (
-            profiles.map(profile => (
-              <GeoCard userId={profile.user._id} event={profile.events.filter(e => e.eventType === 'Other')} />
-            ))
-          ) : (
-            <p className='sorry'>We&rsquo;re sorry, we did not find any classes in that category...</p>
-          )}
+          <Wrapper>
+            {profiles.length > 0 ? (
+              profiles.map(profile => (
+                <GeoCard userId={profile.user._id} event={profile.events.filter(e => e.eventType === 'Other')} />
+              ))
+            ) : (
+              <p className='sorry'>We&rsquo;re sorry, we did not find any classes in that category...</p>
+            )}
+          </Wrapper>
         </div>
       </div>
     </Fragment>

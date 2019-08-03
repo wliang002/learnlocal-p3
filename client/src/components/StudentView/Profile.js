@@ -5,6 +5,7 @@ import Spinner from '../Landing/Spinner'
 import { getProfileById } from '../../actions/profile'
 import ClassCard from '../ClassCard/ClassCard'
 import '../ClassDisplays/ClassDisplays.css'
+import Wrapper from '../ClassCard/Wrapper'
 
 const Profile = ({
   getProfileById,
@@ -25,11 +26,13 @@ const Profile = ({
           <Fragment>
             <h1><i className='fab fa-earlybirds' />
               &nbsp;{profile.user.name}&rsquo;s Classes</h1>
-            {profile.events.length > 0 ? (
+            <Wrapper>{profile.events.length > 0 ? (
+
               <ClassCard userId={match.params.id} event={profile.events} />
             ) : (
               <p className='sorry'>We&rsquo;re sorry &mdash; this teacher is not hosting any classes right now.</p>
-            )}
+
+            )}</Wrapper>
           </Fragment>
         )}
       </div>

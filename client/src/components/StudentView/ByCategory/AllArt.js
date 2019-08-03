@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { getProfiles } from '../../../actions/profile'
 import '../../ClassDisplays/ClassDisplays.css'
 import GeoCard from '../../ClassCard/GeoCard'
+import Wrapper from '../../ClassCard/Wrapper'
 
 const AllArt = ({ getProfiles, profile: { profiles, loading } }) => {
   useEffect(() => {
@@ -20,14 +21,16 @@ const AllArt = ({ getProfiles, profile: { profiles, loading } }) => {
           <p>If there’s a class you’d like to take, click the “Sign up” buttom to&nbsp;RSVP.</p>
         </div>
         <hr />
-        <div className='profiles row'>
-          {profiles.length > 0 ? (
-            profiles.map(profile => (
-              <GeoCard userId={profile.user._id} event={profile.events.filter(e => e.eventType === 'Art')} />
-            ))
-          ) : (
-            <p className='sorry'>We&rsquo;re sorry, we did not find any classes in that category...</p>
-          )}
+        <div className='profiles'>
+          <Wrapper>
+            {profiles.length > 0 ? (
+              profiles.map(profile => (
+                <GeoCard userId={profile.user._id} event={profile.events.filter(e => e.eventType === 'Art')} />
+              ))
+            ) : (
+              <p className='sorry'>We&rsquo;re sorry, we did not find any classes in that category...</p>
+            )}
+          </Wrapper>
         </div>
       </div>
     </Fragment>
