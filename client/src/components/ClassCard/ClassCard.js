@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment, useState } from 'react'
 import PropTypes from 'prop-types'
 import Moment from 'react-moment'
 import moment from 'moment'
@@ -6,8 +6,10 @@ import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { deleteEvent } from '../../actions/profile'
 import './ClassCard.css'
+import Student from './Student'
 
 const ClassCard = ({ userId, event, deleteEvent, auth }) => {
+  const [displayStudents, toggleStudents] = useState(false)
   const events = event.map(eve => (
     <div className='class-card' key={eve._id}>
       <h2 className='class-title'>Class: {eve.eventName}</h2>
@@ -25,7 +27,7 @@ const ClassCard = ({ userId, event, deleteEvent, auth }) => {
         <span />
       ) : (
         <button className='directions-btn' > <a href={`https://www.google.com/maps/dir/?api=1&destination=${eve.location.replace(/ /g, '+')}`} target='_blank' rel='noopener noreferrer'>
-            Get directions</a>
+          <i class='fas fa-directions' />&nbsp;Get directions</a>
         </button >
       )}
 
@@ -36,21 +38,51 @@ const ClassCard = ({ userId, event, deleteEvent, auth }) => {
         <strong>Time: </strong>{eve.eventTime}
       </p>
       <p>
-        <strong>Class Size: </strong>{eve.eventSize}
+        <strong>Class Size: </strong>{eve.students.length} | {eve.eventSize}
       </p>
       <p>
         <strong>Description:</strong> {eve.description}
       </p>
       {auth ? (
-        <div className='dash-buttons'>
-          <button className='DeleteBtn btn'
-            onClick={() => deleteEvent(eve._id)}>
-            <i class='fas fa-times' />&nbsp;Delete</button>
-        </div>
+        <Fragment>
+          <button
+            onClick={() => toggleStudents(!displayStudents)}
+            type='button'
+            className='btn class-signup-btn'
+          >
+            <i className='fas fa-users' />&nbsp;Students
+          </button>
+          {eve.students.length > 0 ? (
+            <Fragment>
+              {displayStudents && (
+                <Fragment>
+                  {eve.students.map(student => {
+                    return <Student student={student} />
+                  })}
+                </Fragment>
+              )}
+            </Fragment>
+          ) : (
+            <span />
+          )}
+
+          <div className='dash-buttons'>
+            <button className='DeleteBtn btn'
+              onClick={() => deleteEvent(eve._id)}>
+              <i className='fas fa-times' />&nbsp;Delete</button>
+          </div>
+        </Fragment>
       ) : (
-        <Link className='btn class-signup-btn' to={`/sign-up/${userId}/${eve._id}`}>
-          Sign Up
-        </Link>
+        <Fragment>
+          {eve.students.length >= eve.eventSize ? (
+            <h4>
+              <i className='far fa-sad-tear' />&nbsp;Class is full</h4>
+          ) : (
+            <Link className='btn class-signup-btn' to={`/sign-up/${userId}/${eve._id}`}>
+              <i className='fas fa-user-plus' />&nbsp;Sign Up
+            </Link>
+          )}
+        </Fragment>
       )}
 
     </div>
