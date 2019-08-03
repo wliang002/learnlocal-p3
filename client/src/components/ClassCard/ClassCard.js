@@ -56,9 +56,7 @@ const ClassCard = ({ userId, event, deleteEvent, auth }) => {
             <Fragment>
               {displayStudents && (
                 <Fragment>
-                  {eve.students.map(student => {
-                    return <Student student={student} />
-                  })}
+                  <Student student={eve.students} />
                 </Fragment>
               )}
             </Fragment>
