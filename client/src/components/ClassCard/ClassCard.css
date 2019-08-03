@@ -1,6 +1,6 @@
 .class-card {
     border-radius: 10px;
-    /* margin: 40px; */
+    margin-top: 20px;
     padding: 30px;
     background-color: rgb(73, 105, 109);
     max-width: 500px;
@@ -47,6 +47,7 @@
 strong {
     color: #DA7A22;
     font-family: 'Fredericka the Great', cursive;
+    letter-spacing: 1px;
 }
 
 .directions-btn a {
@@ -58,6 +59,24 @@ p {
     font-size: 20px;
     color: rgba(238, 237, 234, 0.911);
     font-family: 'Quicksand', sans-serif;
+}
+
+.classSizeCol {
+    float: left;
+    width: 50%;
+}
+
+.classSizeRow:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.classDescription {
+    margin-top:10px;
+    margin-bottom:10px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
 }
 
 /* don't display regular cards on desktop view */
