@@ -1,6 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import styles from './MapClassCard.css'
 import ReactMapboxGl from 'react-mapbox-gl'
 import axios from 'axios'
 import GeoCard from './GeoCard'
@@ -38,7 +36,7 @@ class MapBox extends React.Component {
 
   addClassCard() {
     return this.state.profiles.map(profile => {
-      return <GeoCard event={profile.events} />
+      return <GeoCard userId={profile.user._id} event={profile.events} />
     })
   }
 
@@ -47,6 +45,7 @@ class MapBox extends React.Component {
     const newChaps = {}
     this.state.profiles.map(profile => {
       chaps.push(this.makeChapters(profile.events))
+      return null
     })
 
     chaps.map(chap => {
@@ -56,10 +55,13 @@ class MapBox extends React.Component {
         if (Object.keys(chap).length  > 1) {
           Object.keys(chap).map( (k,i) => {
             newChaps[k] = Object.values(chap)[i]
+            return null
           })
         }
+        return null
     })
     this.setState({ chapters: newChaps })
+    
   }
 
   makeChapters(events) {
@@ -72,6 +74,7 @@ class MapBox extends React.Component {
         zoom: 13,
         pitch: 40
       }
+      return null
     })
     return allevents
   }
@@ -111,16 +114,17 @@ class MapBox extends React.Component {
     const element = document.getElementById(id);
     const bounds = element.getBoundingClientRect();
     return bounds.top < window.innerHeight && bounds.bottom - 800 > 0;
-    console.log('the element on screen', id)
+    // console.log('the element on screen', id)
   }
 
   render() {
+    const obj = {'s':'mapbox://styles/mapbox/streets-v10'}
     return (
 
         <div className='MapClassCardContainer'>
           <StickyBox>
             <Map
-              style='mapbox://styles/mapbox/streets-v10'
+              style= {obj.s}
               center={this.state.center}
               zoom={[15.0]}
               bearing={[0]}

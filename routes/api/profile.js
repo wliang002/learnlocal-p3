@@ -4,7 +4,7 @@ const config = require('config')
 const router = express.Router()
 const auth = require('../../middleware/auth')
 const { check, validationResult } = require('express-validator/check')
-
+const mongoose = require('mongoose')
 const Profile = require('../../models/Profile')
 const User = require('../../models/User')
 
@@ -179,6 +179,9 @@ router.put(
       check('eventTime', 'Event Time is required')
         .not()
         .isEmpty(),
+      check('eventSize', 'Event Size is required')
+        .not()
+        .isEmpty(),
       check('description', 'Description is required')
         .not()
         .isEmpty()
@@ -198,6 +201,7 @@ router.put(
       geocode,
       eventDate,
       eventTime,
+      eventSize,
       description
     } = req.body
 
@@ -209,6 +213,7 @@ router.put(
       geocode,
       eventDate,
       eventTime,
+      eventSize,
       description
     }
 
@@ -223,6 +228,70 @@ router.put(
       res.json(profile)
     } catch (err) {
       console.error(err.message)
+      res.status(500).send('Server Error')
+    }
+  }
+)
+
+// Sign up for classes
+// @route    PUT api/profile//user/:user_id/events/:event_id
+// @desc     Add student to event
+// @access   Public
+router.post(
+  '/user/:user_id/events/:event_id',
+  [
+    check('studentsName', 'students name is required')
+      .not()
+      .isEmpty(),
+    check('studentsEmail', 'email is required')
+      .not()
+      .isEmpty(),
+    check('studentsPhone', 'phone is required')
+      .not()
+      .isEmpty()
+  ],
+  async (req, res) => {
+    const errors = validationResult(req)
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array() })
+    }
+
+    const {
+      studentsName,
+      studentsEmail,
+      studentsPhone
+    } = req.body
+
+    const newStudent = {
+      studentsName,
+      studentsEmail,
+      studentsPhone
+    }
+
+    try {
+      const profile = await Profile.findOne({
+        user: req.params.user_id
+      })
+
+      if (!profile) return res.status(400).json({ msg: 'Profile not found' })
+
+      // res.json(profile)
+      // // get the id of the class
+      const eventIds = profile.events.map(event => event._id.toString())
+      // // get the index of the class
+      const eventIndex = eventIds.indexOf(req.params.event_id)
+      // if the id doesn't exist
+      if (eventIndex === -1) {
+        return res.status(500).json({ msg: 'event not found' })
+      } else {
+        profile.events[eventIndex].students.unshift(newStudent)
+
+        await profile.save()
+
+        res.json(profile)
+      }
+    } catch (err) {
+      console.log(err.message)
       res.status(500).send('Server Error')
     }
   }
