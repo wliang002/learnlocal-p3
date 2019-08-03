@@ -21,7 +21,7 @@ const GeoCard = ({ userId, event }) => {
           <strong>Location:</strong> {eve.location}
         </p>
         <button className='directions-btn' > <a href={`https://www.google.com/maps/dir/?api=1&destination=${eve.location.replace(/ /g, '+')}`} target='_blank' rel='noopener noreferrer'>
-        Get directions</a>
+        <i className="fas fa-directions"></i>&nbsp;Get directions</a>
         </button >
         <p>
           <strong>Date:</strong> <Moment format='MM/DD/YYYY'>{moment.utc(eve.eventDate)}</Moment>
@@ -30,12 +30,20 @@ const GeoCard = ({ userId, event }) => {
           <strong>Time:</strong> {eve.eventTime}
         </p>
         <p>
+          <strong>Class Size: </strong>{eve.students.length} | {eve.eventSize}
+        </p>
+        <p>
           <strong>Description:</strong> {eve.description}
         </p>
 
-        <Link className='btn class-signup-btn' to={`/sign-up/${userId}/${eve._id}`}>
-          Sign Up
-        </Link>
+        {eve.students.length >= eve.eventSize ? (
+          <h4>
+            <i class='far fa-sad-tear' />&nbsp;Class is full</h4>
+        ) : (
+          <Link className='btn class-signup-btn' to={`/sign-up/${userId}/${eve._id}`}>
+              <i className="fas fa-user-plus"></i>&nbsp;Sign Up
+          </Link>
+        )}
       </div>
     </section>
 
