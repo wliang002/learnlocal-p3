@@ -26,7 +26,7 @@ const Profile = ({
             <h1><i className='fab fa-earlybirds' />
               &nbsp;{profile.user.name}&rsquo;s Classes</h1>
             {profile.events.length > 0 ? (
-              <ClassCard event={profile.events} />
+              <ClassCard userId={match.params.id} event={profile.events} />
             ) : (
               <p className='sorry'>We&rsquo;re sorry &mdash; this teacher is not hosting any classes right now.</p>
             )}
