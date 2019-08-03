@@ -55,7 +55,7 @@ const Login = ({ login, isAuthenticated }) => {
         <input type='submit' className='btn btn-success log' value='Login' />
       </form>
       <p className='haveAcctQ'>
-        Don't have an account? <Link to='/register'>Create One!</Link>
+        Don't have an account? <Link to='/register'>Create&nbsp;One!</Link>
       </p>
     </div>
   )
