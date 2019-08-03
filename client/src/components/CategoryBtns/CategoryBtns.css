@@ -6,15 +6,15 @@
 }
 
 .categoryBtnContainer p {
-    color: #CECDC9;
-    font-family: 'Lustria', serif;
+    color:rgba(238, 237, 234, 0.911);
+    font-family: 'Quicksand', sans-serif;
     font-size: 17px;
 }
 
 .categoryBtnContainer .btn {
     background-color: #DA7A22;
-    color: white;
-    font-family: 'Fredericka the Great', cursive;
+    color:rgba(238, 237, 234, 0.911);
+    font-family: 'Quicksand', sans-serif;
     padding-left: 30px;
     padding-right: 30px;
     padding-bottom: 10px;

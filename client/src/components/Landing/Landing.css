@@ -42,9 +42,9 @@
 }
 
 .landing p {
-    font-family: 'Lustria', serif;
+    font-family: 'Quicksand', sans-serif;
     font-size: 17px;
-    color: #CECDC9;
+    color:rgba(238, 237, 234, 0.911);
 }
 
 .landing-inner .btn {

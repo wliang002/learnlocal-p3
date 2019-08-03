@@ -23,7 +23,7 @@
 .dropdown, .teacherLinkBtn {
   position: relative;
   float: left;
-  font-family: 'Lustria', serif;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .dropdown.first {
@@ -81,9 +81,9 @@
 /* Login Button */
 .LogInBtns .btn {
   background-color: #E4B320;
-  color: white;
+  color:rgba(238, 237, 234, 0.911);
   font-size:17px;
-  font-family: 'Fredericka the Great', cursive;
+  font-family: 'Quicksand', sans-serif;
   padding-left: 30px;
   padding-right: 30px;
   margin-bottom: 20px;
