@@ -8,6 +8,7 @@ import { getCurrentProfile, deleteAccount } from '../../actions/profile'
 import Spinner from '../Landing/Spinner'
 import DashboardActions from './DashboardActions'
 import ProfileItem from '../TeachersDisplays/ProfileItem'
+import Wrapper from '../ClassCard/Wrapper'
 
 const TeacherProfile = ({
   getCurrentProfile,
@@ -37,7 +38,9 @@ const TeacherProfile = ({
               <div className='AppDescriptionContainer'>
                 <p>These are the classes you are teaching:</p>
               </div>
-              <ClassCard event={profile.events} auth={isAuthenticated} />
+              <Wrapper>
+                <ClassCard event={profile.events} auth={isAuthenticated} />
+              </Wrapper>
               <button className='btn delete-account' onClick={() => deleteAccount()}>
                 <i className='fas fa-heart-broken' />&nbsp;Delete Account
               </button>
