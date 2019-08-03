@@ -55,10 +55,11 @@ const StudentForm = ({ studentSignUp, history, userId, match }) => {
 
           <div className='form-group'>
             <label for='studentsEmail'>Your Email:</label>
-            <textarea
+            <input
               className='form-control'
+              type='email'
               id='studentsEmail'
-              rows='2'
+              rows='1'
               placeholder='Your Email ...'
               name='studentsEmail'
               value={studentsEmail}
@@ -72,7 +73,7 @@ const StudentForm = ({ studentSignUp, history, userId, match }) => {
             <textarea
               className='form-control'
               id='studentsPhone'
-              rows='2'
+              rows='1'
               placeholder='Your phone number ...'
               name='studentsPhone'
               value={studentsPhone}

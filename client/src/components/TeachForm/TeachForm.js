@@ -5,8 +5,6 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { addClasses } from '../../actions/profile'
 
-
-
 const TeachForm = ({ addClasses, history }) => {
   const [formData, setFormData] = useState({
     teachersName: '',
