@@ -7,6 +7,12 @@
 ##### Main Page
 ![main page](readmeimg/main.png)
 
+##### Classes
+<p align="center">
+
+  <img src="readmeimg/map.gif">
+</p>
+
 ## Contributors
 - Emily Liang (wliang002)
 - Hetty Chin (hetty-chin)
