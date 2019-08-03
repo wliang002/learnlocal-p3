@@ -169,7 +169,7 @@ export const studentSignUp = (userId, id, formData, history) => async dispatch =
 // delete account and profile
 // delete request to /api/profile
 export const deleteAccount = () => async dispatch => {
-  if (window.confirm('Are you sure?')) {
+  if (window.confirm('Are you sure you want to delete your account? This can not be undone!')) {
     try {
       await axios.delete(`/api/profile`)
 
@@ -192,6 +192,7 @@ export const deleteAccount = () => async dispatch => {
 // delete classes
 // delete request to/ api/profile/events/:event_id
 export const deleteEvent = id => async dispatch => {
+  if (window.confirm('Are you sure you want to delete this class?'))
   try {
     const res = await axios.delete(`/api/profile/events/${id}`)
 
