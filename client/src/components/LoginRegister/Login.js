@@ -26,7 +26,7 @@ const Login = ({ login, isAuthenticated }) => {
   }
 
   return (
-    <div className='wrapper'>
+    <div className='LoginRegisterContainer'>
       <h1 className='sign-in'>Login</h1>
       <p className='lead'>
         <i className='fas fa-user' /> Login to your account</p>

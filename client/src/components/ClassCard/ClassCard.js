@@ -1,3 +1,4 @@
+
 import React, { Fragment, useState } from 'react'
 import PropTypes from 'prop-types'
 import Moment from 'react-moment'
@@ -26,8 +27,10 @@ const ClassCard = ({ userId, event, deleteEvent, auth }) => {
       {auth ? (
         <span />
       ) : (
+
         <button className='directions-btn' > <a href={`https://www.google.com/maps/dir/?api=1&destination=${eve.location.replace(/ /g, '+')}`} target='_blank' rel='noopener noreferrer'>
           <i class='fas fa-directions' />&nbsp;Get directions</a>
+
         </button >
       )}
 
@@ -87,7 +90,7 @@ const ClassCard = ({ userId, event, deleteEvent, auth }) => {
   ))
 
   return (
-    <div className='class-body'>{events}</div>
+    <Fragment>{events}</Fragment>
   )
 }
 
