@@ -137,6 +137,21 @@ export const getProfileById = userId => async dispatch => {
   }
 }
 
+// Sign up for classes
+export const studentSignUp = (userId, id) => async dispatch => {
+  try {
+    const res = await axios.post(`/api/profile/user/${userId}/events/${id}`)
+
+    
+
+  } catch (err) {
+    dispatch({
+      type: PROFILE_ERROR,
+      payload: { msg: err.response.statusText, status: err.response.status } 
+    })
+  }
+}
+
 // delete account and profile
 // delete request to /api/profile
 export const deleteAccount = () => async dispatch => {
