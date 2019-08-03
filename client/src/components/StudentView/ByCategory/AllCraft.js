@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { getProfiles } from '../../../actions/profile'
 import '../../ClassDisplays/ClassDisplays.css'
 import GeoCard from '../../ClassCard/GeoCard'
+import Wrapper from '../../ClassCard/Wrapper'
 
 const AllCraft = ({ getProfiles, profile: { profiles, loading } }) => {
   useEffect(() => {
@@ -21,13 +22,15 @@ const AllCraft = ({ getProfiles, profile: { profiles, loading } }) => {
         </div>
         <hr />
         <div className='profiles'>
-          {profiles.length > 0 ? (
-            profiles.map(profile => (
-              <GeoCard userId={profile.user._id} event={profile.events.filter(e => e.eventType === 'Craft')} />
-            ))
-          ) : (
-            <p className='sorry'>We&rsquo;re sorry, we did not find any classes in that category...</p>
-          )}
+          <Wrapper>
+            {profiles.length > 0 ? (
+              profiles.map(profile => (
+                <GeoCard userId={profile.user._id} event={profile.events.filter(e => e.eventType === 'Craft')} />
+              ))
+            ) : (
+              <p className='sorry'>We&rsquo;re sorry, we did not find any classes in that category...</p>
+            )}
+          </Wrapper>
         </div>
       </div>
     </Fragment>

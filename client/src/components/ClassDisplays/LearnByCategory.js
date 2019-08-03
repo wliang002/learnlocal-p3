@@ -8,7 +8,6 @@ const LearnByCategory = (props) => {
       <div className='LearnByCategoryContainer'>
         <h1>Learn!</h1>
         <hr />
-        {/* classes in this category */}
         <MapBox />
       </div>
     </Fragment>
