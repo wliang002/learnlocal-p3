@@ -1,4 +1,3 @@
-
 import React, { Fragment, useEffect } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
@@ -27,7 +26,6 @@ const AllTechnology = ({ getProfiles, profile: { profiles, loading } }) => {
           </p>
         </div>
         <hr />
-
         <div className="profiles">
           {profiles.length > 0 ? (
             profiles.map(profile => (
@@ -40,7 +38,6 @@ const AllTechnology = ({ getProfiles, profile: { profiles, loading } }) => {
               We&rsquo;re sorry, we did not find any classes in that category...
             </p>
           )}
-
         </div>
       </div>
     </Fragment>
