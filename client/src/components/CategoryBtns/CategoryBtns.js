@@ -8,10 +8,10 @@ const CategoryBtns = props => (
     <p>Search for a class happening in your neighborhood.</p>
     <div className='buttons'>
       <Link to='/learn-by-category' className='btn btn-success'>
-        All Classes
+        <i className='fas fa-cat' />&nbsp;All Classes
       </Link>
       <Link to='/art' className='btn btn-success'>
-        <i className='fas fa-palette' />&nbsp; Art
+        <i className='fas fa-palette' />&nbsp;Art
       </Link>
       <Link to='/cooking' className='btn btn-success'>
         <i className='fas fa-utensils' />&nbsp;Cooking
