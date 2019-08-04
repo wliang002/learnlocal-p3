@@ -1,4 +1,4 @@
-.HostClassContainer {
+.HostClassContainer, .SignUpForClassContainer {
   width: 75%;
   margin-left: auto;
   margin-right: auto;
@@ -27,7 +27,7 @@
   margin-top: 5px;
 }
 
-.teachersProfileContainer .submit-btn, .HostClassContainer .submit-btn {
+.teachersProfileContainer .submit-btn, .HostClassContainer .submit-btn, .SignUpForClassContainer .submit-btn  {
   background-color: #DA7A22;
   color: rgba(238, 237, 234, 0.911);
   font-family: 'Quicksand', sans-serif;
@@ -43,7 +43,7 @@
   border: none;
 }
 
-.teachersProfileContainer .back-btn, .HostClassContainer .back-btn {
+.teachersProfileContainer .back-btn, .HostClassContainer .back-btn, .SignUpForClassContainer .back-btn {
   background-color: #DA7A22;
   color: rgba(238, 237, 234, 0.911);
   font-family: 'Quicksand', sans-serif;
