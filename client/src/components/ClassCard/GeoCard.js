@@ -17,7 +17,7 @@ const GeoCard = ({ userId, event }) => {
         <p>
           <strong>Location:</strong> {eve.location}
         </p>
-        <button className='directions-btn' > <a href={`https://www.google.com/maps/dir/?api=1&destination=${eve.location.replace(/ /g, '+')}`} target='_blank' rel='noopener noreferrer'>
+        <button className='btn directions-btn' > <a href={`https://www.google.com/maps/dir/?api=1&destination=${eve.location.replace(/ /g, '+')}`} target='_blank' rel='noopener noreferrer'>
           <i className='fas fa-directions' />&nbsp;Get directions</a>
         </button >
         <p>

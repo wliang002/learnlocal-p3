@@ -3,8 +3,10 @@
     margin-top: 20px;
     padding: 30px;
     background-color: rgb(73, 105, 109);
-    max-width: 500px;
-    min-width: 500px;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
 }
 
 .class-card p {
@@ -17,12 +19,11 @@
   font-family: 'Fredericka the Great', cursive;
   text-shadow: 1px 1px 0 rgba(0,0,0,0.4), 0 0 15px rgba(255,255,255,0.4);
   font-size: 40px;
-  padding-top:20px;
 }
 
 .class-signup-btn, .directions-btn {
     background-color: #DA7A22;
-    color: white;
+    color: rgba(238, 237, 234, 0.911);
     font-family: 'Quicksand', sans-serif;
     padding-left: 30px;
     padding-right: 30px;
@@ -30,10 +31,17 @@
     padding-top: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
-    margin-left: 5px;
     margin-right: 5px;
-    border-radius: 10px;
-    border: none;
+    border-radius: 0.25rem;
+   border: none;
+}
+
+.directions-btn a {
+    text-decoration: none;
+}
+
+.class-signup-btn:hover {
+    color: rgba(238, 237, 234, 0.911);
 }
 
 .dash-buttons .DeleteBtn {
@@ -75,6 +83,8 @@ p {
 .classDescription {
     margin-top:10px;
     margin-bottom:10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
 }

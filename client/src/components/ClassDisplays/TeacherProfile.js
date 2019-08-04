@@ -42,7 +42,7 @@ const TeacherProfile = ({
                 <ClassCard event={profile.events} auth={isAuthenticated} />
               </Wrapper>
               <button className='btn delete-account' onClick={() => deleteAccount()}>
-                <i className='fas fa-heart-broken' />&nbsp;Delete Account
+                <i className='fas fa-heart-broken' />&nbsp;Delete your account
               </button>
             </Fragment>
           ) : (

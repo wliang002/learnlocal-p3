@@ -29,7 +29,7 @@ const Login = ({ login, isAuthenticated }) => {
     <div className='LoginRegisterContainer'>
       <h1 className='sign-in'>Login</h1>
       <p className='lead'>
-        <i className='fas fa-user' /> Login to your account</p>
+        <i className='fas fa-user' /> Login to your account.</p>
       <form className='form' onSubmit={e => onSubmit(e)}>
         <div className='form-group'>
           <input
@@ -52,7 +52,7 @@ const Login = ({ login, isAuthenticated }) => {
         </div>
         {/* Might need this later */}
         {/* <div id='validator' className='alert alert-danger' style={{ display: 'none' }}>Invalid credentials</div> */}
-        <input type='submit' className='btn btn-success log' value='Login' />
+        <input type='submit' className='btn log' value='Login' />
       </form>
       <p className='haveAcctQ'>
         Don't have an account? <Link to='/register'>Create&nbsp;One!</Link>
