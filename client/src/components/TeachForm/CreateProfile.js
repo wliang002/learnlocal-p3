@@ -83,7 +83,7 @@ const CreateProfile = ({ createProfile,
               type='button'
               className='btn btn-light'
             >
-              Add Social Network Links
+              <i class='fas fa-caret-down' />&nbsp;Add Social Network Links
             </button>
             <span className='socialOptional'>(Optional)</span>
           </div>
@@ -123,7 +123,7 @@ const CreateProfile = ({ createProfile,
           )}
           <input type='submit' className='btn btn-primary submit-btn' />
           <Link className='btn btn-light back-btn' to='/dashboard'>
-            Go Back
+            <i class='fas fa-caret-left' />&nbsp;Go Back
           </Link>
         </form>
       </div>

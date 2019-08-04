@@ -25,10 +25,10 @@ const Header = ({ auth: { isAuthenticated, loading }, logout }) => {
   const guestLinks = (
     <div style={{ float: 'right' }}>
       <div className='LogInBtns'>
-        <Link to='/login' className='btn btn-success'>
+        <Link to='/login' className='btn'>
           Login
         </Link>
-        <Link to='/register' className='btn btn-success'>
+        <Link to='/register' className='btn'>
           Create Account
         </Link>
       </div>
@@ -40,12 +40,12 @@ const Header = ({ auth: { isAuthenticated, loading }, logout }) => {
       {/* for wide desktop */}
       <div className='wideView' >
         <div className='site-logo'>
-          <Link to='/' className='home'>Learn Local</Link>
+          <Link to='/' className='home btn'>Learn Local</Link>
         </div>
         {/* class categories */}
         <div className='dropdown first'>
           <button
-            className='btn btn-secondary dropdown-toggle'
+            className='btn dropdown-toggle'
             id='categoryDropdownMenuLink'
             data-toggle='dropdown'
             aria-haspopup='true'
@@ -88,8 +88,8 @@ const Header = ({ auth: { isAuthenticated, loading }, logout }) => {
           </div>
         </div>
         {/* teachers */}
-        <div className='btn-secondary teacherLinkBtn btn'>
-          <Link to='/profiles'>
+        <div className='teacherLinkBtn'>
+          <Link to='/profiles' className='btn'>
             Teacher Directory
           </Link>
         </div>
@@ -97,12 +97,11 @@ const Header = ({ auth: { isAuthenticated, loading }, logout }) => {
         {!loading && (
           <Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>
         )}
-
       </div >
       {/* for narrower and mobile view */}
       <div className='narrowView' >
         <div className='site-logo'>
-          <Link to='/' className='home'>Learn Local</Link>
+          <Link to='/' className='home btn'>Learn Local</Link>
         </div>
         <CollapsibleHeader />
       </div >

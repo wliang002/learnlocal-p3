@@ -16,11 +16,9 @@
   background-color: #E4B320;
   color: white;
   font-size: 17px;
-  font-family: 'Fredericka the Great', cursive;
+  font-family: 'Quicksand', sans-serif;
   padding-left: 30px;
   padding-right: 30px;
-  margin-bottom: 20px;
-  margin-left: 5px;
   margin-right: 5px;
   margin-top: 5px;
 }
@@ -28,32 +26,33 @@
 .teachersProfileContainer .submit-btn{
   background-color: #DA7A22;
   color: white;
-  font-family: 'Fredericka the Great', cursive;
-  font-size: 1.5em;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1em;
   padding-left: 30px;
   padding-right: 30px;
   padding-bottom: 10px;
   padding-top: 10px;
   margin-bottom: 20px;
-  margin-left: 5px;
+  margin-top: 10px;
   margin-right: 5px;
-  border-radius: 10px;
+  border-radius: .25rem;
   border: none;
 }
 
 .teachersProfileContainer .back-btn{
   background-color: #DA7A22;
   color: white;
-  font-family: 'Fredericka the Great', cursive;
-  font-size: 1.5em;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1em;
   padding-left: 30px;
   padding-right: 30px;
   padding-bottom: 10px;
   padding-top: 10px;
   margin-bottom: 20px;
   margin-left: 5px;
+  margin-top: 10px;
   margin-right: 5px;
-  border-radius: 10px;
+  border-radius: .25rem;
   border: none;
 }
 

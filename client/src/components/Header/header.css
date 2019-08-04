@@ -10,17 +10,26 @@
   z-index: 100;
 }
 
-.site-logo, .home, .home:hover {
+.site-logo, .home {
   color: #E4B320;
   font-size: 30px;
   font-family: 'Fredericka the Great', Verdana, Tahoma, sans-serif;
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4), 0 0 15px rgba(255,255,255,0.4);
-
   text-decoration: none;
 }
 
+.home.btn {
+  background:none;
+  margin-right:0;
+  padding: 0;
+}
+
 /* Dropdown*/
-.dropdown, .teacherLinkBtn {
+.collapsibleHeader .dropdown {
+  width: -webkit-fill-available;
+}
+
+.dropdown, .teacherLinkBtn .btn{ 
   position: relative;
   float: left;
   font-family: 'Quicksand', sans-serif;
@@ -34,7 +43,6 @@
   font-size: 17px;
   color:#DA7A22;
   font-weight: bold;
-  text-shadow: 1px 1px 0 rgba(0,0,0,0.4), 0 0 15px rgba(255,255,255,0.4);
   margin-top: 5px;
 }
 
@@ -49,8 +57,7 @@
 }
 
 .dropdown-content a {
-  color: rgb(73, 105, 109);
-  padding: 12px 16px;
+  color: #212529;
   text-decoration: none;
   display: block;
 }
@@ -62,20 +69,15 @@
   display: block;
 }
 
-.dropdown:hover .dropbtn {
-  background-color: #3e8e41;
-}
-
 /* teacher button */
-.site-header .teacherLinkBtn.btn {
+.site-header .teacherLinkBtn .btn {
   margin-top: 5px;
 }
 
-.site-header .teacherLinkBtn.btn a{
+.site-header .teacherLinkBtn .btn {
   font-size: 17px;
   color:#E4B320;
   font-weight: bold;
-  text-shadow: 1px 1px 0 rgba(0,0,0,0.4), 0 0 15px rgba(255,255,255,0.4);
 }
 
 /* Login Button */
@@ -93,77 +95,49 @@
 }
 
 /* collapsible header styling */
-.collapsibleHeader{
-  padding-top: 23px;
+.dropDownBtn {
+  padding: 0.50rem 1.5rem;
+  font-size: 25px;
 }
-
-.collapsibleCategories, .collapsibleTeachersBtn a, .collapsibleLogInBtns {
+.collapsibleCategories, .collapsibleTeachers a, .collapsibleLogIn {
   font-size: 17px;
   font-family: 'Quicksand', sans-serif;
   font-weight: bold;
-  text-shadow: 1px 1px 0 rgba(0,0,0,0.4), 0 0 15px rgba(255,255,255,0.4);
 }
 
-.collapsibleCategories, .collapsibleTeachersBtn {
+.collapsibleCategories, .collapsibleTeachers {
   background: var(--light-color);
   padding-top:5px;
-}
-
-.collapsibleHeader .Collapsible__trigger{
-  padding: .25rem 1.5rem;
-}
-
-.collapsibleCategories .Collapsible__trigger::after {
-  display: inline-block;
-  margin-left: .255em;
-  vertical-align: .255em;
-  content: "";
-  border-top: .3em solid;
-  border-right: .3em solid transparent;
-  border-bottom: 0;
-  border-left: .3em solid transparent;
 }
 
 .collapsibleCategories {
   color: #DA7A22;
 }
 
-.collapsibleTeachersBtn a {
+.collapsibleTeachers a {
   color: #E4B320;
   padding-bottom:5px;
 }
 
-.collapsibleLogInBtns {
+.collapsibleLogIn {
   background-color: #E4B320;
 }
 
-.collapsibleLogInBtns .dropdown-item {
-  color:  #f4f4f4;;
+.collapsibleLogIn .dropdown-item {
+  color:  #f4f4f4;
 }
 
-.collapsibleLogInBtns .dropdown-item:hover, .collapsibleTeachersBtn .dropdown-item:hover {
+.collapsibleLogIn .dropdown-item:hover, .collapsibleTeachers .dropdown-item:hover {
   color: black;
   background:rgb(247, 207, 61);
 }
 
-.collapsibleCategories .dropdown-item:hover {
-  background: rgb(230, 141, 58);
+.collapsibleCategories.dropdown-item:hover {
+  background: rgb(228, 139, 55);
 }
-.collapsibleHeader .Collapsible__contentInner p {
- margin-bottom:0;
-}
-
-/* .Collapsible.three-Lines span:first-child {
-  color:red;
-}
-
-.collapsibleHeader .Collapsible .Collapsible__trigger.is-open {
-  color: green;
-} */
-
 
 /* wider screen view */
-@media only screen and (min-width:1019px){
+@media only screen and (min-width:976px) {
   .narrowView {
     display:none;
   }
@@ -173,7 +147,7 @@
 }
 
 /* narrower screen view */
-@media only screen and (max-width:1019px){
+@media only screen and (max-width:975px) {
   .wideView {
     display:none;
   }
@@ -184,7 +158,7 @@
   .site-logo {
     position: fixed;
     margin-left: 55px;
+    margin-top: 4px;
   }
-
 }
 
