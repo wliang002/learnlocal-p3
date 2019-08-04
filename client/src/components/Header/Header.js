@@ -26,10 +26,10 @@ const Header = ({ auth: { isAuthenticated, loading }, logout }) => {
     <div style={{ float: 'right' }}>
       <div className='LogInBtns'>
         <Link to='/login' className='btn'>
-          Login
+          <i className='fas fa-user' />&nbsp;Login
         </Link>
         <Link to='/register' className='btn'>
-          Create Account
+          <i className='fas fa-user' />&nbsp;Create Account
         </Link>
       </div>
     </div>
@@ -90,7 +90,7 @@ const Header = ({ auth: { isAuthenticated, loading }, logout }) => {
         {/* teachers */}
         <div className='teacherLinkBtn'>
           <Link to='/profiles' className='btn'>
-            Teacher Directory
+            <i class='fab fa-earlybirds' />&nbsp;Teacher Directory
           </Link>
         </div>
         {/* different buttons depending on whether logged in */}

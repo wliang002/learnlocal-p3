@@ -24,6 +24,11 @@
   padding: 0;
 }
 
+.home.btn:hover {
+  opacity: 0.8;
+  color: #E4B320;
+}
+
 /* Dropdown*/
 .collapsibleHeader .dropdown {
   width: -webkit-fill-available;
@@ -49,7 +54,8 @@
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
+  background: var(--light-color);
+  /* background-color: #f9f9f9; */
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -133,11 +139,11 @@
 }
 
 .collapsibleCategories.dropdown-item:hover {
-  background: rgb(228, 139, 55);
+  background: rgb(223, 174, 128);
 }
 
 /* wider screen view */
-@media only screen and (min-width:976px) {
+@media only screen and (min-width:1036px) {
   .narrowView {
     display:none;
   }
@@ -147,7 +153,7 @@
 }
 
 /* narrower screen view */
-@media only screen and (max-width:975px) {
+@media only screen and (max-width:1035px) {
   .wideView {
     display:none;
   }

@@ -40,22 +40,14 @@ const CreateProfile = ({ createProfile,
         <h1>Create Your Profile</h1>
         <form className='form' onSubmit={e => onSubmit(e)}>
           <div className='form-group'>
-            <textarea
-              placeholder='Bio'
-              name='bio'
-              value={bio}
-              onChange={e => onChange(e)}
-            />
-            <small className='form-text'>What would you like us to know about you?</small>
-          </div>
-          <div className='form-group'>
-            <textarea
+            <input
+              type='text'
               placeholder='Titles'
               name='titles'
               value={titles}
               onChange={e => onChange(e)}
             />
-            <small className='form-text'>What do you call yourself?</small>
+            <small className='form-text'>What do you call yourself? (Please separate each with a comma.)</small>
           </div>
           <div className='form-group'>
             <input
@@ -68,6 +60,15 @@ const CreateProfile = ({ createProfile,
             <small className='form-text'>Where are you located?</small>
           </div>
           <div className='form-group'>
+            <textarea
+              placeholder='Bio'
+              name='bio'
+              value={bio}
+              onChange={e => onChange(e)}
+            />
+            <small className='form-text'>What would you like us to know about you?</small>
+          </div>
+          <div className='form-group'>
             <input
               type='text'
               placeholder='Skills'
@@ -75,7 +76,7 @@ const CreateProfile = ({ createProfile,
               value={skills}
               onChange={e => onChange(e)}
             />
-            <small className='form-text'>What skills do you have?</small>
+            <small className='form-text'>What skills do you have? (Please separate each with a comma.)</small>
           </div>
           <div className='socialLinks'>
             <button
@@ -121,8 +122,8 @@ const CreateProfile = ({ createProfile,
               </div>
             </Fragment>
           )}
-          <input type='submit' className='btn btn-primary submit-btn' />
-          <Link className='btn btn-light back-btn' to='/dashboard'>
+          <input type='submit' className='btn submit-btn' />
+          <Link className='btn back-btn' to='/dashboard'>
             <i class='fas fa-caret-left' />&nbsp;Go Back
           </Link>
         </form>

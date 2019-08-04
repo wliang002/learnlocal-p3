@@ -12,12 +12,9 @@ const ClassCard = ({ userId, event, deleteEvent, auth }) => {
   const [displayStudents, toggleStudents] = useState(false)
   const events = event.map(eve => (
     <div className='class-card' key={eve._id}>
-      <h2 className='class-title'>Class : {eve.eventName}</h2>
+      <h2 className='class-title'>{eve.eventType}&nbsp;Class:<br />{eve.eventName}</h2>
       <p>
         <strong>Taught by:</strong> {eve.teachersName}
-      </p>
-      <p>
-        <strong>Category:</strong> {eve.eventType}
       </p>
       <p>
         <strong>Location:</strong> {eve.location}
@@ -37,52 +34,61 @@ const ClassCard = ({ userId, event, deleteEvent, auth }) => {
       <p>
         <strong>Time: </strong>{eve.eventTime}
       </p>
-      <p>
-        <strong>Class Size: </strong>{eve.students.length} | {eve.eventSize}
-      </p>
-      <p>
-        <strong>Description:</strong> {eve.description}
-      </p>
-      {auth ? (
-        <Fragment>
-          <button
-            onClick={() => toggleStudents(!displayStudents)}
-            type='button'
-            className='btn class-signup-btn'
-          >
-            <i className='fas fa-users' />&nbsp;Students Enrolled
-          </button>
-          {eve.students.length > 0 ? (
-            <Fragment>
-              {displayStudents && (
-                <Fragment>
-                  <Student student={eve.students} />
-                </Fragment>
-              )}
-            </Fragment>
-          ) : (
-            <span />
-          )}
+      <div className='classDescription'>
+        <p>
+          <strong>Description:</strong> {eve.description}
+        </p>
+      </div>
+      <div className='classSizeRow'>
+        <div className='classSizeCol'>
+          <p>
+            <strong>Class Size: </strong>{eve.eventSize}
+          </p>
+        </div>
+        <div className='classSizeCol'>
+          <p>
+            <strong>Currently enrolled:</strong> {eve.students.length}
+          </p>
+        </div>
+        {auth ? (
+          <Fragment>
+            <div
+              onClick={() => toggleStudents(!displayStudents)}
+              className='btn class-signup-btn'
+            >
+              <i className='fas fa-users' />&nbsp;Students Enrolled
+            </div>
+            {eve.students.length > 0 ? (
+              <Fragment>
+                {displayStudents && (
+                  <Fragment>
+                    <Student student={eve.students} />
+                  </Fragment>
+                )}
+              </Fragment>
+            ) : (
+              <span />
+            )}
+            <div className='dash-buttons'>
+              <button className='DeleteBtn btn'
+                onClick={() => deleteEvent(eve._id)}>
+                <i className='fas fa-times' />&nbsp;Delete Class</button>
+            </div>
+          </Fragment>
+        ) : (
+          <Fragment>
+            {eve.students.length >= eve.eventSize ? (
+              <h4>
+                <i className='far fa-sad-tear' />&nbsp;Class is full</h4>
+            ) : (
+              <Link className='btn class-signup-btn' to={`/sign-up/${userId}/${eve._id}`}>
+                <i className='fas fa-user-plus' />&nbsp;Sign Up
+              </Link>
+            )}
+          </Fragment>
+        )}
 
-          <div className='dash-buttons'>
-            <button className='DeleteBtn btn'
-              onClick={() => deleteEvent(eve._id)}>
-              <i className='fas fa-times' />&nbsp;Delete Class</button>
-          </div>
-        </Fragment>
-      ) : (
-        <Fragment>
-          {eve.students.length >= eve.eventSize ? (
-            <h4>
-              <i className='far fa-sad-tear' />&nbsp;Class is full</h4>
-          ) : (
-            <Link className='btn class-signup-btn' to={`/sign-up/${userId}/${eve._id}`}>
-              <i className='fas fa-user-plus' />&nbsp;Sign Up
-            </Link>
-          )}
-        </Fragment>
-      )}
-
+      </div>
     </div>
   ))
 

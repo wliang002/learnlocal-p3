@@ -5,8 +5,6 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { studentSignUp } from '../../actions/profile'
 
-
-
 const StudentForm = ({ studentSignUp, history, userId, match }) => {
   const [formData, setFormData] = useState({
     studentsName: '',
@@ -19,9 +17,7 @@ const StudentForm = ({ studentSignUp, history, userId, match }) => {
     studentsPhone
   } = formData
 
-
   const onChange = e => {
-  
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
@@ -96,7 +92,6 @@ const StudentForm = ({ studentSignUp, history, userId, match }) => {
 StudentForm.propTypes = {
   studentSignUp: PropTypes.func.isRequired
 }
-
 
 export default connect(
   null,

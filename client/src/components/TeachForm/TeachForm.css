@@ -1,20 +1,24 @@
-.container {
-    width: 50%;
+.HostClassContainer {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
 }
+
 .teachersProfileContainer {
   padding-top: 70px;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
 }
 
 .teachersProfileContainer .form .form-group .form-text {
   color: #CECDC9;
-  font-family: 'Lustria', serif;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .teachersProfileContainer .socialLinks .btn {
   background-color: #E4B320;
-  color: white;
+  color: rgba(238, 237, 234, 0.911);
   font-size: 17px;
   font-family: 'Quicksand', sans-serif;
   padding-left: 30px;
@@ -23,9 +27,9 @@
   margin-top: 5px;
 }
 
-.teachersProfileContainer .submit-btn{
+.teachersProfileContainer .submit-btn, .HostClassContainer .submit-btn {
   background-color: #DA7A22;
-  color: white;
+  color: rgba(238, 237, 234, 0.911);
   font-family: 'Quicksand', sans-serif;
   font-size: 1em;
   padding-left: 30px;
@@ -39,9 +43,9 @@
   border: none;
 }
 
-.teachersProfileContainer .back-btn{
+.teachersProfileContainer .back-btn, .HostClassContainer .back-btn {
   background-color: #DA7A22;
-  color: white;
+  color: rgba(238, 237, 234, 0.911);
   font-family: 'Quicksand', sans-serif;
   font-size: 1em;
   padding-left: 30px;
@@ -57,18 +61,16 @@
 }
 
 .teachersProfileContainer .socialOptional {
-  font-family: 'Lustria', serif;
+  font-family: 'Quicksand', sans-serif;
   font-size: 17px;
 }
 
 .teachForm {
-  margin: 20px;
-  padding: 20px;
   text-align: left;
 }
 
 .form-group {
-    font-family: 'Lustria', serif;
+    font-family: 'Quicksand', sans-serif;
     font-size: 17px;
     color: #CECDC9;
 }
@@ -96,3 +98,6 @@ h2 {
   margin-right: 10px;
 }
 
+.HostClassContainer .form-control {
+  font-family: 'Quicksand', sans-serif;
+}
