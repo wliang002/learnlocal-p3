@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link, Redirect } from 'react-router-dom'
+import './LoginRegister.css'
 import { connect } from 'react-redux'
 import { setAlert } from '../../actions/alert'
 import { register } from '../../actions/auth'
@@ -28,9 +29,9 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
   }
 
   return (
-    <div className='wrapper'>
+    <div className='LoginRegisterContainer'>
       <h1 className='sign-up'>Sign Up</h1>
-      <p className='lead'><i className='fas fa-user' /> Create your account</p>
+      <p className='lead'><i className='fas fa-user' /> Create your account.</p>
       <form className='form' onSubmit={e => onSubmit(e)} action='create-profile.html'>
         <div className='form-group'>
           <input
@@ -60,10 +61,10 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
             onChange={e => onChange(e)}
           />
         </div>
-        <input type='submit' className='btn btn-success create-btn' value='Create' />
+        <input type='submit' className='btn create-btn' value='Create' />
       </form>
       <p className='haveAcctQ'>
-      Already have an account? <Link to='/login'>Login</Link>
+      Already have an account? <Link to='/login'>Login!</Link>
       </p>
     </div>
   )

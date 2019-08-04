@@ -22,7 +22,6 @@
   color: #E4B320;
 }
 
-
 .log, .create-btn{
   background-color: #E4B320;
   color: rgba(238, 237, 234, 0.911);
@@ -31,7 +30,10 @@
   padding-left: 30px;
   padding-right: 30px;
   margin-bottom: 20px;
-  margin-left: 5px;
   margin-right: 5px;
   margin-top: 5px;
+}
+
+.log:hover, .create-btn:hover {
+  color: rgba(238, 237, 234, 0.911);
 }

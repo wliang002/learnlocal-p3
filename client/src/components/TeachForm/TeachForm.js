@@ -29,15 +29,12 @@ const TeachForm = ({ addClasses, history }) => {
     description
   } = formData
 
-
   const onChange = e => {
-  
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
   return (
-    <div className='container'>
-
+    <div className='HostClassContainer'>
       <h1>Teach</h1>
       <hr />
       <h2>Host a class for your neighbors.</h2>
@@ -49,85 +46,80 @@ const TeachForm = ({ addClasses, history }) => {
             addClasses(formData, history)
           }}
         >
-
           <div className='form-group'>
-            <label for='teachersName'>Teacher's Name</label>
+            <label for='teachersName'>Teacher's Name:</label>
             <textarea
               className='form-control'
               id='teachersName'
               rows='1'
-              placeholder='Your name ...'
+              placeholder='List all the teachers for this class.'
               name='teachersName'
               value={teachersName}
               onChange={e => onChange(e)}
               required
             />
           </div>
-
           <div className='form-group'>
-            <label for='eventname'>Event Name</label>
-            <textarea
-              className='form-control'
-              id='eventName'
-              rows='2'
-              placeholder='Class title ...'
-              name='eventName'
-              value={eventName}
-              onChange={e => onChange(e)}
-              required
-            />
-          </div>
-
-          <div className='form-group'>
-            <label for='categorySelect'>Select a category for your class type</label>
+            <label for='categorySelect'>What kind of class are you teaching?</label>
             <select className='form-control'
               id='categorySelect'
               name='eventType'
               value={eventType}
               onChange={e => onChange(e)}
             >
-              <option value='0'>* Select a Category</option>
+              <option value='0'>Select a category.</option>
               <option value='Art'>Art</option>
               <option value='Cooking'>Cooking</option>
-              <option value='Garden'>Garden</option>
-              <option value='Wellness'>Wellness</option>
-              <option value='Technology'>Technology</option>
-              <option value='Creative'>Creative</option>
               <option value='Craft'>Craft</option>
+              <option value='Creative'>Creative</option>
+              <option value='Garden'>Garden</option>
               <option value='Movement'>Movement</option>
               <option value='Social'>Social</option>
+              <option value='Technology'>Technology</option>
+              <option value='Wellness'>Wellness</option>
               <option value='Other'>Other</option>
             </select>
           </div>
-
           <div className='form-group'>
-            <label for='location'>Location address:</label>
+            <label for='eventname'>Class name:</label>
+            <textarea
+              className='form-control'
+              id='eventName'
+              rows='1'
+              placeholder='Give you class a name.'
+              name='eventName'
+              value={eventName}
+              onChange={e => onChange(e)}
+              required
+            />
+          </div>
+          <div className='form-group'>
+            <label for='location'>Where is this class taking place?</label>
             <textarea
               className='form-control'
               id='location'
               rows='2'
-              placeholder='street, city, state'
+              placeholder='Street, City, State'
               name='location'
               value={location}
               onChange={e => onChange(e)}
               required
             />
           </div>
-
           <div className='form-group'>
             <label for='location'>Geo location:</label>
             <textarea
               className='form-control'
               id='geocode'
               rows='1'
-              placeholder='-122.3223, 37.23232'
+              placeholder='longitude, latitude, for example: -122.3223, 37.23232'
               name='geocode'
               value={geocode}
               onChange={e => onChange(e)}
               required
-            /> <button>convert</button>
+            />
+            <button>convert</button>
           </div>
-
           <div className='form-group'>
             <label for='location'>Date:</label>
             <input
@@ -140,7 +132,6 @@ const TeachForm = ({ addClasses, history }) => {
               onChange={e => onChange(e)}
               required />
           </div>
-
           <div className='form-group'>
             <label for='location'>Time:</label>
             <textarea
@@ -153,39 +144,36 @@ const TeachForm = ({ addClasses, history }) => {
               onChange={e => onChange(e)}
               required />
           </div>
-
           <div className='form-group'>
-            <label for='location'>Class Size: </label>
+            <label for='location'>Class size: </label>
             <textarea
               className='form-control'
               id='eventSize'
               rows='1'
-              placeholder='how big is your class ...'
+              placeholder='How many students can sign up for your class?'
               name='eventSize'
               value={eventSize}
               onChange={e => onChange(e)}
               required />
           </div>
-
           <div className='form-group'>
             <label for='description'>Description:</label>
             <textarea
               className='form-control'
               id='description'
               rows='8'
-              placeholder='Class description ...'
+              placeholder='What should students know about your class?'
               name='description'
               value={description}
               onChange={e => onChange(e)}
               required
             />
           </div>
-          <input type='submit' className='btn btn-primary my-1' />
-          <Link className='btn btn-light my-1' to='/dashboard'>
-            Go Back
+          <input type='submit' className='submit-btn btn ' />
+          <Link className='btn back-btn' to='/dashboard'>
+            <i class='fas fa-caret-left' />&nbsp;Go Back
           </Link>
         </form>
-
       </div>
     </div >
   )
@@ -194,7 +182,6 @@ const TeachForm = ({ addClasses, history }) => {
 TeachForm.propTypes = {
   addClasses: PropTypes.func.isRequired
 }
-
 
 export default connect(
   null,

@@ -17,6 +17,7 @@ hr {
 .events-container {
     width: 80%;
     margin: auto;
+    text-align: center;
 }
 
 /* dashboard actions */
@@ -67,3 +68,4 @@ hr {
     align-content: flex-start;
     overflow: auto;
 }
+
