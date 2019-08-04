@@ -12,7 +12,7 @@ const ClassCard = ({ userId, event, deleteEvent, auth }) => {
   const [displayStudents, toggleStudents] = useState(false)
   const events = event.map(eve => (
     <div className='class-card' key={eve._id}>
-      <h2 className='class-title'>Class: {eve.eventName}</h2>
+      <h2 className='class-title'>Class : {eve.eventName}</h2>
       <p>
         <strong>Taught by:</strong> {eve.teachersName}
       </p>
