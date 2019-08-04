@@ -22,9 +22,9 @@ const StudentForm = ({ studentSignUp, history, userId, match }) => {
   }
 
   return (
-    <div className='container'>
+    <div className='SignUpForClassContainer'>
 
-      <h1>Sign Up</h1>
+      <h1>Sign up for this class!</h1>
       <hr />
       <div className='teachForm'>
         <form id='addClass'
@@ -36,12 +36,12 @@ const StudentForm = ({ studentSignUp, history, userId, match }) => {
         >
 
           <div className='form-group'>
-            <label for='studentsName'>Your Name:</label>
+            <label for='studentsName'>Name:</label>
             <textarea
               className='form-control'
               id='studentsName'
               rows='1'
-              placeholder='Your name ...'
+              placeholder='What name do you go by?'
               name='studentsName'
               value={studentsName}
               onChange={e => onChange(e)}
@@ -50,13 +50,13 @@ const StudentForm = ({ studentSignUp, history, userId, match }) => {
           </div>
 
           <div className='form-group'>
-            <label for='studentsEmail'>Your Email:</label>
+            <label for='studentsEmail'>Email:</label>
             <input
               className='form-control'
               type='email'
               id='studentsEmail'
               rows='1'
-              placeholder='Your Email ...'
+              placeholder='What&rsquo;s your name?'
               name='studentsEmail'
               value={studentsEmail}
               onChange={e => onChange(e)}
@@ -65,12 +65,12 @@ const StudentForm = ({ studentSignUp, history, userId, match }) => {
           </div>
 
           <div className='form-group'>
-            <label for='studentsPhone'>Your Phone Number:</label>
+            <label for='studentsPhone'> Phone number:</label>
             <textarea
               className='form-control'
               id='studentsPhone'
               rows='1'
-              placeholder='Your phone number ...'
+              placeholder='What&rsquo;s your number?'
               name='studentsPhone'
               value={studentsPhone}
               onChange={e => onChange(e)}
@@ -78,9 +78,9 @@ const StudentForm = ({ studentSignUp, history, userId, match }) => {
             />
           </div>
 
-          <input type='submit' className='btn btn-primary my-1' />
-          <Link className='btn btn-light my-1' to='/profiles'>
-            Go Back
+          <input type='submit' className='submit-btn btn' />
+          <Link className='btn back-btn' to='/profiles'>
+            <i class='fas fa-caret-left' />&nbsp;Go Back
           </Link>
         </form>
 

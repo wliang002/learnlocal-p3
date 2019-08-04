@@ -19,7 +19,7 @@ const Landing = ({ isAuthenticated }) => {
         </div>
       </div>
       {isAuthenticated ? (
-        <span />
+        <div className='landing-inner' />
       ) : (
         <div className='landing-inner'>
           <p>Log in or create an account to host a class of your own.</p>
