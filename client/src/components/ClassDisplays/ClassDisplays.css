@@ -63,9 +63,16 @@ hr {
     height: 100%;
     display: flex;
     flex-flow: row wrap;
-    padding: 20px 100px 10px 100px;
+    padding: 10px;
     justify-content: space-around;
     align-content: flex-start;
     overflow: auto;
+}
+
+/* narrower views */
+@media (max-width: 576px) {
+    .CardWrapper {
+        padding:0px;
+    }
 }
 
