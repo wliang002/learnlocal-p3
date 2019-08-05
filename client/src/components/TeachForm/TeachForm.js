@@ -4,6 +4,11 @@ import { Link, withRouter } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { addClasses } from '../../actions/profile'
+import Geocoder from 'react-native-geocoding'
+
+Geocoder.init("AIzaSyDrLK8VEV5HqhAQR0PeKOx9Pyv0k2ebDv0")
+
+
 
 const TeachForm = ({ addClasses, history }) => {
   const [formData, setFormData] = useState({
@@ -29,6 +34,14 @@ const TeachForm = ({ addClasses, history }) => {
     description
   } = formData
 
+  const onClick = e => {
+    Geocoder.from("Colosseum")
+		.then(json => {
+			var location = json.results[0].geometry.location;
+			console.log(location);
+		})
+		.catch(error => console.warn(error));
+  }
   const onChange = e => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
@@ -47,7 +60,7 @@ const TeachForm = ({ addClasses, history }) => {
           }}
         >
           <div className='form-group'>
-            <label for='teachersName'>Teacher's Name:</label>
+            <label htmlFor='teachersName'>Teacher's Name:</label>
             <textarea
               className='form-control'
               id='teachersName'
@@ -60,7 +73,7 @@ const TeachForm = ({ addClasses, history }) => {
             />
           </div>
           <div className='form-group'>
-            <label for='categorySelect'>What kind of class are you teaching?</label>
+            <label htmlFor='categorySelect'>What kind of class are you teaching?</label>
             <select className='form-control'
               id='categorySelect'
               name='eventType'
@@ -81,7 +94,7 @@ const TeachForm = ({ addClasses, history }) => {
             </select>
           </div>
           <div className='form-group'>
-            <label for='eventname'>Class name:</label>
+            <label htmlFor='eventname'>Class name:</label>
             <textarea
               className='form-control'
               id='eventName'
@@ -94,7 +107,7 @@ const TeachForm = ({ addClasses, history }) => {
             />
           </div>
           <div className='form-group'>
-            <label for='location'>Where is this class taking place?</label>
+            <label htmlFor='location'>Where is this class taking place?</label>
             <textarea
               className='form-control'
               id='location'
@@ -107,7 +120,7 @@ const TeachForm = ({ addClasses, history }) => {
             />
           </div>
           <div className='form-group'>
-            <label for='location'>Geo location:</label>
+            <label htmlFor='location'>Geo location:</label>
             <textarea
               className='form-control'
               id='geocode'
@@ -118,10 +131,10 @@ const TeachForm = ({ addClasses, history }) => {
               onChange={e => onChange(e)}
               required
             />
-            <button>convert</button>
+            <button onClick={e => onClick(e)}>convert</button>
           </div>
           <div className='form-group'>
-            <label for='location'>Date:</label>
+            <label htmlFor='location'>Date:</label>
             <input
               className='form-control'
               id='date'
@@ -133,7 +146,7 @@ const TeachForm = ({ addClasses, history }) => {
               required />
           </div>
           <div className='form-group'>
-            <label for='location'>Time:</label>
+            <label htmlFor='location'>Time:</label>
             <textarea
               className='form-control'
               id='time'
@@ -145,7 +158,7 @@ const TeachForm = ({ addClasses, history }) => {
               required />
           </div>
           <div className='form-group'>
-            <label for='location'>Class size: </label>
+            <label htmlFor='location'>Class size: </label>
             <textarea
               className='form-control'
               id='eventSize'
@@ -157,7 +170,7 @@ const TeachForm = ({ addClasses, history }) => {
               required />
           </div>
           <div className='form-group'>
-            <label for='description'>Description:</label>
+            <label htmlFor='description'>Description:</label>
             <textarea
               className='form-control'
               id='description'
@@ -171,7 +184,7 @@ const TeachForm = ({ addClasses, history }) => {
           </div>
           <input type='submit' className='submit-btn btn ' />
           <Link className='btn back-btn' to='/dashboard'>
-            <i class='fas fa-caret-left' />&nbsp;Go Back
+            <i className='fas fa-caret-left' />&nbsp;Go Back
           </Link>
         </form>
       </div>
