@@ -5,7 +5,6 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
 const Landing = ({ isAuthenticated }) => {
-
   return (
     <section className='landing'>
       <div className='landing-header'>
@@ -19,15 +18,15 @@ const Landing = ({ isAuthenticated }) => {
         </div>
       </div>
       {isAuthenticated ? (
-        <div className='landing-inner' />
+        <div className='authenticated landing-inner' />
       ) : (
         <div className='landing-inner'>
           <p>Log in or create an account to host a class of your own.</p>
           <div className='buttons'>
-            <Link to='/login' className='btn btn-success'>
+            <Link to='/login' className='btn'>
             Login
             </Link>
-            <Link to='/register' className='btn btn-success'>
+            <Link to='/register' className='btn'>
             Create Account
             </Link>
           </div>

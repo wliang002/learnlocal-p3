@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import { Link } from 'react-router-dom'
-import './header.css'
+import './Header.css'
 import CollapsibleHeader from './CollapsibleHeader'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
@@ -10,11 +10,11 @@ const Header = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (
     <div style={{ float: 'right' }}>
       <div className='LogInBtns'>
-        <Link to='/dashboard' className='btn btn-success'>
+        <Link to='/dashboard' className='btn'>
           <i className='fas fa-user' />{' '}
           <span className='hide-sm'>Dashboard</span>
         </Link>
-        <a onClick={logout} href='#!' className='btn btn-success'>
+        <a onClick={logout} href='#!' className='btn'>
           <i className='fas fa-sign-out-alt' />{' '}
           <span className='hide-sm'>Logout</span>
         </a>

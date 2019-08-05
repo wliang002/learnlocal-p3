@@ -60,6 +60,10 @@
     margin-right: 5px;
 }
 
+.authenticated.landing-inner {
+  background: none;
+}
+
 /* desktop view */
 @media only screen and (min-width:576px){
   .landing-inner {
