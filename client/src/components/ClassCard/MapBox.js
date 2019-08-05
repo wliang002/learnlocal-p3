@@ -9,7 +9,7 @@ const Map = ReactMapboxGl({
   accessToken: 'pk.eyJ1IjoibGVhcm5sb2NhbCIsImEiOiJjanlkZ2dram4wcHY1M2ptZm8wNGZrNzVkIn0.SnFaLsmeVQkX5XSj8-pp-A'
 })
 
-let activeChapterName = 'learn-javascript-with-me';
+let activeChapterName = 'coding-bootcamp';
 
 class MapBox extends React.Component {
   state = {
@@ -98,6 +98,8 @@ class MapBox extends React.Component {
 
   setActiveChapter = (chapterName) => {
     if (chapterName === activeChapterName) return;
+    console.log(activeChapterName)
+    console.log(this.state.chapters)
     this.setState({ 'center': this.state.chapters[activeChapterName]['center'] })
     console.log('centered at:', activeChapterName)
     // // make the card that is centered the one that is active
