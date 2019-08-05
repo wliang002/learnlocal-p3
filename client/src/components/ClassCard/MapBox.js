@@ -98,8 +98,6 @@ class MapBox extends React.Component {
 
   setActiveChapter = (chapterName) => {
     if (chapterName === activeChapterName) return;
-    console.log(activeChapterName)
-    console.log(this.state.chapters)
     this.setState({ 'center': this.state.chapters[activeChapterName]['center'] })
     console.log('centered at:', activeChapterName)
     // // make the card that is centered the one that is active

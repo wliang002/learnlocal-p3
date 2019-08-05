@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import { Link } from 'react-router-dom'
-import './Header.css'
+import './header.css'
 import CollapsibleHeader from './CollapsibleHeader'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
@@ -90,7 +90,7 @@ const Header = ({ auth: { isAuthenticated, loading }, logout }) => {
         {/* teachers */}
         <div className='teacherLinkBtn'>
           <Link to='/profiles' className='btn'>
-            <i class='fab fa-earlybirds' />&nbsp;Teacher Directory
+            <i className='fab fa-earlybirds' />&nbsp;Teacher Directory
           </Link>
         </div>
         {/* different buttons depending on whether logged in */}
