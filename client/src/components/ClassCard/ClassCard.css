@@ -8,9 +8,6 @@
     text-align: left;
 }
 
-.teacherProfile .class-card {
-    width: unset;
-}
 .class-card p {
    margin-bottom: 0px; 
 }
