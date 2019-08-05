@@ -1,7 +1,7 @@
 # <h1>Learn Local 2.0 </h1>
 
 ## Overview
-    * A community building skillshare platform that connects passionate artisans with one another. Users can browse available classes/workshops by category or teacher. Teachers can add classes that they want to teach and update their profile.
+    - A community building skillshare platform that connects passionate artisans with one another. Users can browse available classes/workshops by category or teacher. Teachers can add classes that they want to teach and update their profile.
 
 ## Pages
 ##### Main Page
@@ -27,9 +27,8 @@
 - Mobile responsive
 
 ## Future Development
-- User is able to sign up for a class
-- Classes have a sign-up limit
-- Class info can be updated by whoever is hosting it
+- Class info can be updated by whoever is hosting it.
+- Students can log in and see what classes they signed up for.
 
 ## Built With
 - HTML
@@ -40,7 +39,9 @@
 - ExpressJS
 - BCryptJS
 - Mongoose
+- Mapbox API
 - jsonwebtoken
 - concurrently
 
 ## Link To Heroku
+https://learnlocal3.herokuapp.com/
