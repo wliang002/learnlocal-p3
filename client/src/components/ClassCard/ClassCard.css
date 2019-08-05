@@ -3,7 +3,6 @@
     margin-top: 20px;
     padding: 30px;
     background-color: rgb(73, 105, 109);
-    width: 500px;
     margin-left: auto;
     margin-right: auto;
     text-align: left;
@@ -75,6 +74,11 @@ p {
     font-family: 'Quicksand', sans-serif;
 }
 
+.sorry-full {
+    text-align:center;
+    margin-top: 10px;
+}
+
 .classSizeCol {
     float: left;
     width: 50%;
@@ -109,12 +113,21 @@ p {
     border-bottom:none;
 }
 
-/* don't display regular cards on desktop view */
-@media (min-width: 782px) {
-    .mobileViewCards .class-card {
-        display:none;
+/* wide view -- make them split */
+@media (min-width: 1200px) {
+    .class-card {
+        width: 500px;
     }
 }
+
+/* narrow views */
+@media (max-width: 1199px) {
+    .class-card {
+        width: 85%
+    }
+}
+
+/* narrower views */
 @media (max-width: 576px) {
     .class-card {
         width: 100%;

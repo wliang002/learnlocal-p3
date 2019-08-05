@@ -1,5 +1,0 @@
-{
-    "mongoURI": "mongodb+srv://mongoUser:learnlocal3@cluster0-x8r8x.mongodb.net/test?retryWrites=true&w=majority",
-    "jwtSecret": "secret"
-  }
-

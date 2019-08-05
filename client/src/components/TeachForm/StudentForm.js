@@ -56,7 +56,7 @@ const StudentForm = ({ studentSignUp, history, userId, match }) => {
               type='email'
               id='studentsEmail'
               rows='1'
-              placeholder='What&rsquo;s your email?'
+              placeholder='What&rsquo;s your email address?'
               name='studentsEmail'
               value={studentsEmail}
               onChange={e => onChange(e)}
