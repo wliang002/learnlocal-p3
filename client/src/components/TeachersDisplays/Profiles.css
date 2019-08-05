@@ -78,10 +78,15 @@
     margin-right: 5px;
     margin-top: 5px;
   }
+
 /* give it padding when the screen narrows */
 @media only screen and (max-width:840px) {
  .TeachersProfile {
     margin-left: 20px;
     margin-right: 20px;
  }
+}
+
+@media (max-width:764px) {
+    
 }

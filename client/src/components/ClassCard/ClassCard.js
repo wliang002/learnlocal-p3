@@ -12,7 +12,7 @@ const ClassCard = ({ userId, event, deleteEvent, auth }) => {
   const [displayStudents, toggleStudents] = useState(false)
   const events = event.map(eve => (
     <div className='class-card' key={eve._id}>
-      <h2 className='class-title'>{eve.eventType}&nbsp;Class:<br />{eve.eventName}</h2>
+      <h2 className='class-title'>{eve.eventType} Class:<br />{eve.eventName}</h2>
       <p>
         <strong>Taught by:</strong> {eve.teachersName}
       </p>
@@ -80,8 +80,8 @@ const ClassCard = ({ userId, event, deleteEvent, auth }) => {
       ) : (
         <Fragment>
           {eve.students.length >= eve.eventSize ? (
-            <h4>
-              <i className='far fa-sad-tear' />&nbsp;We&rsquo;re sorry &mdash; this class is full.</h4>
+            <p className='sorry-full'>
+              <i class='far fa-frown' />&nbsp;We&rsquo;re sorry &mdash; this class is full.</p>
           ) : (
             <Link className='btn class-signup-btn' to={`/sign-up/${userId}/${eve._id}`}>
               <i className='fas fa-user-plus' />&nbsp;Sign Up

@@ -10,7 +10,7 @@ const GeoCard = ({ userId, event }) => {
 
     <section id={eve.eventName.replace(/\s+/g, '-').toLowerCase()} className='active'>
       <div className='class-card'>
-        <h2 className='class-title'>{eve.eventType}&nbsp;Class:<br /> {eve.eventName}</h2>
+        <h2 className='class-title'>{eve.eventType} Class:<br /> {eve.eventName}</h2>
         <p>
           <strong>Taught by:</strong> {eve.teachersName}
         </p>
@@ -45,8 +45,8 @@ const GeoCard = ({ userId, event }) => {
         </div>
 
         {eve.students.length >= eve.eventSize ? (
-          <h4>
-            <i class='far fa-sad-tear' />&nbsp;Class is full</h4>
+          <p className='sorry-full'>
+            <i class='far fa-frown' />&nbsp;We&rsquo;re sorry &mdash; this class is full.</p>
         ) : (
           <Link className='btn class-signup-btn' to={`/sign-up/${userId}/${eve._id}`}>
             <i className='fas fa-user-plus' />&nbsp;Sign Up
