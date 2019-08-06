@@ -6,9 +6,7 @@ import { connect } from 'react-redux'
 import { addClasses } from '../../actions/profile'
 import Geocoder from 'react-native-geocoding'
 
-Geocoder.init("AIzaSyDrLK8VEV5HqhAQR0PeKOx9Pyv0k2ebDv0")
-
-
+Geocoder.init('AIzaSyDrLK8VEV5HqhAQR0PeKOx9Pyv0k2ebDv0')
 
 const TeachForm = ({ addClasses, history }) => {
   const [formData, setFormData] = useState({
@@ -22,6 +20,7 @@ const TeachForm = ({ addClasses, history }) => {
     eventSize: '',
     description: ''
   })
+
   const {
     teachersName,
     eventName,
@@ -35,15 +34,28 @@ const TeachForm = ({ addClasses, history }) => {
   } = formData
 
   const onClick = e => {
-    Geocoder.from("Colosseum")
-		.then(json => {
-			var location = json.results[0].geometry.location;
-			console.log(location);
-		})
-		.catch(error => console.warn(error));
+    Geocoder.from('Colosseum').then(json => {
+      var location = json.results[0].geometry.location
+      console.log(location)
+    }).catch(error => console.warn(error))
   }
+
   const onChange = e => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
+  }
+  // h/t to https://github.com/marlove/react-native-geocoding
+  // when the person adding a class moves on from the address field, geocode the location.
+  const onLocationInputBlur = e => {
+    Geocoder.from(e.target.value).then(json => {
+      var locationObject = json.results[0].geometry.location
+      // the geocode is in an object so extract it into an array in the order that we want
+      var locationArray = []
+      locationArray.push(locationObject.lng, locationObject.lat)
+      // then turn it into a string before pushing to database
+      var locationString = locationArray.toString()
+      console.log(locationString)
+      setFormData({ ...formData, 'geocode': locationString })
+    }).catch(error => console.warn(error))
   }
 
   return (
@@ -107,7 +119,9 @@ const TeachForm = ({ addClasses, history }) => {
             />
           </div>
           <div className='form-group'>
-            <label htmlFor='location'>Where is this class taking place?</label>
+            <label htmlFor='location'>
+              Where is this class taking place?
+            </label>
             <textarea
               className='form-control'
               id='location'
@@ -115,6 +129,7 @@ const TeachForm = ({ addClasses, history }) => {
               placeholder='Street, City, State'
               name='location'
               value={location}
+              onBlur={e => onLocationInputBlur(e)}
               onChange={e => onChange(e)}
               required
             />
@@ -131,7 +146,6 @@ const TeachForm = ({ addClasses, history }) => {
               onChange={e => onChange(e)}
               required
             />
-            <button onClick={e => onClick(e)}>convert</button>
           </div>
           <div className='form-group'>
             <label htmlFor='location'>Date:</label>
