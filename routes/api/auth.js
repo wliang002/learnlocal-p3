@@ -5,8 +5,9 @@ const auth = require('../../middleware/auth')
 const jwt = require('jsonwebtoken')
 const config = require('config')
 const { check, validationResult } = require('express-validator/check')
-
 const User = require('../../models/User')
+
+// @resources https://github.com/prescottprue/react-redux-firebase/tree/master/src
 
 // add middleware 'auth' to protect the route
 // @route    GET api/auth

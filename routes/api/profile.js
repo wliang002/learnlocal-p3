@@ -5,6 +5,9 @@ const { check, validationResult } = require('express-validator/check')
 const Profile = require('../../models/Profile')
 const User = require('../../models/User')
 
+// @resources https://odino.org/async-slash-await-in-expressjs/
+// @resources https://scotch.io/tutorials/using-mongoosejs-in-node-js-and-mongodb-applications
+
 // @route    GET api/profile/me
 // @desc     Get current users profile
 // @access   Private

@@ -1,6 +1,8 @@
 const jwt = require('jsonwebtoken')
 const config = require('config')
 
+// @resources https://github.com/auth0/go-jwt-middleware
+
 module.exports = (req, res, next) => {
   // Get token from header 'x-auto-token' is the header key
   const token = req.header('x-auth-token')
