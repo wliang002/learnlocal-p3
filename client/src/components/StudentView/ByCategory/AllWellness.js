@@ -2,9 +2,9 @@ import React, { Fragment, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { getProfiles } from '../../../actions/profile'
-import '../../ClassDisplays/ClassDisplays.css'
-import GeoCard from '../../ClassCard/GeoCard'
-import Wrapper from '../../ClassCard/Wrapper'
+import '../../teachersView/dashboard/ClassDisplays.css'
+import GeoCard from '../../mapFlyOver/GeoCard'
+import Wrapper from '../../teachersView/ClassCard/Wrapper'
 
 const AllWellness = ({ getProfiles, profile: { profiles, loading } }) => {
   useEffect(() => {
