@@ -3,6 +3,7 @@ import { Route, Redirect } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
+// Authenticates the user to be able to display routes that are only available when logged in
 const PrivateRoute = ({
   component: Component,
   auth: { isAuthenticated, loading },

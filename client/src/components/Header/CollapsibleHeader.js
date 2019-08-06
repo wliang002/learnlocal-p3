@@ -54,8 +54,9 @@ const CollapsibleHeader = ({ auth: { isAuthenticated, loading }, logout }) => {
               Browse Classes
             </div>
             <div className='dropdown-content'>
-              <Link to='/learn-by-category' className='dropdown-item'>
-                All Classes
+              <Link to='/map-all-classes' className='dropdown-item'>
+                <span className='wideViewText'>Map View of All Classes</span>
+                <span className='narrowViewText'>All Classes</span>
               </Link>
               <Link to='/art' className='dropdown-item'>
                 Art

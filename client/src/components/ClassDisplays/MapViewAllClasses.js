@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import './ClassDisplays.css'
 import MapBox from '../ClassCard/MapBox'
 
-const LearnByCategory = (props) => {
+const MapViewAllClasses = (props) => {
   return [
     <Fragment>
       <div className='LearnByCategoryContainer'>
@@ -13,4 +13,4 @@ const LearnByCategory = (props) => {
     </Fragment>
   ]
 }
-export default LearnByCategory
+export default MapViewAllClasses

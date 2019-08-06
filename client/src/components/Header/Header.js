@@ -54,7 +54,7 @@ const Header = ({ auth: { isAuthenticated, loading }, logout }) => {
             Browse Classes
           </button>
           <div className='dropdown-content'>
-            <Link to='/learn-by-category' className='dropdown-item'>All Classes</Link>
+            <Link to='/map-all-classes' className='dropdown-item'>Map View of All Classes</Link>
             <Link to='/art' className='dropdown-item'>
               Art
             </Link>

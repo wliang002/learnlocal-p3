@@ -97,6 +97,8 @@
     }
 }
 
+/* Mobile Responsive */
+
 @media (max-width:831px) {
     .TeachersProfile > div {
         width: unset;

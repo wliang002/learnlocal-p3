@@ -240,6 +240,7 @@ router.put(
 router.post(
   '/user/:user_id/events/:event_id',
   [
+    // Data validation for form fields
     check('studentsName', 'students name is required')
       .not()
       .isEmpty(),
