@@ -31,3 +31,21 @@
         border-radius: 0;
     }
 }
+
+/* change the text when no more map */
+@media (max-width: 782px) {
+    .wideViewText {
+      display: none;
+    }
+    .narrowViewText {
+      display: inline;
+    }
+  }
+  @media (min-width: 783px) {
+    .narrowViewText {
+      display: none;
+    }
+    .wideViewText {
+      display: inline;
+    }
+  }

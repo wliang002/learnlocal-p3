@@ -2,7 +2,6 @@ import React, { Fragment } from 'react'
 import Moment from 'react-moment'
 import moment from 'moment'
 import { Link } from 'react-router-dom'
-import './ClassCard.css'
 import './MapClassCard.css'
 
 const GeoCard = ({ userId, event }) => {

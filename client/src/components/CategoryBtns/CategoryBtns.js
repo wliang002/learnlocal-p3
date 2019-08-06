@@ -8,7 +8,7 @@ const CategoryBtns = props => (
     <p>Search for a class happening in your neighborhood.</p>
     <div className='buttons'>
       <Link to='/map-all-classes' className='btn'>
-        <i className='fas fa-cat' />&nbsp;Map View of All Classes
+        <i className='fas fa-cat' />&nbsp;<span className='wideViewText'>Map View of All Classes</span><span className='narrowViewText'>All Classes</span>
       </Link>
       <Link to='/art' className='btn'>
         <i className='fas fa-palette' />&nbsp;Art
