@@ -1,5 +1,5 @@
 import uuid from 'uuid'
-
+// @resources https://github.com/reduxjs/redux
 // thunk middleware allows multiple dispatch actions, setAlert action is called from Alert component
 export const setAlert = (msg, alertType, timeout = 3000) => dispatch => {
   const id = uuid.v4()

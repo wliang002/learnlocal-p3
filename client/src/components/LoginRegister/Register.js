@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import { setAlert } from '../../actions/alert'
 import { register } from '../../actions/auth'
 import PropTypes from 'prop-types'
-
+// @resources https://www.bignerdranch.com/blog/react-data-layer-part-3-login/
 const Register = ({ setAlert, register, isAuthenticated }) => {
   // formData is the state
   // use setFormData to update the state

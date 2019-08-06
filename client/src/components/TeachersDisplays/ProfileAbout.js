@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
-const ProfileItem = ({
+const ProfileAbout= ({
   profile: {
     user: { _id, name, avatar },
     location,
@@ -81,7 +81,8 @@ const ProfileItem = ({
     </div>
   )
 }
-ProfileItem.propTypes = {
+// @resources https://learnetto.com/tutorials/typechecking-with-proptypes
+ProfileAbout.propTypes = {
   profile: PropTypes.object.isRequired
 }
-export default ProfileItem
+export default ProfileAbout

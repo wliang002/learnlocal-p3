@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { setAlert } from './alert'
 import setAuthToken from '../utils/setAuthToken'
-
+// @resources https://github.com/reduxjs/redux
 // Load User
 export const loadUser = () => async dispatch => {
   // if there is a token, send it to a global header

@@ -6,7 +6,8 @@ import { getProfileById } from '../../actions/profile'
 import ClassCard from '../ClassCard/ClassCard'
 import '../ClassDisplays/ClassDisplays.css'
 import Wrapper from '../ClassCard/Wrapper'
-
+// @resources https://github.com/prescottprue/react-redux-firebase/blob/master/docs/recipes/auth.md
+// @resources https://blog.logrocket.com/react-redux-connect-when-and-how-to-use-it-f2a1edab2013/
 const Profile = ({
   getProfileById,
   profile: { profile, loading },
@@ -39,7 +40,7 @@ const Profile = ({
     </Fragment>
   )
 }
-
+// @resources https://learnetto.com/tutorials/typechecking-with-proptypes
 Profile.propTypes = {
   getProfileById: PropTypes.func.isRequired,
   profile: PropTypes.object.isRequired,

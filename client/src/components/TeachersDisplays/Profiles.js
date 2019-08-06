@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import ProfileItem from './ProfileItem'
+import ProfileAbout from './ProfileAbout'
 import Spinner from '../Landing/Spinner'
 import { getProfiles } from '../../actions/profile'
 import './Profiles.css'
@@ -24,7 +24,7 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
             <div className='profiles'>
               {profiles.length > 0 ? (
                 profiles.map(profile => (
-                  <ProfileItem profile={profile} />
+                  <ProfileAbout profile={profile} />
                 ))
               ) : (
                 <p>We're sorry, we did not find any profiles...</p>
@@ -38,6 +38,7 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
 
   )
 }
+// @resources https://learnetto.com/tutorials/typechecking-with-proptypes
 Profiles.propTypes = {
   getProfiles: PropTypes.func.isRequired,
   profile: PropTypes.object.isRequired

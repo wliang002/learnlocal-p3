@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './ClassDisplays.css'
 
-const DashboardActions = () => {
+const ActionButtons = () => {
   return (
     <div className='dash-buttons'>
       <Link to='/edit-profile' className='btn'>
@@ -15,4 +15,4 @@ const DashboardActions = () => {
   )
 }
 
-export default DashboardActions
+export default ActionButtons

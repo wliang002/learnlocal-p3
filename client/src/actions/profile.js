@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { setAlert } from './alert'
-
+// @resources https://github.com/reduxjs/redux
 // Get current users profile
 // geting api/profile/me return the user id
 export const getCurrentProfile = () => async dispatch => {

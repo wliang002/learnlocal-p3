@@ -97,7 +97,7 @@ const ClassCard = ({ userId, event, deleteEvent, auth }) => {
     <Fragment>{events}</Fragment>
   )
 }
-
+// @resources https://learnetto.com/tutorials/typechecking-with-proptypes
 ClassCard.prototype = {
   events: PropTypes.array.isRequired,
   deleteEvent: PropTypes.func.isRequired

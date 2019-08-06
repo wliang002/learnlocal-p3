@@ -1,4 +1,4 @@
-
+// @resources https://github.com/reduxjs/redux
 // initial state contains object with id, msg and alertType
 const initialState = []
 // action contains type and payload(data)

@@ -1,4 +1,4 @@
-
+// @resources https://github.com/reduxjs/redux
 // create initial state
 const initialState = {
   // hold user profile data and other profile data
