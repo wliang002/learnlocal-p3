@@ -8,7 +8,7 @@ const Map = ReactMapboxGl({
   accessToken: 'pk.eyJ1IjoibGVhcm5sb2NhbCIsImEiOiJjanlkZ2dram4wcHY1M2ptZm8wNGZrNzVkIn0.SnFaLsmeVQkX5XSj8-pp-A'
 })
 
-let activeChapterName = 'coding-bootcamp';
+let activeChapterName = `full-stack-coding-bootcamp`;
 
 class MapBox extends React.Component {
   state = {
@@ -99,12 +99,6 @@ class MapBox extends React.Component {
     if (chapterName === activeChapterName) return;
     this.setState({ 'center': this.state.chapters[activeChapterName]['center'] })
     console.log('centered at:', activeChapterName)
-    // // make the card that is centered the one that is active
-    // document.getElementById(chapterName).setAttribute('className', 'active');
-    // document.getElementById(chapterName).setAttribute('class', 'active');
-    // document.getElementById(activeChapterName).setAttribute('className', '');
-    // document.getElementById(activeChapterName).setAttribute('class', '');
-    // changes which is the active chapter
     activeChapterName = chapterName;
     console.log('active chapter switched to:', activeChapterName)
   }
@@ -113,7 +107,6 @@ class MapBox extends React.Component {
     const element = document.getElementById(id);
     const bounds = element.getBoundingClientRect();
     return bounds.top < window.innerHeight && bounds.bottom - 800 > 0;
-    // console.log('the element on screen', id)
   }
 
   render() {
@@ -132,7 +125,7 @@ class MapBox extends React.Component {
             />
           </StickyBox>
           <div id='features'>
-          <h2>Sign up for a class happening in your neighborhood.</h2>
+            <h2>Sign up for a class happening in your neighborhood.</h2>
             {this.addClassCard()}
           </div>
         </div>

@@ -17,7 +17,7 @@ const AllTechnology = ({ getProfiles, profile: { profiles, loading } }) => {
         <hr />
         <h2>
           <i className='fas fa-laptop' />
-          &nbsp;Sign up for a <span class='selectedCategory'>Technology</span> class
+          &nbsp;Sign up for a <span className='selectedCategory'>Technology</span> class
           happening in your&nbsp;neighborhood.
         </h2>
         <div className='AppDescriptionContainer'>

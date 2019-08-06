@@ -17,7 +17,7 @@ const AllCooking = ({ getProfiles, profile: { profiles, loading } }) => {
         <hr />
         <h2>
           <i className='fas fa-utensils' />
-          &nbsp;Sign up for a <span class='selectedCategory'>Cooking</span> class
+          &nbsp;Sign up for a <span className='selectedCategory'>Cooking</span> class
           happening in your&nbsp;neighborhood.
         </h2>
         <div className='AppDescriptionContainer'>

@@ -80,7 +80,7 @@ const StudentForm = ({ studentSignUp, history, userId, match }) => {
 
           <input type='submit' className='submit-btn btn' />
           <Link className='btn back-btn' to='/profiles'>
-            <i class='fas fa-caret-left' />&nbsp;Go Back
+            <i className='fas fa-caret-left' />&nbsp;Go Back
           </Link>
         </form>
 

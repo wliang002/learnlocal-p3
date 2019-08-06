@@ -17,7 +17,7 @@ const AllCreative = ({ getProfiles, profile: { profiles, loading } }) => {
         <hr />
         <h2>
           <i className='far fa-lightbulb' />
-          &nbsp;Sign up for a <span class='selectedCategory'>Creative</span> class
+          &nbsp;Sign up for a <span className='selectedCategory'>Creative</span> class
           happening in your&nbsp;neighborhood.
         </h2>
         <div className='AppDescriptionContainer'>
