@@ -4,10 +4,14 @@ import axios from 'axios'
 import GeoCard from './GeoCard'
 import StickyBox from 'react-sticky-box'
 
+// h/t to https://docs.mapbox.com/mapbox-gl-js/example/scroll-fly-to/
+// h/t to https://github.com/alex3165/react-mapbox-gl
+
 const Map = ReactMapboxGl({
   accessToken: 'pk.eyJ1IjoibGVhcm5sb2NhbCIsImEiOiJjanlkZ2dram4wcHY1M2ptZm8wNGZrNzVkIn0.SnFaLsmeVQkX5XSj8-pp-A'
 })
 
+// anchor the beginning center for the map
 let activeChapterName = `full-stack-coding-bootcamp`;
 
 class MapBox extends React.Component {
@@ -32,7 +36,7 @@ class MapBox extends React.Component {
 
     window.addEventListener('scroll', this.handleScroll);
   }
-
+  // add all of the classes
   addClassCard() {
     return this.state.profiles.map(profile => {
       return <GeoCard userId={profile.user._id} event={profile.events} />
@@ -60,9 +64,8 @@ class MapBox extends React.Component {
         return null
     })
     this.setState({ chapters: newChaps })
-    
   }
-
+  // for each event set their center based on the geocode from the database
   makeChapters(events) {
     const allevents = {}
     events.map(event => {
@@ -82,7 +85,7 @@ class MapBox extends React.Component {
     this.setState({ chapters: this.addChapters() })
     window.removeEventListener('scroll', this.handleScroll);
   }
-
+  // define the active chapter as the one that is one the screen
   handleScroll = () => {
     const chapterNames = Object.keys(this.state.chapters);
     for (let i = 0; i < chapterNames.length; i++) {
@@ -94,7 +97,7 @@ class MapBox extends React.Component {
       }
     }
   }
-
+  // the active chapter centers at the geocode
   setActiveChapter = (chapterName) => {
     if (chapterName === activeChapterName) return;
     this.setState({ 'center': this.state.chapters[activeChapterName]['center'] })
@@ -102,7 +105,7 @@ class MapBox extends React.Component {
     activeChapterName = chapterName;
     console.log('active chapter switched to:', activeChapterName)
   }
-
+  // read which chapter is on the screen
   isElementOnScreen = (id) => {
     const element = document.getElementById(id);
     const bounds = element.getBoundingClientRect();
@@ -114,6 +117,7 @@ class MapBox extends React.Component {
     return (
 
         <div className='MapClassCardContainer'>
+          {/* keep the map fixed */}
           <StickyBox>
             <Map
               style= {obj.s}
@@ -124,12 +128,12 @@ class MapBox extends React.Component {
               className='the-map'
             />
           </StickyBox>
+          {/* but not the classcards */}
           <div id='features'>
             <h2>Sign up for a class happening in your neighborhood.</h2>
             {this.addClassCard()}
           </div>
         </div>
-
     )
   }
 }
