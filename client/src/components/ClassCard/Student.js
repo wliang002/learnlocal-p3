@@ -31,7 +31,7 @@ const Student = ({ student }) => {
     </table>
   )
 }
-
+// @resources https://learnetto.com/tutorials/typechecking-with-proptypes
 Student.prototype = {
   students: PropTypes.array.isRequired
 }

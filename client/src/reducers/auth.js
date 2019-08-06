@@ -1,4 +1,4 @@
-
+// @resources https://github.com/reduxjs/redux
 const initialState = {
   token: localStorage.getItem('token'),
   isAuthenticated: null,

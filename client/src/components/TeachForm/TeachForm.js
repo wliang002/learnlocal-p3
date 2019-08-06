@@ -7,6 +7,8 @@ import { addClasses } from '../../actions/profile'
 import Geocoder from 'react-native-geocoding'
 import GEO_API from './config_keys'
 
+
+// @resources https://itnext.io/how-i-tried-to-validate-react-forms-with-hooks-31634fc5385b
 Geocoder.init(GEO_API)
 
 const TeachForm = ({ addClasses, history }) => {

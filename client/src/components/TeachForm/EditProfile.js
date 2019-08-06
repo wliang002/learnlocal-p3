@@ -4,7 +4,7 @@ import { Link, withRouter } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { createProfile, getCurrentProfile } from '../../actions/profile'
-
+// @resources https://itnext.io/how-i-tried-to-validate-react-forms-with-hooks-31634fc5385b
 const EditProfile = ({ profile: { profile, loading },
   createProfile,
   history, getCurrentProfile }) => {

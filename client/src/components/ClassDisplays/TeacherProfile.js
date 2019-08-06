@@ -6,8 +6,8 @@ import ClassCard from '../ClassCard/ClassCard'
 import { connect } from 'react-redux'
 import { getCurrentProfile, deleteAccount } from '../../actions/profile'
 import Spinner from '../Landing/Spinner'
-import DashboardActions from './DashboardActions'
-import ProfileItem from '../TeachersDisplays/ProfileItem'
+import ActionButtons from './ActionButtons'
+import ProfileAbout from '../TeachersDisplays/ProfileAbout'
 import Wrapper from '../ClassCard/Wrapper'
 
 const TeacherProfile = ({
@@ -32,8 +32,8 @@ const TeacherProfile = ({
           </h2>
           {profile !== null ? (
             <Fragment>
-              <ProfileItem profile={profile} auth={isAuthenticated} />
-              <DashboardActions />
+              <ProfileAbout profile={profile} auth={isAuthenticated} />
+              <ActionButtons />
               <hr />
               <div className='AppDescriptionContainer'>
                 <p>These are the classes you are teaching:</p>
@@ -51,7 +51,7 @@ const TeacherProfile = ({
                 <p>Before you host a class, tell us a little about yourself.</p>
               </div>
               <Link to='/create-profile' className='createProfileBtn btn'>
-                Create a Profile
+                    Create a Profile
               </Link>
             </Fragment>
           )}
@@ -62,6 +62,7 @@ const TeacherProfile = ({
   )
 }
 
+// @resources https://learnetto.com/tutorials/typechecking-with-proptypes
 TeacherProfile.propTypes = {
   getCurrentProfile: PropTypes.func.isRequired,
   deleteAccount: PropTypes.func.isRequired,

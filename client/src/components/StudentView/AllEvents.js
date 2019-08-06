@@ -34,6 +34,7 @@ const AllEvents = ({ getProfiles, profile: { profiles, loading } }) => {
 
   )
 }
+// @resources https://learnetto.com/tutorials/typechecking-with-proptypes
 AllEvents.propTypes = {
   getProfiles: PropTypes.func.isRequired,
   profile: PropTypes.object.isRequired
