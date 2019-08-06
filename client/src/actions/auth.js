@@ -1,15 +1,5 @@
 import axios from 'axios'
 import { setAlert } from './alert'
-import {
-  REGISTER_SUCCESS,
-  REGISTER_FAIL,
-  USER_LOADED,
-  AUTH_ERROR,
-  LOGIN_SUCCESS,
-  LOGIN_FAIL,
-  LOGOUT,
-  CLEAR_PROFILE
-} from './types'
 import setAuthToken from '../utils/setAuthToken'
 
 // Load User
@@ -23,12 +13,12 @@ export const loadUser = () => async dispatch => {
     const res = await axios.get('/api/auth')
     // payload is the user
     dispatch({
-      type: USER_LOADED,
+      type: 'USER_LOADED',
       payload: res.data
     })
   } catch (err) {
     dispatch({
-      type: AUTH_ERROR
+      type: 'AUTH_ERROR'
     })
   }
 }
@@ -48,7 +38,7 @@ export const register = ({ name, email, password }) => async dispatch => {
     // make a post request
     const res = await axios.post('/api/users', body, config)
     dispatch({
-      type: REGISTER_SUCCESS,
+      type: 'REGISTER_SUCCESS',
       // a token will be returned
       payload: res.data
     })
@@ -61,7 +51,7 @@ export const register = ({ name, email, password }) => async dispatch => {
     }
 
     dispatch({
-      type: REGISTER_FAIL
+      type: 'REGISTER_FAIL'
     })
   }
 }
@@ -81,7 +71,7 @@ export const login = (email, password) => async dispatch => {
     const res = await axios.post('/api/auth', body, config)
 
     dispatch({
-      type: LOGIN_SUCCESS,
+      type: 'LOGIN_SUCCESS',
       payload: res.data
     })
     dispatch(loadUser())
@@ -93,13 +83,13 @@ export const login = (email, password) => async dispatch => {
     }
 
     dispatch({
-      type: LOGIN_FAIL
+      type: 'LOGIN_FAIL'
     })
   }
 }
 
 // Logout/ Clear Profile
 export const logout = () => dispatch => {
-  dispatch({ type: LOGOUT })
-  dispatch({ type: CLEAR_PROFILE })
+  dispatch({ type: 'LOGOUT' })
+  dispatch({ type: 'CLEAR_PROFILE' })
 }

@@ -66,6 +66,7 @@ router.post(
 
       // encrypt password using bcrypt
       // create a salt to do the hashing
+      // @resources https://stackoverflow.com/questions/14588032/mongoose-password-hashing
       const salt = await bcrypt.genSalt(10)
       // hash the password, create a hash
       user.password = await bcrypt.hash(password, salt)
