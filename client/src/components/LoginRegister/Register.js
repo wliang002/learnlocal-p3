@@ -15,6 +15,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
     password: ''
   })
 
+  // Captures the entered data and stores it in a variable
   const { name, email, password } = formData
   // setState, e.target.name -> name attribute in each input tag
   const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value })
@@ -23,7 +24,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
     register({ name, email, password })
   }
 
-  // if login success, redirect to the user's darshboard
+  // if login success, redirect to the user's dashboard
   if (isAuthenticated) {
     return <Redirect to='/dashboard' />
   }
