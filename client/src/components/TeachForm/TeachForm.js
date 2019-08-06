@@ -5,8 +5,10 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { addClasses } from '../../actions/profile'
 import Geocoder from 'react-native-geocoding'
+import GEO_API from './config_keys'
 
-Geocoder.init('AIzaSyDrLK8VEV5HqhAQR0PeKOx9Pyv0k2ebDv0')
+
+Geocoder.init(GEO_API)
 
 const TeachForm = ({ addClasses, history }) => {
   const [formData, setFormData] = useState({
@@ -26,19 +28,11 @@ const TeachForm = ({ addClasses, history }) => {
     eventName,
     eventType,
     location,
-    geocode,
     eventDate,
     eventTime,
     eventSize,
     description
   } = formData
-
-  const onClick = e => {
-    Geocoder.from('Colosseum').then(json => {
-      var location = json.results[0].geometry.location
-      console.log(location)
-    }).catch(error => console.warn(error))
-  }
 
   const onChange = e => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
@@ -53,7 +47,6 @@ const TeachForm = ({ addClasses, history }) => {
       locationArray.push(locationObject.lng, locationObject.lat)
       // then turn it into a string before pushing to database
       var locationString = locationArray.toString()
-      console.log(locationString)
       setFormData({ ...formData, 'geocode': locationString })
     }).catch(error => console.warn(error))
   }
@@ -134,19 +127,7 @@ const TeachForm = ({ addClasses, history }) => {
               required
             />
           </div>
-          <div className='form-group'>
-            <label htmlFor='location'>Geo location:</label>
-            <textarea
-              className='form-control'
-              id='geocode'
-              rows='1'
-              placeholder='longitude, latitude, for example: -122.3223, 37.23232'
-              name='geocode'
-              value={geocode}
-              onChange={e => onChange(e)}
-              required
-            />
-          </div>
+
           <div className='form-group'>
             <label htmlFor='location'>Date:</label>
             <input
@@ -205,11 +186,9 @@ const TeachForm = ({ addClasses, history }) => {
     </div >
   )
 }
-
 TeachForm.propTypes = {
   addClasses: PropTypes.func.isRequired
 }
-
 export default connect(
   null,
   { addClasses }

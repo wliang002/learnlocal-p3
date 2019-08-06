@@ -11,8 +11,9 @@ const Map = ReactMapboxGl({
   accessToken: 'pk.eyJ1IjoibGVhcm5sb2NhbCIsImEiOiJjanlkZ2dram4wcHY1M2ptZm8wNGZrNzVkIn0.SnFaLsmeVQkX5XSj8-pp-A'
 })
 
+
 // anchor the beginning center for the map
-let activeChapterName = `full-stack-coding-bootcamp`;
+let activeChapterName = `full-stack-coding-bootcamp`
 
 class MapBox extends React.Component {
   state = {
