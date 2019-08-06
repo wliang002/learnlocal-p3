@@ -24,6 +24,8 @@
     margin-right: 5px;
 }
 
+/* Mobile View */
+
 @media (max-width: 576px) {
     .categoryBtnContainer .btn {
         width: 100%;

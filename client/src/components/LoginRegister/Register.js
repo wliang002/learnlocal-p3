@@ -23,7 +23,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
     register({ name, email, password })
   }
 
-  // if login success, redirect
+  // if login success, redirect to the user's darshboard
   if (isAuthenticated) {
     return <Redirect to='/dashboard' />
   }
