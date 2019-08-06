@@ -46,7 +46,7 @@ const GeoCard = ({ userId, event }) => {
 
         {eve.students.length >= eve.eventSize ? (
           <p className='sorry-full'>
-            <i class='far fa-frown' />&nbsp;We&rsquo;re sorry &mdash; this class is full.</p>
+            <i className='far fa-frown' />&nbsp;We&rsquo;re sorry &mdash; this class is full.</p>
         ) : (
           <Link className='btn class-signup-btn' to={`/sign-up/${userId}/${eve._id}`}>
             <i className='fas fa-user-plus' />&nbsp;Sign Up
