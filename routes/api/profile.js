@@ -1,10 +1,7 @@
 const express = require('express')
-const request = require('request')
-const config = require('config')
 const router = express.Router()
 const auth = require('../../middleware/auth')
 const { check, validationResult } = require('express-validator/check')
-const mongoose = require('mongoose')
 const Profile = require('../../models/Profile')
 const User = require('../../models/User')
 
@@ -240,6 +237,7 @@ router.put(
 router.post(
   '/user/:user_id/events/:event_id',
   [
+    // Data validation for form fields
     check('studentsName', 'students name is required')
       .not()
       .isEmpty(),

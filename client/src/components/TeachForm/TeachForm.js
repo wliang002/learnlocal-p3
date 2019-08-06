@@ -7,7 +7,6 @@ import { addClasses } from '../../actions/profile'
 import Geocoder from 'react-native-geocoding'
 import GEO_API from './config_keys'
 
-
 Geocoder.init(GEO_API)
 
 const TeachForm = ({ addClasses, history }) => {
