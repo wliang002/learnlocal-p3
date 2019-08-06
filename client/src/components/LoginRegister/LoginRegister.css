@@ -37,3 +37,9 @@
 .log:hover, .create-btn:hover {
   color: rgba(238, 237, 234, 0.911);
 }
+
+@media (max-width: 576px) {
+  .LoginRegisterContainer {
+    width: 100%;
+  }
+}
