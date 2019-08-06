@@ -167,4 +167,21 @@
     margin-top: 4px;
   }
 }
+/* change the text when no more map */
+@media (max-width: 782px) {
+  .wideViewText {
+    display: none;
+  }
+  .narrowViewText {
+    display: block;
+  }
+}
+@media (min-width: 783px) {
+  .narrowViewText {
+    display: none;
+  }
+  .wideViewText {
+    display: block;
+  }
+}
 

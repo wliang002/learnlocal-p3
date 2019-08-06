@@ -8,7 +8,7 @@ import CategoryBtns from './components/CategoryBtns/CategoryBtns'
 import Footer from './components/Footer/Footer'
 import TeachForm from './components/TeachForm/TeachForm'
 import TeacherProfile from './components/ClassDisplays/TeacherProfile'
-import LearnByCategory from './components/ClassDisplays/LearnByCategory'
+import MapViewAllClasses from './components/ClassDisplays/MapViewAllClasses'
 import Landing from './components/Landing/Landing'
 import Alert from './components/LoginRegister/Alert'
 import PrivateRoute from './components/routing/PrivateRoute'
@@ -71,12 +71,11 @@ const App = () => {
                 <Route exact path='/social' component={AllSocial} />
                 <Route exact path='/other' component={AllOther} />
                 <Route exact path='/sign-up/:userId/:id' component={StudentForm} />
-                
                 <PrivateRoute exact path='/dashboard' component={TeacherProfile} />
                 <PrivateRoute exact path='/add-classes' component={TeachForm} />
                 <PrivateRoute exact path='/create-profile' component={CreateProfile} />
                 <PrivateRoute exact path='/edit-profile' component={EditProfile} />
-                <Route exact path='/learn-by-category' component={LearnByCategory} />
+                <Route exact path='/map-all-classes' component={MapViewAllClasses} />
                 <Route component={NotFound} />
               </Switch>
             </section>
