@@ -3,7 +3,7 @@
 # dependencies
 /node_modules
 config/default.json
-
+client/src/components/TeachForm/config_keys.js
 # testing
 /coverage
 
