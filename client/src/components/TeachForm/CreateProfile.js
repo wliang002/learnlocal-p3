@@ -61,6 +61,7 @@ const CreateProfile = ({ createProfile,
           </div>
           <div className='form-group'>
             <textarea
+              rows='8'
               placeholder='Bio'
               name='bio'
               value={bio}
@@ -82,7 +83,7 @@ const CreateProfile = ({ createProfile,
             <button
               onClick={() => toggleSocialInputs(!displaySocialInputs)}
               type='button'
-              className='btn btn-light'
+              className='btn'
             >
               <i className='fas fa-caret-down' />&nbsp;Add Social Network Links
             </button>
