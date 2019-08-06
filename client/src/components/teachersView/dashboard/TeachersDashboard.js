@@ -7,7 +7,7 @@ import { connect } from 'react-redux'
 import { getCurrentProfile, deleteAccount } from '../../../actions/profile'
 import Spinner from '../../mainDisplay/Landing/Spinner'
 import ActionButtons from './ActionButtons'
-import ProfileAbout from '../../studentView/teachersDirectory/ProfileAbout'
+import ProfileAbout from '../../studentsView/teachersDirectory/ProfileAbout'
 import Wrapper from '../ClassCard/Wrapper'
 
 const TeachersDashboard = ({
