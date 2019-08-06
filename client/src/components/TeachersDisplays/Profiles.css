@@ -150,43 +150,46 @@
     .narrowViewProfile .bioPhoto, .narrowViewProfile .teachersSkills, .narrowViewProfile .teachersSubInfo  {
         float:left;
     }
-
-    @media (max-width: 604px) {
-        .TeachersProfile {
-            justify-content: center;
-        }
-
-        .TeachersProfile > div {
-            padding-left: 0;
-            padding-right: 0;
-        }
-
-        .narrowViewProfile .teachersSkills {
-            padding-left: 0;
-            float: left;
-            margin-left: 30px;
-        }
-        .narrowViewProfile .bioPhoto {
-            float: none;
-            text-align: center;
-            width: 100%
-        }
-
-        .narrowViewProfile .teachersSubInfo {
-            margin-left: 0;
-            margin-right: 0;
-            max-width: unset;
-            float: left;
-        }   
-    }
-    @media (max-width: 307px) {
-        .narrowViewProfile .teachersSkills {
-        margin-left: 0;
-        }
-    }
 }
 
+@media (max-width: 604px) {
+    .TeachersProfile {
+        justify-content: center;
+        margin-left: 0;
+        margin-right: 0;
+        border-radius: 0;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 0;
+    }
 
+    .TeachersProfile > div {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .narrowViewProfile .teachersSkills {
+        padding-left: 0;
+        float: left;
+        margin-left: 30px;
+    }
+    .narrowViewProfile .bioPhoto {
+        float: none;
+        text-align: center;
+        width: 100%
+    }
+
+    .narrowViewProfile .teachersSubInfo {
+        margin-left: 0;
+        margin-right: 0;
+        max-width: unset;
+        float: left;
+    }   
+}
+@media (max-width: 307px) {
+    .narrowViewProfile .teachersSkills {
+    margin-left: 0;
+    }
+}
 
 
 

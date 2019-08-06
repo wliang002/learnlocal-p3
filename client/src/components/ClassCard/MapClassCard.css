@@ -5,6 +5,7 @@
     width: 100%;
 
 }
+
 .MapClassCardContainer .the-map {
     /* this sets the width to fit half the viewport */
     width: 50vw;
@@ -46,5 +47,8 @@
     }
     .MapClassCardContainer #features {
         width: 100%
+    }
+    .MapClassCardContainer section {
+        padding: 0;
     }
 }
