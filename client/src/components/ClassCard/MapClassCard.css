@@ -36,10 +36,6 @@
     margin-bottom: 200px;
 }
 
-#features .class-card {
-    margin-top:0;
-}
-
 /* do not display map on mobile view */
 @media (max-width: 782px) {
     .MapClassCardContainer .the-map {
@@ -51,4 +47,17 @@
     .MapClassCardContainer section {
         padding: 0;
     }
+    .class-card {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
 }
+
+/* narrower views */
+@media (max-width: 576px) {
+    .class-card {
+        margin:0;
+    }
+}
+
+
