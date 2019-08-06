@@ -61,6 +61,7 @@ const CreateProfile = ({ createProfile,
           </div>
           <div className='form-group'>
             <textarea
+              rows='8'
               placeholder='Bio'
               name='bio'
               value={bio}
@@ -82,9 +83,9 @@ const CreateProfile = ({ createProfile,
             <button
               onClick={() => toggleSocialInputs(!displaySocialInputs)}
               type='button'
-              className='btn btn-light'
+              className='btn'
             >
-              <i class='fas fa-caret-down' />&nbsp;Add Social Network Links
+              <i className='fas fa-caret-down' />&nbsp;Add Social Network Links
             </button>
             <span className='socialOptional'>(Optional)</span>
           </div>
@@ -124,7 +125,7 @@ const CreateProfile = ({ createProfile,
           )}
           <input type='submit' className='btn submit-btn' />
           <Link className='btn back-btn' to='/dashboard'>
-            <i class='fas fa-caret-left' />&nbsp;Go Back
+            <i className='fas fa-caret-left' />&nbsp;Go Back
           </Link>
         </form>
       </div>

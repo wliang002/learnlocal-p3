@@ -7,6 +7,7 @@ import { addClasses } from '../../actions/profile'
 import Geocoder from 'react-native-geocoding'
 import GEO_API from './config_keys'
 
+
 Geocoder.init(GEO_API)
 
 const TeachForm = ({ addClasses, history }) => {
@@ -46,7 +47,6 @@ const TeachForm = ({ addClasses, history }) => {
       locationArray.push(locationObject.lng, locationObject.lat)
       // then turn it into a string before pushing to database
       var locationString = locationArray.toString()
-      // console.log(locationString)
       setFormData({ ...formData, 'geocode': locationString })
     }).catch(error => console.warn(error))
   }
@@ -127,6 +127,7 @@ const TeachForm = ({ addClasses, history }) => {
               required
             />
           </div>
+
           <div className='form-group'>
             <label htmlFor='location'>Date:</label>
             <input

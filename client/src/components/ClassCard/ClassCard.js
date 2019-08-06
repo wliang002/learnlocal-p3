@@ -24,7 +24,7 @@ const ClassCard = ({ userId, event, deleteEvent, auth }) => {
         <span />
       ) : (
         <button className='directions-btn' > <a href={`https://www.google.com/maps/dir/?api=1&destination=${eve.location.replace(/ /g, '+')}`} target='_blank' rel='noopener noreferrer'>
-          <i class='fas fa-directions' />&nbsp;Get directions</a>
+          <i className='fas fa-directions' />&nbsp;Get directions</a>
         </button >
       )}
 
@@ -58,7 +58,7 @@ const ClassCard = ({ userId, event, deleteEvent, auth }) => {
             onClick={() => toggleStudents(!displayStudents)}
             className='class-signup-btn'
           >
-            <i className='fas fa-users' />&nbsp;Students enrolled in your class&nbsp;<i class='fas fa-caret-down' />
+            <i className='fas fa-users' />&nbsp;Students enrolled in your class&nbsp;<i className='fas fa-caret-down' />
           </div>
           {eve.students.length > 0 ? (
             <Fragment>
@@ -81,7 +81,7 @@ const ClassCard = ({ userId, event, deleteEvent, auth }) => {
         <Fragment>
           {eve.students.length >= eve.eventSize ? (
             <p className='sorry-full'>
-              <i class='far fa-frown' />&nbsp;We&rsquo;re sorry &mdash; this class is full.</p>
+              <i className='far fa-frown' />&nbsp;We&rsquo;re sorry &mdash; this class is full.</p>
           ) : (
             <Link className='btn class-signup-btn' to={`/sign-up/${userId}/${eve._id}`}>
               <i className='fas fa-user-plus' />&nbsp;Sign Up

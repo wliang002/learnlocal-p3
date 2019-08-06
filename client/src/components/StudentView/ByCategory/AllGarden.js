@@ -17,7 +17,7 @@ const AllGarden = ({ getProfiles, profile: { profiles, loading } }) => {
         <hr />
         <h2>
           <i className='fas fa-seedling' />
-          &nbsp;Sign up for a <span class='selectedCategory'>Garden</span> class
+          &nbsp;Sign up for a <span className='selectedCategory'>Garden</span> class
           happening in your&nbsp;neighborhood.
         </h2>
         <div className='AppDescriptionContainer'>

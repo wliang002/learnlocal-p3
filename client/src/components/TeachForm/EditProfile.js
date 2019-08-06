@@ -48,7 +48,6 @@ const EditProfile = ({ profile: { profile, loading },
   const onSubmit = e => {
     e.preventDefault()
     createProfile(formData, history, true)
-    
   }
 
   return (
@@ -57,22 +56,14 @@ const EditProfile = ({ profile: { profile, loading },
         <h1>Edit Your Profile</h1>
         <form className='form' onSubmit={e => onSubmit(e)}>
           <div className='form-group'>
-            <textarea
-              placeholder='Bio'
-              name='bio'
-              value={bio}
-              onChange={e => onChange(e)}
-            />
-            <small className='form-text'>What would you like us to know about you?</small>
-          </div>
-          <div className='form-group'>
-            <textarea
+            <input
+              type='text'
               placeholder='Titles'
               name='titles'
               value={titles}
               onChange={e => onChange(e)}
             />
-            <small className='form-text'>What do you call yourself?</small>
+            <small className='form-text'>What do you call yourself?(Please separate each with a comma.)</small>
           </div>
           <div className='form-group'>
             <input
@@ -85,6 +76,16 @@ const EditProfile = ({ profile: { profile, loading },
             <small className='form-text'>Where are you located?</small>
           </div>
           <div className='form-group'>
+            <textarea
+              rows='8'
+              placeholder='Bio'
+              name='bio'
+              value={bio}
+              onChange={e => onChange(e)}
+            />
+            <small className='form-text'>What would you like us to know about you?</small>
+          </div>
+          <div className='form-group'>
             <input
               type='text'
               placeholder='Skills'
@@ -92,15 +93,15 @@ const EditProfile = ({ profile: { profile, loading },
               value={skills}
               onChange={e => onChange(e)}
             />
-            <small className='form-text'>What skills do you have?</small>
+            <small className='form-text'>What skills do you have? (Please separate each with a comma.)</small>
           </div>
           <div className='socialLinks'>
             <button
               onClick={() => toggleSocialInputs(!displaySocialInputs)}
               type='button'
-              className='btn btn-light'
+              className='btn'
             >
-              Add Social Network Links
+              <i className='fas fa-caret-down' />&nbsp;Add Social Network Links
             </button>
             <span className='socialOptional'>(Optional)</span>
           </div>
@@ -138,9 +139,9 @@ const EditProfile = ({ profile: { profile, loading },
               </div>
             </Fragment>
           )}
-          <input type='submit' className='btn btn-primary submit-btn' />
-          <Link className='btn btn-light back-btn' to='/dashboard'>
-            Go Back
+          <input type='submit' className='btn submit-btn' />
+          <Link className='btn back-btn' to='/dashboard'>
+            <i className='fas fa-caret-left' />&nbsp;Go Back
           </Link>
         </form>
         <hr />

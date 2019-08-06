@@ -91,7 +91,7 @@ const CollapsibleHeader = ({ auth: { isAuthenticated, loading }, logout }) => {
           </div>
           <div className='collapsibleTeachers'>
             <Link to='/profiles' className='dropdown-item'>
-              <i class='fab fa-earlybirds' />&nbsp;Teacher Directory
+              <i className='fab fa-earlybirds' />&nbsp;Teacher Directory
             </Link>
           </div>
           {/* different buttons depending on whether logged in */}
