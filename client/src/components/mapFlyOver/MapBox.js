@@ -8,9 +8,9 @@ import StickyBox from 'react-sticky-box'
 // h/t to https://github.com/alex3165/react-mapbox-gl
 
 const Map = ReactMapboxGl({
-  accessToken: 'pk.eyJ1IjoibGVhcm5sb2NhbCIsImEiOiJjanlkZ2dram4wcHY1M2ptZm8wNGZrNzVkIn0.SnFaLsmeVQkX5XSj8-pp-A'
+  // accessToken: 'pk.eyJ1IjoibGVhcm5sb2NhbCIsImEiOiJjanlkZ2dram4wcHY1M2ptZm8wNGZrNzVkIn0.SnFaLsmeVQkX5XSj8-pp-A'
+  accessToken: 'pk.eyJ1IjoibGVhcm5sb2NhbCIsImEiOiJjanowbjUzZmUwZTZ1M2xucXRiMTB2MW05In0.HDkoLSx_IJwG56ZseWacWQ'
 })
-
 
 // anchor the beginning center for the map
 let activeChapterName = `full-stack-coding-bootcamp`

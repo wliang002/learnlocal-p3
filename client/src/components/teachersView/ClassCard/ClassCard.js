@@ -23,6 +23,7 @@ const ClassCard = ({ userId, event, deleteEvent, auth }) => {
       {auth ? (
         <span />
       ) : (
+        // h/t https://developers.google.com/maps/documentation/urls/guide
         <button className='directions-btn' > <a href={`https://www.google.com/maps/dir/?api=1&destination=${eve.location.replace(/ /g, '+')}`} target='_blank' rel='noopener noreferrer'>
           <i className='fas fa-directions' />&nbsp;Get directions</a>
         </button >
