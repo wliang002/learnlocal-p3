@@ -128,6 +128,61 @@ export const getProfileById = userId => async dispatch => {
   }
 }
 
+// Get event by ID
+export const getEventById = id => async dispatch => {
+  try {
+    const res = await axios.get(`/api/profile/events/${id}`)
+
+    dispatch({
+      type: 'GET_PROFILE',
+      payload: res.data
+    })
+  } catch (err) {
+    dispatch({
+      type: 'PROFILE_ERROR',
+      payload: { msg: err.response.statusText, status: err.response.status }
+    })
+  }
+}
+
+// update a event
+export const updateEvent = (
+  id,
+  formData,
+  history,
+  edit = false
+) => async dispatch => {
+  try {
+    const config = {
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }
+    // make a post request
+    const res = await axios.post(`/api/profile/events/${id}`, formData, config)
+    // send the user profile to state
+    dispatch({
+      type: 'GET_PROFILE',
+      payload: res.data
+    })
+    // send an alert after profile changes
+    dispatch(setAlert('Class Updated', 'success'))
+   
+  } catch (err) {
+    const errors = err.response.data.errors
+    // validation error
+    if (errors) {
+      errors.forEach(error => dispatch(setAlert(error.msg, 'danger')))
+    }
+
+    dispatch({
+      type: 'PROFILE_ERROR',
+      payload: { msg: err.response.statusText, status: err.response.status }
+    })
+  }
+}
+
+
 // Sign up for classes
 export const studentSignUp = (userId, id, formData, history) => async dispatch => {
   try {

@@ -76,6 +76,9 @@ const ClassCard = ({ userId, event, deleteEvent, auth }) => {
             <button className='DeleteBtn btn'
               onClick={() => deleteEvent(eve._id)}>
               <i className='fas fa-times' />&nbsp;Delete Class</button>
+            <Link className='btn' to={`/edit-class/${eve._id}`}>
+              <i className='fas fa-user-plus' />&nbsp;Edit Class
+            </Link>
           </div>
         </Fragment>
       ) : (
