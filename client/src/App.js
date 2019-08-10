@@ -28,6 +28,7 @@ import AllCreative from './components/studentsView/category/AllCreative'
 import AllTechnology from './components/studentsView/category/AllTechnology'
 import NotFound from './components/mainDisplay/Landing/NotFound'
 import StudentForm from './components/allForms/studentSignUpForm/StudentForm'
+import EditTeach from './components/allForms/TeachForm/EditTeach'
 // Redux
 import { Provider } from 'react-redux'
 import store from './store'
@@ -73,6 +74,7 @@ const App = () => {
                 <PrivateRoute exact path='/add-classes' component={TeachForm} />
                 <PrivateRoute exact path='/create-profile' component={CreateProfile} />
                 <PrivateRoute exact path='/edit-profile' component={EditProfile} />
+                <PrivateRoute exact path='/edit-class/:id' component={EditTeach} />
                 <Route exact path='/map-all-classes' component={MapViewAllClasses} />
                 <Route component={NotFound} />
               </Switch>

@@ -325,4 +325,101 @@ router.delete('/events/:event_id', auth, async (req, res) => {
   }
 })
 
+
+// update a class
+// @route    Post api/profile/events/:event_id
+// @desc     update a class from profile
+// @access   Private
+router.post(
+  '/events/:event_id',
+  [
+    auth,
+    [check('teachersName', 'Teachers name is required')
+      .not()
+      .isEmpty(),
+    check('eventName', 'Event name is required')
+      .not()
+      .isEmpty(),
+    check('eventType', 'Event type is required')
+      .not()
+      .isEmpty(),
+    check('location', 'Location is required')
+      .not()
+      .isEmpty(),
+    check('eventDate', 'Event Date is required')
+      .not()
+      .isEmpty(),
+    check('eventTime', 'Event Time is required')
+      .not()
+      .isEmpty(),
+    check('eventSize', 'Event Size is required')
+      .not()
+      .isEmpty(),
+    check('description', 'Description is required')
+      .not()
+      .isEmpty()]
+  ],
+  async (req, res) => {
+    const errors = validationResult(req)
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array() })
+    }
+    const {
+      teachersName,
+      eventName,
+      eventType,
+      location,
+      geocode,
+      eventDate,
+      eventTime,
+      eventSize,
+      description
+    } = req.body
+
+    const newEvent = {
+      teachersName,
+      eventName,
+      eventType,
+      location,
+      geocode,
+      eventDate,
+      eventTime,
+      eventSize,
+      description
+    }
+
+    try {
+    // get the correct profile
+      let foundProfile = await Profile.findOne({ user: req.user.id })
+      // get the id of the class
+      const eventIds = foundProfile.events.map(event => event._id.toString())
+      // get the index of the class
+      const updateIndex = eventIds.indexOf(req.params.event_id)
+
+      // if the id doesn't exist
+      if (updateIndex === -1) {
+        return res.status(500).json({ msg: 'Server error' })
+      } else {
+        foundProfile = await Profile.findOneAndUpdate(
+          {
+            'events._id': req.params.event_id },
+          { $set: { 'events.$.eventName': newEvent.eventName,
+            'events.$.eventType': newEvent.eventType,
+            'events.$.teachersName': newEvent.teachersName,
+            'events.$.location': newEvent.location,
+            'events.$.eventDate': newEvent.eventDate,
+            'events.$.eventTime': newEvent.eventTime,
+            'events.$.eventSize': newEvent.eventSize,
+            'events.$.description': newEvent.description } },
+          { new: true }
+        )
+
+        return res.json(foundProfile)
+      }
+    } catch (error) {
+      console.error(error)
+      return res.status(500).json({ msg: 'Server error' })
+    }
+  })
+
 module.exports = router
